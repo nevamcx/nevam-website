@@ -17,20 +17,25 @@
                                     <div class="uui-button-wrapper max-width-full-mobile-landscape">
                                             
                                         <Button
+                                            @click="openModal()"
                                             :action="'#'"
-                                            :id="'demo-button'"
                                             :classes="{
                                                 'w-lightbox': true,
                                                 'demo-button': true
                                             }"
                                             :icon="'/images/demo-icon.svg'"
-                                            :object="object"
                                         >
                                         Demo</Button>
 
                                     </div>
 
-                                    <!-- <Button /> -->
+                                    <Button
+                                        :action="'/contact'"
+                                        :classes="{
+                                            'sign-up-button': true
+                                        }"
+                                    >
+                                    Sign up</Button>
 
                                 </div>
                             </div>
@@ -388,18 +393,10 @@
 </template>
 
 <script setup>
-const object = {
-    "items": [
-        {
-            "url": "https://www.youtube.com/watch?v=eiW7rY_PPdo",
-            "originalUrl": "https://www.youtube.com/watch?v=eiW7rY_PPdo",
-            "width": 940,
-            "height": 528,
-            "thumbnailUrl": "https://i.ytimg.com/vi/eiW7rY_PPdo/hqdefault.jpg",
-            "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FeiW7rY_PPdo%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DeiW7rY_PPdo&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeiW7rY_PPdo%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-            "type": "video"
-        }
-    ],
-    "group": ""
+import { baseStore } from './../../store/index'
+const store = baseStore()
+
+const openModal = () => {
+    store.$patch({ modal: true })
 }
 </script>

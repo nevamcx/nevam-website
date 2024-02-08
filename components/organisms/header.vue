@@ -7,20 +7,9 @@
                         class="waves---brand"></a>
                 <div class="waves-right-nav-1">
                     <nav role="navigation" class="waves---nav-menu w-nav-menu main-menu">
-                        <a href="#" class="waves---nav-link w-nav-link main-menu">Home</a>
-                        <a href="#" class="waves---nav-link w-nav-link main-menu">About</a>
-                        <div data-hover="false" data-delay="0" class="waves---nav-dropdown w-dropdown main-menu">
-                            <div class="waves-dropdown-toggle w-dropdown-toggle">
-                                <div>Dropdown</div><img src="/images/nav-arrow-down.svg" loading="lazy" alt=""
-                                    class="waves-icon-drodpdown">
-                            </div>
-                            <nav class="waves-dropdown-list w-dropdown-list">
-                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 1</a>
-                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 2</a>
-                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 3</a>
-                            </nav>
-                        </div>
-                        <a href="#" class="waves---nav-link w-nav-link main-menu">Contact</a>
+                        <a href="/" class="waves---nav-link w-nav-link main-menu">Home</a>
+                        <a href="/about" class="waves---nav-link w-nav-link main-menu">About</a>
+                        <a href="/contact" class="waves---nav-link w-nav-link main-menu">Contact</a>
                     </nav>
 
                     <Button

@@ -2,7 +2,6 @@
     <div class="button-component">
         <img v-if="props.icon" :src="props.icon" width="24" height="24">
         <a
-            :id="props.id"
             :class="updateClasses()"
             type="button"
             role="button"
@@ -15,10 +14,6 @@
 
 <script setup>
 const props = defineProps({
-    id: {
-        type: String,
-        default: ''
-    },
     classes: {
         type: Object,
         default: {}
@@ -34,11 +29,7 @@ const props = defineProps({
     icon: {
         type: String,
         default: ''
-    },
-    object: {
-        type: Object,
-        default: {}
-    },
+    }
 })
 
 const updateClasses = () => {
@@ -47,20 +38,10 @@ const updateClasses = () => {
         newClasses['has-icon'] = true
         return newClasses
     }
-}
-
-onMounted(() => {
-    if(props.object) {
-        const newInnerDiv = document.createElement('script')
-        const demoButton = document.getElementById('demo-button')
-        if(demoButton) {
-            demoButton.appendChild(newInnerDiv)
-            newInnerDiv.setAttribute('type', 'application/json')
-            newInnerDiv.classList.add('w-json')
-            newInnerDiv.innerHTML = JSON.stringify(props.object)
-        }
+    else {
+        return props.classes
     }
-})
+}
 </script>
 
 <style scoped lang="scss">
