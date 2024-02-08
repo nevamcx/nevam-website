@@ -1,0 +1,31 @@
+.single-team-member { 
+    margin-top: 30px;
+
+	.member-img { 
+        height: 415px;
+        border-radius: 5px;
+        width: 100%;
+        background-position: top;
+        filter: sepia(20%) saturate(150%) hue-rotate(10deg) brightness(110%) contrast(100%);
+
+        @media (max-width: 991px) {
+            height: 380px;
+        }
+
+        @media (max-width: 767px) {
+            height: 320px;
+        }
+	}
+
+	.member-info { 
+        margin-top: 20px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+		span { 
+            color: #617686;
+		}
+	}
+}

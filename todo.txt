@@ -1,0 +1,54 @@
+Tasks:
+- video
+
+
+Content:
+- review all content on site
+
+
+Bugs:
+- menu deeplinks (faqs, pricing, etc.) don't work when coming from page (about, contact, etc.)
+- formium: connect email workflow
+- test all links (on mobile)
+
+
+Optional:
+- change to use assets dir
+- import all bootstrap modules
+- treeshake css
+
+
+Performance:
+- use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
+- use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
+
+
+
+
+
+
+
+Video:
+
+[HOOK]
+> do you know what's really interesting? your coding skills won't actually help you get a better job
+> I'll repeat: your coding skills won't get you the job you want!
+> and that's because, once you know some basic coding skills, only networking skills will help you get the job you want
+
+
+[TRANSITION]
+> before I got my first job in software, I was coding in my spare time & even worked on some side projects
+> I wasn't doing anything advanced, just the basics (HTML, CSS, and some JavaScript)
+> I applied for hundreds of jobs, but I hardly got any job interviews, because I didn't have any previous job experience
+> and I couldn't understand why, I mean, I could do basic coding, but STILL no one wanted to give me the opportunity to work for them formally
+> So I thought to myself, there must be a better way!
+
+
+[INTRO]
+- Hi I'm Brett, a Senior Software Engineer, and I'm here to show you how to network with the right people, so you can get the job you want in software engineering
+- my coding skills didn't help me get the job, but my online networking skills did, to find & connect with the people who got me the job I wanted
+- and that's why we created this course, it's to show you how YOU can do this for yourself & network your way into your dream job
+
+
+[ACTION / BENEFIT]
+- so, sign up today, and join hundreds of others who are on already their way to achieving their dream goals in software engineering

@@ -1,0 +1,140 @@
+footer {
+    background-color: $heading-color;
+
+    &.alt-footer-style {
+        background-color: $black !important;
+
+        .footer-logo {
+            img {
+                filter: invert(1);
+            }
+        }
+
+        .footer-widgets-wrapper, 
+        .footer-bottom-wrapper {
+            a, p, span {
+                color: $white4 !important;
+            }
+        }
+
+        .widget-title {
+            h5 { 
+                color: $white !important;
+            }
+        }
+
+        .footer-border {
+            border-top: 1px solid $textcolor !important;
+        }
+
+        a {
+            &:hover {
+                color: $purple !important;
+            }
+        }
+    }
+
+    &.footer-2 {
+        background-color: #fff;
+
+        .footer-widgets-wrapper, 
+        .footer-bottom-wrapper {
+            a, p, span {
+                color: $textcolor;
+            }
+        }
+
+        .widget-title {
+            
+            h5 {
+                color: $heading-color;
+            }
+        }
+    }
+
+	.footer-widgets-wrapper {
+        padding-top: 70px;
+        padding-bottom: 50px;
+
+        @media (max-width: 991px) {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        .col-12 {
+            overflow: hidden;
+        }
+
+        a, p, span {
+            color: rgba(#fff, 0.7);
+        }
+
+        .single-footer-widget {
+
+            .widget-title {
+
+                h5 { 
+                    color: $black;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+                }
+            }
+
+            ul {
+
+                li { 
+                    display: block;
+
+                    a { 
+                        display: block;
+                        font-size: 17px;
+                        font-weight: 400;
+                        margin-top: 10px;
+
+                        &:hover {
+                            color: $blueMain;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-us-widget { 
+
+            .footer-logo { 
+                margin-bottom: 20px;
+            }
+
+            p { 
+                font-size: 18px;
+            }
+
+            img {
+                width: 150px;
+            }
+        }
+
+	}
+
+	.footer-bottom-wrapper { 
+
+        .footer-border {
+            padding-top: 13px;
+            border-top: 1px solid rgba($color: #080F1E, $alpha: 0.1);
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        .footer-bottom-text { 
+            p { 
+                line-height: 24px;
+                color: $textcolor;
+                font-size: 15px;
+            }
+        }
+	}
+}

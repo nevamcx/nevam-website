@@ -1,19 +1,21 @@
 {
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "dependencies": {
-    "@nuxt/content": "^2.11.0",
-    "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.10.1",
-    "pinia": "^2.1.7"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "static-serve": "nuxi generate && nuxi preview",
+    "analyse": "npx nuxi analyze"
   },
   "devDependencies": {
-    "sass": "^1.70.0"
-  }
+    "@pinia/nuxt": "^0.4.6",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "nuxt": "^3.0.0",
+    "pinia": "^2.0.28"
+  },
+  "type": "module"
 }

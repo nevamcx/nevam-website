@@ -1,0 +1,24 @@
+@import './../../../style/_variables.scss';
+
+#image-holder-a {
+    .top-clip {
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%);
+        height: 75px;
+        margin-bottom: -75px;
+    }
+    .bottom-clip {
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+        height: 75px;
+        margin-top: -74px;
+        margin-bottom: 50px;
+    }
+    .blue {
+        background-color: $blueMain;
+    }
+    .white {
+        background-color: $white;
+    }
+    img {
+        width: 100%;
+    }
+}

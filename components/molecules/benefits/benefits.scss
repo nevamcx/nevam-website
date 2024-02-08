@@ -1,0 +1,55 @@
+@import './../../../style/_variables.scss';
+
+#benefits {
+    text-align: left;
+
+    .text {
+        margin-left: 40px;
+        margin-top: -15px;
+    }
+    .icon {
+        position: relative;
+        transform: rotateZ(-6deg);
+        font-size: 35px;
+
+        &:before {
+            color: $blueMain;
+        }
+
+        &:after {
+            color: #3333ff;
+        }
+    }
+}
+
+.desktop-mode {
+    #benefits {
+        padding: 100px 350px 150px 350px !important;
+        margin-left: 50px;
+
+        .icon {
+            top: 17px;
+            right: 27px;
+        }
+        .item {
+            background-color: #ffffff;
+            margin: 5px;
+            padding: 2px;
+        }
+    }
+}
+.mobile-mode {
+    #benefits {
+        padding: 15px 5px 50px 5px !important;
+
+        .icon {
+            top: 27px;
+            right: 21px;
+        }
+        .item {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 10px;
+        }
+    }
+}

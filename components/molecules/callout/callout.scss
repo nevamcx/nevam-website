@@ -1,0 +1,37 @@
+@import './../../../style/_variables.scss';
+
+.callout {
+    background-color: $blueMain;
+    text-align: center;
+
+    .text {
+        color: $white2;
+    }
+    .button a {
+        margin-top: 40px;
+        display: inline-block;
+        color: $white;
+    }
+}
+
+.desktop-mode {
+    .callout {
+        padding: 100px 350px !important;
+        .heading h2 {
+            font-size: 50px !important;
+            color: $white;
+        }
+    }
+}
+.mobile-mode {
+    .callout {
+        padding: 50px 15px !important;
+        .heading h2 {
+            font-size: 30px !important;
+            color: $white;
+        }
+        .container {
+            padding: 5px;
+        }
+    }
+}
