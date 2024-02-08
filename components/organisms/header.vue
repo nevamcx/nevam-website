@@ -13,8 +13,8 @@
                     </nav>
 
                     <Button
-                        :action="'/contact-us'"
-                    >Get started</Button>
+                        :action="'/join-waitlist'"
+                    >Join waitlist</Button>
 
                     <div class="waves---nav-buttons-right">
                         <div class="waves---menu-button w-nav-button">

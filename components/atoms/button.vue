@@ -85,13 +85,13 @@ const updateClasses = () => {
     left: 27px;
 }
 
-.demo-button {
+.white-button {
     color: #000 !important;
     background-color: #fff !important;
     border: 1px solid #475467;
 }
 
-.sign-up-button {
+.purple-button {
     background-color: #6941c6 !important;
     border: 1px solid #6941c6 !important;
 }

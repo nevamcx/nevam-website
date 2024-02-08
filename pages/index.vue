@@ -6,10 +6,10 @@
                     <div class="uui-padding-vertical-xhuge">
                         <div class="w-layout-grid uui-heroheader01_component">
                             <div class="uui-heroheader01_content">
-                                <h1 class="uui-heading-xlarge">People who care about your growth</h1>
+                                <h1 class="uui-heading-xlarge">Identify the problems in your digital customer experience</h1>
                                 <div class="uui-space-small"></div>
                                 <div class="uui-max-width-medium">
-                                    <div class="uui-text-size-xlarge">Powerful, self-serve product and growth analytics to help you convert, engage, and retain more.</div>
+                                    <div class="uui-text-size-xlarge">with recommendations on how to fix them.</div>
                                 </div>
                                 <div class="uui-space-large"></div>
 
@@ -21,7 +21,7 @@
                                             :action="'#'"
                                             :classes="{
                                                 'w-lightbox': true,
-                                                'demo-button': true
+                                                'white-button': true
                                             }"
                                             :icon="'/images/demo-icon.svg'"
                                         >
@@ -30,12 +30,12 @@
                                     </div>
 
                                     <Button
-                                        :action="'/contact'"
+                                        :action="'/join-waitlist'"
                                         :classes="{
-                                            'sign-up-button': true
+                                            'purple-button': true
                                         }"
                                     >
-                                    Sign up</Button>
+                                    Join waitlist</Button>
 
                                 </div>
                             </div>
