@@ -1,0 +1,40 @@
+<template>
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="waves-navbar-1 w-nav">
+        <div class="waves---nav-container w-container">
+            <div class="waves-master-nav-1">
+                <a href="#" class="waves---nav-brand-link w-nav-brand"><img src="/images/Brand.svg" loading="lazy" alt=""
+                        class="waves---brand"></a>
+                <div class="waves-right-nav-1">
+                    <nav role="navigation" class="waves---nav-menu w-nav-menu main-menu">
+                        <a href="#" class="waves---nav-link w-nav-link main-menu">Home</a>
+                        <a href="#" class="waves---nav-link w-nav-link main-menu">About</a>
+                        <div data-hover="false" data-delay="0" class="waves---nav-dropdown w-dropdown main-menu">
+                            <div class="waves-dropdown-toggle w-dropdown-toggle">
+                                <div>Dropdown</div><img src="/images/nav-arrow-down.svg" loading="lazy" alt=""
+                                    class="waves-icon-drodpdown">
+                            </div>
+                            <nav class="waves-dropdown-list w-dropdown-list">
+                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 1</a>
+                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 2</a>
+                                <a href="#" class="waves---dropdown-link w-dropdown-link">Link 3</a>
+                            </nav>
+                        </div>
+                        <a href="#" class="waves---nav-link w-nav-link main-menu">Contact</a>
+                    </nav>
+
+                    <Button
+                        :action="'/contact-us'"
+                    >Get started</Button>
+
+                    <div class="waves---nav-buttons-right">
+                        <div class="waves---menu-button w-nav-button">
+                            <div class="waves---hamburger-icon w-icon-nav-menu"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
