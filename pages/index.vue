@@ -14,6 +14,8 @@
 
     <!---------------- THE FOLD ---------------->
 
+    <Services />
+
     <LoadStyles />
 
 </template>

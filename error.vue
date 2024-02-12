@@ -41,7 +41,7 @@ const store = baseStore()
 
         #big-letters h1 {
             font-size: 240px;
-            color: $textcolor;
+            color: $grayDark;
         }
     }
 }
@@ -52,7 +52,7 @@ const store = baseStore()
 
         #big-letters h1 {
             font-size: 140px;
-            color: $textcolor;
+            color: $grayDark;
         }
     }
 }

@@ -10,7 +10,7 @@
                             <div class="cta-button">
 
                                 <BaseButton
-                                    @click="openModal()"
+                                    @click="store.$patch({ modal: true })"
                                     :colour="'black-invert'"
                                     :icon="'fal fa-play-circle'"
                                 >Demo</BaseButton>
@@ -37,10 +37,6 @@
 <script setup>
 import { baseStore } from '@/stores'
 const store = baseStore()
-
-const openModal = () => {
-    store.$patch({ modal: true })
-}
 </script>
 
 <style lang="scss">

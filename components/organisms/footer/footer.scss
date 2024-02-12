@@ -24,7 +24,7 @@ footer {
         }
 
         .footer-border {
-            border-top: 1px solid $textcolor !important;
+            border-top: 1px solid $grayDark !important;
         }
 
         a {
@@ -40,7 +40,7 @@ footer {
         .footer-widgets-wrapper, 
         .footer-bottom-wrapper {
             a, p, span {
-                color: $textcolor;
+                color: $grayDark;
             }
         }
 
@@ -132,7 +132,7 @@ footer {
         .footer-bottom-text { 
             p { 
                 line-height: 24px;
-                color: $textcolor;
+                color: $grayDark;
                 font-size: 15px;
             }
         }

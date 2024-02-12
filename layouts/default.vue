@@ -98,17 +98,6 @@ onMounted(() => {
   position: relative;
   z-index: 0;
 }
-
-/* scroll offset margin */
-#intro-video,
-#course-overview,
-#testimonials,
-#course-instructor,
-#pricing,
-#guarantee,
-#faqs {
-  scroll-margin-top: 100px !important;
-}
 </style>
 
 <style lang="scss">

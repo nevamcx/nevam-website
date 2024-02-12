@@ -82,7 +82,7 @@ a.base-button {
     border: 2px solid $purple;
 }
 .purple:hover {
-    opacity: 0.6;
+    filter: brightness(0.8);
 }
 .purple-invert {
     background-color: $white;
@@ -100,7 +100,7 @@ a.base-button {
     border: 2px solid $black;
 }
 .black:hover {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .black-invert {
     background-color: $white;
