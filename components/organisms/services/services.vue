@@ -16,7 +16,7 @@
                 <div class="col-md-6 col-xl-4 col-12">
                     <div class="service-box-item">
                         <div class="icon">
-                            <img src="images/icons/arrow.svg" alt="">
+                            <img src="/images/icons/arrow.svg" alt="">
                         </div>
                         <div class="content">
                             <h4>Every channel</h4>
@@ -28,7 +28,7 @@
                 <div class="col-md-6 col-xl-4 col-12">
                     <div class="service-box-item">
                         <div class="icon">
-                            <img src="images/icons/grid.svg" alt="">
+                            <img src="/images/icons/grid.svg" alt="">
                         </div>
                         <div class="content">
                             <h4>Every piece of content</h4>
@@ -40,7 +40,7 @@
                 <div class="col-md-6 col-xl-4 col-12">
                     <div class="service-box-item">
                         <div class="icon">
-                            <img src="images/icons/path.svg" alt="">
+                            <img src="/images/icons/path.svg" alt="">
                         </div>
                         <div class="content">
                             <h4>Every pathway</h4>
