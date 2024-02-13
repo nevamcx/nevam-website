@@ -1,4 +1,10 @@
 Tasks:
+
+- faq's page
+- expert support
+- pricing page
+- privacy policy & T + Cs
+
 - 404 page loses template
 - review all content on site
 

@@ -64,17 +64,13 @@ onMounted(() => {
 #text-effect {
     color: #0075e1;
 }
+
 .desktop-mode {
     .text-effect {
         position: relative;
         bottom: 40px;
     }
-    .input-cursor {
-        top: -5px;
-        width: 6px;
-        height: 120px;
-        margin-left: 25px;
-    }
+
     .callout {
         .text-effect {
             position: relative;
@@ -83,8 +79,9 @@ onMounted(() => {
         .input-cursor {
             top: 15px;
             width: 6px;
-            height: 70px;
+            height: 65px;
             margin-left: 12px;
+            margin-top: -10px;
         }
     }
 }
@@ -93,12 +90,7 @@ onMounted(() => {
         position: relative;
         bottom: 20px;
     }
-    .input-cursor {
-        top: -2px;
-        width: 4px;
-        height: 60px;
-        margin-left: 10px;
-    }
+
     .callout {
         .text-effect {
             position: relative;
@@ -109,6 +101,7 @@ onMounted(() => {
             width: 4px;
             height: 45px;
             margin-left: 5px;
+            margin-top: -10px;
         }
     }
 }

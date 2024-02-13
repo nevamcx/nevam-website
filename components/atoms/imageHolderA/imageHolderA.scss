@@ -10,13 +10,15 @@
         clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
         height: 75px;
         margin-top: -74px;
-        margin-bottom: 50px;
     }
     .blue {
         background-color: $blueMain;
     }
     .white {
         background-color: $white;
+    }
+    .white-3 {
+        background-color: $white3;
     }
     img {
         width: 100%;

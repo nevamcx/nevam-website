@@ -41,4 +41,20 @@ const store = baseStore()
 
 <style lang="scss">
 @import './hero.scss';
+.desktop-mode {
+    #hero {
+        h1 {
+            font-size: 80px;
+            margin-top: 30px;
+        }
+    }
+}
+.mobile-mode {
+    #hero {
+        h1 {
+            font-size: 50px;
+            margin-top: 10px;
+        }
+    }
+}
 </style>

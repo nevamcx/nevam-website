@@ -108,7 +108,7 @@ a.base-button {
     border: 2px solid $black;
 }
 .black-invert:hover {
-    background-color: $lightGrey;
+    background-color: $grayLight;
 }
 
 .mobile-mode .base-button {

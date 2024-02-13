@@ -5,7 +5,7 @@
             <div class="col-lg-8 ps-xl-5 pe-xl-5 col-12 offset-lg-2 text-center">
                 <div class="block-contents">
                     <div class="section-title wow fadeInUp" data-wow-duration="1s">
-                        <h1>Our content visualizer gives a birds eye view</h1>
+                        <h1>Visualize your content with a birds eye view</h1>
                         <p>See every aspect of your marketing efforts in one place</p>
                     </div>
                 </div>
@@ -50,9 +50,6 @@
                 </div>
 
             </div>
-
-
-
         </div>
 
         <div class="container-fluid">
@@ -67,7 +64,6 @@
             </div>
 
         </div>
-
     </section>
 </template>
 
@@ -88,10 +84,6 @@ const store = baseStore()
         border-radius: 10px;
         padding: 40px;
         margin-top: 30px;
-
-        .icon {
-            margin-bottom: 50px;
-        }
     }
 
     .service-box-item .content p {
@@ -123,14 +115,30 @@ const store = baseStore()
         .base-button {
             margin-top:  50px;
         }
+
+        .service-box-item {
+            .icon {
+                margin-bottom: 50px;
+            }
+        }
     }
 }
 .mobile-mode {
     #services {
         padding: 50px 15px;
 
+        h1 {
+            margin-top: 30px;
+        }
+
         .base-button {
             margin-top:  70px !important;
+        }
+
+        .service-box-item {
+            .icon {
+                margin-bottom: 20px;
+            }
         }
     }
 }

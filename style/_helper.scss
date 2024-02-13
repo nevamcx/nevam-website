@@ -981,21 +981,22 @@
  }
 
  .overlay {
-     transition: all .2s ease-in-out;
-     width: 40%;
+    transition: all 0.5s ease-in-out;
+     width: 0%;
      opacity: 0;
      visibility: hidden;
+     left: -100px;
 
      &.active {
          position: fixed;
-         right: 0;
+         left: 0;
          top: 0;
          height: 100%;
-         width: 100%;
+         width: 40%;
          content: "";
          background-color: #000;
          z-index: 99;
-         opacity: .5;
+         opacity: 0.5;
          visibility: visible;
      }
  }

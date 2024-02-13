@@ -6,7 +6,7 @@
                 <h2 v-else><span v-html="props.effectPre"></span><TextEffect :id="props.effectID" :words="props.effectWords"/><span v-html="props.effectPost"></span></h2>
             </div>
             <div v-html="props.text" class="text"></div>
-            <div class="button">
+            <div v-if="props.button" class="button">
                 <BaseButton
                     @click.prevent="store.mode == 'mobile' ? navigateTo(props.url + '/' + `?m-${props.slug}`) : navigateTo(props.url + '/' + `?d-${props.slug}`)"
                     :colour="'red'" 
