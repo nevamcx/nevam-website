@@ -1,15 +1,16 @@
 <template>
     <div class="row testimonial-row">
-        <div :class="getClasses()[0]">
+        <div :class="getClassesA()">
             <img 
                 :src="props.image"
+                class="image-radius"
                 :class="{
                     image: true,
                     round: store.mode == 'mobile'
                 }"
             />
         </div>
-        <div :class="getClasses()[1]">
+        <div :class="getClassesB()">
 
             <div class="text-1">
                 <h2 class="name d-inline">{{ props.name }}</h2>
@@ -64,24 +65,27 @@ const props = defineProps({
     },
 })
 
-const getClasses = () => {
+const getClassesA = () => {
     if(store.mode == 'desktop' && props.position == 'left') {
-        return [
-            'col-xl-5 pe-lg-0 col-lg-5 col-12 order-1',
-            'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5 order-2'
-        ]
+        return 'col-xl-5 pe-lg-0 col-lg-5 col-12 order-1'
     }
     if(store.mode == 'desktop' && props.position == 'right') {
-        return [
-            'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5 order-2',
-            'col-xl-5 pe-lg-0 col-lg-5 col-12 order-1'
-        ]
+        return 'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5 order-2'
     }
     if(store.mode == 'mobile') {
-        return [
-            'col-xl-5 pe-lg-0 col-lg-5 col-12',
-            'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5'
-        ]
+        return 'col-xl-5 pe-lg-0 col-lg-5 col-12'
+    }
+}
+
+const getClassesB = () => {
+    if(store.mode == 'desktop' && props.position == 'left') {
+        return  'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5 order-2'
+    }
+    if(store.mode == 'desktop' && props.position == 'right') {
+        return 'col-xl-5 pe-lg-0 col-lg-5 col-12 order-1'
+    }
+    if(store.mode == 'mobile') {
+        return 'col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5'
     }
 }
 </script>
@@ -89,11 +93,6 @@ const getClasses = () => {
 <style lang="scss">
 @import './../style/_variables.scss';
 .testimonial-card {
-
-    .testimonial-row {
-        margin-top: 100px;
-        margin-bottom: 150px;
-    }
 
     .text-1 .linkedin i {
         font-size: 30px;
@@ -129,6 +128,10 @@ const getClasses = () => {
     }
 }
 .desktop-mode {
+    .testimonial-row {
+        margin-top: 30px;
+        margin-bottom: 150px;
+    }
     .text-1 {
         margin-bottom: 10px;
     }
@@ -152,6 +155,10 @@ const getClasses = () => {
     }
 }
 .mobile-mode {
+    .testimonial-row {
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
     .text-1 {
         margin-top: 30px;
     }

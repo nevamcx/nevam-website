@@ -1,10 +1,10 @@
 <template>
-    <div class="floating-arrow">
+    <section class="floating-arrow">
         <img :class="{
             left: props.direction == 0,
             right: props.direction == 1,
         }" src="/images/floating-arrow.svg" alt="">
-    </div>
+    </section>
 </template>
 
 <script setup>

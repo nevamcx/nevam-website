@@ -33,19 +33,21 @@
 
     <FloatingArrow :direction="0"/>
 
-    <div class="testimonials container">
-        <div class="testimonial-card" v-for="(testimonial, testimonialIndex) in testimonials" >
-            <TestimonialCard 
-                :name="testimonial.name"
-                :company="testimonial.company"
-                :role="testimonial.role"
-                :linkedin="testimonial.linkedin"
-                :description="testimonial.description"
-                :image="testimonial.image"
-                :position="testimonial.position"
-            />
+    <section id="testimonials">
+        <div class="container">
+            <div class="testimonial-card" v-for="(testimonial, testimonialIndex) in testimonials" >
+                <TestimonialCard 
+                    :name="testimonial.name"
+                    :company="testimonial.company"
+                    :role="testimonial.role"
+                    :linkedin="testimonial.linkedin"
+                    :description="testimonial.description"
+                    :image="testimonial.image"
+                    :position="testimonial.position"
+                />
+            </div>
         </div>
-    </div>
+    </section>
 
     <LoadStyles />
 
@@ -91,8 +93,15 @@ const callout1 = {
 </script>
 
 <style>
-.testimonials {
-    margin-top: 100px;
+.desktop-mode {
+    #testimonials {
+        padding: 100px 100px;
+    }
+}
+.mobile-mode {
+    #testimonials {
+        padding: 50px 15px;
+    }
 }
 .not-loaded {
     height: 400px;
