@@ -41,6 +41,7 @@ const props = defineProps({
 @import './../../../style/_variables.scss';
 a.base-button {
     text-transform: capitalize;
+    text-decoration: none;
     padding: 12px 30px;
     font-size: 16px;
     font-weight: 500;

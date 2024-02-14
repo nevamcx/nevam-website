@@ -16,6 +16,7 @@
                             <ul>
                                 <li><a @click.prevent="navigateTo('/')">Home</a></li>
                                 <li><a @click.prevent="navigateTo('/about')">About</a></li>
+                                <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                 <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                             </ul>
                         </div>
@@ -44,6 +45,7 @@
                                 <ul class="metismenu" id="mobile-menu">
                                     <li><a @click.prevent="navigateTo('/')">Home</a></li>
                                     <li><a @click.prevent="navigateTo('/about')">About</a></li>
+                                    <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                     <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>
                                 <BaseButton

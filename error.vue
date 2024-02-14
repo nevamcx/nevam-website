@@ -9,7 +9,7 @@
                                 <h1>404</h1>
                             </div>
                             <h1 class="mt-5 mb-3">Oops! Page not found.</h1>
-                            <p>It appears the page you were looking for couldn't be found. Try going to Home Page by using the button below.</p>
+                            <p>It appears the page you were looking for couldn't be found. Try going to our Home page by using the button below.</p>
                             <BaseButton
                                 :fullWidth="store.mode == 'mobile' ? true : false" 
                                 @click.prevent="store.mode == 'mobile' ? navigateTo('/?m-error') : navigateTo('/?d-error')"

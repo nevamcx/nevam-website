@@ -982,10 +982,10 @@
 
  .overlay {
     transition: all 0.5s ease-in-out;
-     width: 0%;
-     opacity: 0;
-     visibility: hidden;
-     left: -100px;
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    left: -100px;
 
      &.active {
          position: fixed;
@@ -994,7 +994,7 @@
          height: 100%;
          width: 40%;
          content: "";
-         background-color: #000;
+         background-color: #000000;
          z-index: 99;
          opacity: 0.5;
          visibility: visible;

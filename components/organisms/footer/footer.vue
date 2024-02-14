@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 offset-xl-2 mb-5">
+                    <div class="col-xl-2 offset-xl-4 mb-5">
                         <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".4s">
                             <div class="widget-title">
                                 <h5>Company</h5>
@@ -25,17 +25,8 @@
                                 <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/about?m-footer-link') : navigateTo('/about?d-footer-link')">About</a></li>
 
                                 <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/contact?m-footer-link') : navigateTo('/contact?d-footer-link')">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="col-xl-2 offset-xl-0 mb-5">
-                        <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".6s">
-                            <div class="widget-title">
-                                <h5>Legal</h5>
-                            </div>
-                            <ul>
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/terms-conditions?m-footer-link') : navigateTo('/terms-conditions?d-footer-link')">Terms & conditions</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/faqs?m-footer-link') : navigateTo('/faqs?d-footer-link')">FAQs</a></li>
 
                                 <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/privacy-policy?m-footer-link') : navigateTo('/privacy-policy?d-footer-link')">Privacy policy</a></li>
                             </ul>

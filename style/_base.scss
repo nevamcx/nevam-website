@@ -29,11 +29,12 @@ img {
     }
 }
 a {
-  &:hover, &:focus, &:active {
-  text-decoration: none;
-  outline: none !important;
-  border: 0;
-  }
+    text-decoration: none !important;
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        outline: none !important;
+        border: 0;
+    }
 }
 input:focus {
   outline: none;
