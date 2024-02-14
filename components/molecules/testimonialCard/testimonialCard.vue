@@ -13,7 +13,7 @@
         <div :class="getClassesB()">
 
             <div class="text-1">
-                <h2 class="name d-inline">{{ props.name }}</h2>
+                <h2 :class="`name d-inline ${props.longName ? 'smaller-font' : ''}`">{{ props.name }}</h2>
                 <a :href="props.linkedin" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
             </div>
 
@@ -38,6 +38,10 @@ const props = defineProps({
     name: {
         type: String,
         default: ''
+    },
+    longName: {
+        type: Boolean,
+        default: false
     },
     company: {
         type: String,
@@ -128,56 +132,71 @@ const getClassesB = () => {
     }
 }
 .desktop-mode {
-    .testimonial-row {
-        margin-top: 30px;
-        margin-bottom: 150px;
-    }
-    .text-1 {
-        margin-bottom: 10px;
-    }
-    .text-2 {
-        margin-bottom: 70px;
-    }
-    .inverted-comma {
 
-        &.before {
-            position: absolute;
-            transform: scaleX(-1) scaleY(-1);
-            margin-left: -90px;
-            margin-top: -60px;
+    .testimonial-card {
+
+        .testimonial-row {
+            margin-top: 30px;
+            margin-bottom: 150px;
         }
+        .text-1 {
+            margin-bottom: 10px;
+        }
+        .text-2 {
+            margin-bottom: 70px;
+        }
+        .inverted-comma {
 
-        &.after {
-            position: relative;
-            float: right;
-            top: -5px;
+            &.before {
+                position: absolute;
+                transform: scaleX(-1) scaleY(-1);
+                margin-left: -90px;
+                margin-top: -60px;
+            }
+
+            &.after {
+                position: relative;
+                float: right;
+                top: -5px;
+            }
         }
     }
 }
 .mobile-mode {
-    .testimonial-row {
-        margin-top: 50px;
-        margin-bottom: 70px;
-    }
-    .text-1 {
-        margin-top: 30px;
-    }
-    .text-2 {
-        margin-bottom: 10px;
-    }
-    .inverted-comma {
 
-        &.before {
-            transform: scaleX(-0.8) scaleY(-0.8);
-            margin-left: -25px;
-            margin-top: -10px;
-            display: block;
+    .testimonial-card {
+
+        .testimonial-row {
+            margin-top: 50px;
+            margin-bottom: 70px;
         }
-
-        &.after {
-            position: relative;
+        i.social-icon {
             float: right;
-            top: -5px;
+            bottom: -3px !important;
+        }
+        .text-1 {
+            margin-top: 30px;
+        }
+        .text-2 {
+            margin-bottom: 10px;
+        }
+        .smaller-font {
+            font-size: 26px;
+        }
+        .inverted-comma {
+
+            &.before {
+                transform: scaleX(-0.8) scaleY(-0.8);
+                margin-left: -25px;
+                margin-top: -10px;
+                display: block;
+            }
+
+            &.after {
+                position: relative;
+                float: right;
+                top: -5px;
+            }
         }
     }
 }
