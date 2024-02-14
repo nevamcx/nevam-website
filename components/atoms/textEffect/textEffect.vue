@@ -1,6 +1,8 @@
 <template>
-    <span class="text-effect" :id="`text-effect-${props.id}`"></span>
-    <span class="input-cursor"></span>
+    <span class="text-effect-wrapper">
+        <span class="text-effect" :id="`text-effect-${props.id}`"></span>
+        <span class="input-cursor"></span>
+    </span>
 </template>
 
 <script setup>

@@ -160,6 +160,10 @@ const getClassesB = () => {
                 top: -5px;
             }
         }
+        img {
+            width: 500px;
+            height: auto;
+        }
     }
 }
 .mobile-mode {

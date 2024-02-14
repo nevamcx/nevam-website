@@ -1,13 +1,12 @@
 Tasks:
 
-- expert support
-- about us page:
+- about us page
 - privacy policy
 - contact page: API for form
 - demo button: change to "book a call"
 - faq's page content
+- images: review
 
-- 404 page loses template (only on nitro not static)
 - review all content on site
 
 
