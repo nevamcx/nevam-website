@@ -12,7 +12,7 @@
                                 >
                                     <img src="/images/logo.svg" alt="Logo image">
                                 </a>
-                                <p>We are on a mission to organise the world of digital marketing channels in one place, with one login.</p>
+                                <p>We are on a mission to organise the world of digital marketing in one place, with one login.</p>
                             </div>
                         </div>
                     </div>

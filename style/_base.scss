@@ -27,6 +27,9 @@ img {
     &.image-radius {
         border-radius: 5px;
     }
+    &.image-round {
+        clip-path: circle(50% at 50% 50%);
+    }
 }
 a {
     text-decoration: none !important;

@@ -1,13 +1,15 @@
 Tasks:
 
-- about us page
 - privacy policy
-- contact page: API for form
 - demo button: change to "book a call"
+
+- contact page: API for form
 - faq's page content
 - images: review
 
 - review all content on site
+
+- cloudflare cdn
 
 
 Optional:

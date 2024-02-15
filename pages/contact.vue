@@ -4,9 +4,9 @@
 
             <div class="row">
                 <div class="col-lg-12 mb-4">
-                    <div class="block-contents">
+                    <div class="block-contents fw500">
                         <div class="section-title mb-0 wow fadeInDown" data-wow-duration="1.2s">
-                            <h1 class="mb-0">Send us a message:</h1>
+                            <h2 class="mb-0">Send us a message:</h2>
                         </div>
                     </div>
                 </div>
