@@ -2,8 +2,6 @@ import path from 'path'
 
 export default {
   
-  ssr: false,
-
   components: [
     {
       dirs: [

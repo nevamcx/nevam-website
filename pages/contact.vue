@@ -36,7 +36,7 @@
                 </div>
 
                 <div v-if="!messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
-                    <form action="#" class="contact-form row" netlify data-netlify="true">
+                    <form name="contact" class="contact-form row" netlify>
                         <div class="col-12">
                             <input
                                 v-model="field1" 
@@ -161,11 +161,11 @@ const sendEmail = async () => {
     form.append('email', field2.value)
     form.append('message', field2.value)
 
-    // console.log('form: ', {
-    //     name: form.get('name'),
-    //     email: form.get('email'),
-    //     message: form.get('message')
-    // })
+    console.log('form: ', {
+        name: form.get('name'),
+        email: form.get('email'),
+        message: form.get('message')
+    })
 
     try {
         await fetch('/', {
