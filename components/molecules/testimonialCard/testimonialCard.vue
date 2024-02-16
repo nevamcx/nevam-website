@@ -47,6 +47,10 @@ const props = defineProps({
         type: String,
         default: ''
     },
+    url: {
+        type: String,
+        default: ''
+    },
     role: {
         type: String,
         default: ''
@@ -175,8 +179,8 @@ const getClassesB = () => {
             margin-bottom: 70px;
         }
         i.social-icon {
-            float: right;
-            bottom: -3px !important;
+            bottom: 0px !important;
+            margin-left: 20px;
         }
         .text-1 {
             margin-top: 30px;

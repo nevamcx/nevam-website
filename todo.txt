@@ -1,16 +1,13 @@
 
-
 DONE:
 -demo button text changes
 -privacy policy
-
+-social links
+- delia testimonial quote update
 
 
 
 Tasks:
-- social links: canva app
-- delia testimonial quote update
-
 - netlify forms setup
 
 - faq's page content

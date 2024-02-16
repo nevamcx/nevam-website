@@ -166,8 +166,8 @@ const store = baseStore()
             left: 4px;
         }
         i.social-icon {
-            float: right;
-            bottom: -3px !important;
+            bottom: 0px !important;
+            margin-left: 25px;
         }
         .text-1 {
             margin-top: 30px;

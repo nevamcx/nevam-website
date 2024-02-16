@@ -39,15 +39,11 @@
                                 <h5>Social</h5>
                             </div>
                             <ul>
-                                <li><a href="https://www.instagram.com"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
+                                <li><a href="https://www.instagram.com/nevamcx"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
 
-                                <li><a href="https://www.facebook.com"><i class="fab fa-facebook social-icon"></i>Facebook</a></li>
+                                <li><a href="https://www.facebook.com/nevamcx"><i class="fab fa-facebook social-icon"></i>Facebook</a></li>
 
-                                <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin social-icon"></i>LinkedIn</a></li>
-
-                                <li><a href="https://www.youtube.com"><i class="fab fa-youtube social-icon"></i>YouTube</a></li>
-
-                                <li><a href="https://www.twitter.com"><i class="fab fa-twitter social-icon"></i>Twitter</a></li>
+                                <li><a href="https://www.linkedin.com/company/nevam-cx"><i class="fab fa-linkedin social-icon"></i>LinkedIn</a></li>
                             </ul>
                         </div>
                     </div>
