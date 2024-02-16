@@ -28,7 +28,7 @@
 
                                 <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/faqs?m-footer-link') : navigateTo('/faqs?d-footer-link')">FAQs</a></li>
 
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/privacy-policy?m-footer-link') : navigateTo('/privacy-policy?d-footer-link')">Privacy policy</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/privacy?m-footer-link') : navigateTo('/privacy?d-footer-link')">Privacy policy</a></li>
                             </ul>
                         </div>
                     </div>

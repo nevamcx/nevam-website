@@ -1,6 +1,13 @@
-Tasks:
 
-- privacy policy
+
+DONE:
+-demo button text changes
+-privacy policy
+
+
+
+
+Tasks:
 - social links: canva app
 - delia testimonial quote update
 
@@ -23,3 +30,4 @@ Optional:
 Performance:
 - use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
 - use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
+
