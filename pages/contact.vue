@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-12">
                             <BaseButton
-                                @click.prevent="triggerChecks()"
+                                @click.prevent="triggerChecks(event)"
                                 :colour="'purple'" 
                                 :fullWidth="store.mode == 'mobile' ? true : false"
                                 :submit="true"
@@ -124,14 +124,14 @@ const field1error = ref(false)
 const field2error = ref(false)
 const field3error = ref(false)
 
-const triggerChecks = async () => {
+const triggerChecks = async (event) => {
     checkEmptyFields()
     isEmailValid()
     if(!field1error.value && !field2error.value && !field3error.value) {
         store.$state.spinner = true
         messageSent.value = false
         await new Promise(resolve => setTimeout(resolve, 3000))
-        await sendEmail()
+        await sendEmail(event)
         messageSent.value = true
         window.scrollTo(0, 0)
         store.$state.spinner = false
@@ -152,20 +152,23 @@ const isEmailValid = () => {
     (field2.value.includes('@')) && (field2.value.includes('.')) ? field2error.value = false : field2error.value = true
 }
 
-const sendEmail = async () => {
+const sendEmail = async (event) => {
     const object = {
         "name": field1.value,
         "email": field2.value,
         "message": field3.value
     }
+
+    const myForm = event.target
+    const formData = new FormData(myForm)
+
     try {
         await fetch('/', {
             method: 'POST',
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: JSON.stringify(object)
+            body: new URLSearchParams(formData).toString()
         })
     }
     catch(e) {
