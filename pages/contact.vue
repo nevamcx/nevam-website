@@ -112,7 +112,6 @@
 <script setup>
 import { baseStore } from "@/stores"
 const store = baseStore()
-const router = useRouter()
 
 const errorText = 'Please update this field'
 const messageSent = ref(false)
@@ -135,7 +134,6 @@ const triggerChecks = async () => {
         await sendEmail()
         messageSent.value = true
         window.scrollTo(0, 0)
-        router.replace({ hash: store.mode == 'mobile' ? '?m-send-email' : '?d-send-email' })
         store.$state.spinner = false
     }
 }
