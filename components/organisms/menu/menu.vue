@@ -24,9 +24,9 @@
                     <div class="header-right-element">
                         <BaseButton 
                             style="margin-left: 20px;"
-                            @click.prevent="navigateTo('/sign-up?d-header')"
+                            @click.prevent="navigateTo('/book-call?d-header')"
                             :colour="'black'"
-                        >Join waitlist</BaseButton>
+                        >Book a Call</BaseButton>
                     </div>
                 </div>
                 <div
@@ -49,10 +49,11 @@
                                     <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>
                                 <BaseButton
-                                    @click.prevent="navigateTo('/join-waitlist?m-header')"
-                                    colour="purple" 
+                                    @click.prevent="navigateTo('/book-call?m-header')"
+                                    colour="purple"
+                                    :icon="'fal fa-phone'"
                                     :fullWidth="true"
-                                >Join waitlist</BaseButton>
+                                >Book a Call</BaseButton>
                             </nav>
                         </div>
                     </div>

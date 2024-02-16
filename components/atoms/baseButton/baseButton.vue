@@ -8,11 +8,12 @@
         'purple' : props.colour == 'purple',
         'purple-invert' : props.colour == 'purple-invert',
         'full-width' : props.fullWidth == true,
+        'more-icon-spacing': props.fullWidth == true
     }"
         :type="props.submit ? 'submit' : ''"
     >
-        <i v-if="icon !== ''" :class="`${props.icon} icon`"></i>
         <slot />
+        <i v-if="icon !== ''" :class="`${props.icon} icon`"></i>
     </a>
 </template>
 
@@ -40,7 +41,6 @@ const props = defineProps({
 <style scoped lang="scss">
 @import './../../../style/_variables.scss';
 a.base-button {
-    text-transform: capitalize;
     text-decoration: none;
     padding: 12px 30px;
     font-size: 16px;
@@ -122,9 +122,12 @@ a.base-button {
 }
 
 .icon {
-  font-size: 25px;
-  position: relative;
-  top: 3px;
-  margin-right: 10px;
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+.more-icon-spacing .icon  {
+    margin-left: 25px;
 }
 </style>

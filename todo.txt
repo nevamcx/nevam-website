@@ -1,15 +1,17 @@
 Tasks:
 
 - privacy policy
-- demo button: change to "book a call"
+- social links: canva app
+- delia testimonial quote update
 
-- contact page: API for form
+- netlify forms setup
+
 - faq's page content
 - images: review
-
 - review all content on site
 
 - cloudflare cdn
+- cms
 
 
 Optional:

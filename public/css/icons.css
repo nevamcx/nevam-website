@@ -456,7 +456,9 @@
 .fa-play-circle:before{
     content:"\f144"
 }
-
+.fa-phone:before{
+    content:"\f095"
+}
 
 /* duotone icons */
 .fa-check:before{

@@ -58,8 +58,8 @@
                     <BaseButton
                         @click="store.$patch({ modal: true })"
                         :colour="'purple'"
-                        :icon="'fal fa-play-circle'"
-                    >Demo</BaseButton>
+                        :icon="'fal fa-phone'"
+                    >Book a Call</BaseButton>
                 </div>
             </div>
 

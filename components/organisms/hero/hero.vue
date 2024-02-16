@@ -13,14 +13,9 @@
                             <div class="cta-button">
 
                                 <BaseButton
-                                    @click="store.$patch({ modal: true })"
-                                    :colour="'black-invert'"
-                                    :icon="'fal fa-play-circle'"
-                                >Demo</BaseButton>
-
-                                <BaseButton
                                     :colour="'purple'"
-                                >Join waitlist</BaseButton>
+                                    :icon="'fal fa-phone'"
+                                >Book a Call</BaseButton>
 
                             </div>
                             <div class="tri-arrow">
