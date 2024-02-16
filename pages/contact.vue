@@ -65,6 +65,7 @@
                                 inputmode="text" 
                                 placeholder="Write your message"
                             ></textarea>
+                            <input type="hidden" name="form-name" value="contact">
                             <div v-if="field3error" class="error-text">{{ errorText }}</div>
                         </div>
                         <div class="col-12" v-if="field1error || field2error || field3error">
