@@ -36,7 +36,7 @@
                 </div>
 
                 <div v-if="!messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
-                    <form action="#" class="contact-form row" netlify>
+                    <form action="#" class="contact-form row" netlify data-netlify="true">
                         <div class="col-12">
                             <input
                                 v-model="field1" 
