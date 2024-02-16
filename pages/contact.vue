@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-12">
                             <BaseButton
-                                @click.prevent="triggerChecks(event)"
+                                @click.prevent="triggerChecks()"
                                 :colour="'purple'" 
                                 :fullWidth="store.mode == 'mobile' ? true : false"
                                 :submit="true"
@@ -124,14 +124,14 @@ const field1error = ref(false)
 const field2error = ref(false)
 const field3error = ref(false)
 
-const triggerChecks = async (event) => {
+const triggerChecks = async () => {
     checkEmptyFields()
     isEmailValid()
     if(!field1error.value && !field2error.value && !field3error.value) {
         store.$state.spinner = true
         messageSent.value = false
         await new Promise(resolve => setTimeout(resolve, 3000))
-        await sendEmail(event)
+        await sendEmail()
         messageSent.value = true
         window.scrollTo(0, 0)
         store.$state.spinner = false
@@ -152,15 +152,19 @@ const isEmailValid = () => {
     (field2.value.includes('@')) && (field2.value.includes('.')) ? field2error.value = false : field2error.value = true
 }
 
-const sendEmail = async (event) => {
-    const object = {
-        "name": field1.value,
-        "email": field2.value,
-        "message": field3.value
-    }
+const sendEmail = async () => {
 
-    const myForm = event.target
-    const formData = new FormData(myForm)
+    const form = new FormData()
+
+    form.append('name', field1.value)
+    form.append('email', field2.value)
+    form.append('message', field2.value)
+
+    // console.log('form: ', {
+    //     name: form.get('name'),
+    //     email: form.get('email'),
+    //     message: form.get('message')
+    // })
 
     try {
         await fetch('/', {
@@ -168,7 +172,7 @@ const sendEmail = async (event) => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams(formData).toString()
+            body: new URLSearchParams(form).toString()
         })
     }
     catch(e) {
