@@ -1,8 +1,6 @@
 import path from 'path'
 
 export default {
-
-  target: 'static',
   
   ssr: false,
 
