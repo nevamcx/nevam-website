@@ -36,7 +36,7 @@
                 </div>
 
                 <div v-if="!messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
-                    <form name="contact" class="contact-form row" netlify-honeypot="bot-field" netlify>
+                    <form name="contact" id="form" class="contact-form row" netlify-honeypot="bot-field" netlify>
                         <input type="hidden" name="form-name" value="contact" />
                         <div class="col-12">
                             <input
@@ -80,6 +80,7 @@
                         </div>
                         <div class="col-12">
                             <BaseButton
+                                :id="'form-submit'"
                                 @click.prevent="triggerChecks()"
                                 :colour="'purple'" 
                                 :fullWidth="store.mode == 'mobile' ? true : false"
@@ -158,17 +159,11 @@ const isEmailValid = () => {
 
 const sendEmail = async () => {
 
-    const form = new FormData()
+    const myForm = document.getElementById('form')
+    const formData = new FormData(myForm)
 
-    form.append('name', field1.value)
-    form.append('email', field2.value)
-    form.append('message', field2.value)
-
-    // console.log('form: ', {
-    //     name: form.get('name'),
-    //     email: form.get('email'),
-    //     message: form.get('message')
-    // })
+    // console.log('myForm: ', myForm)
+    // console.log('formData: ', Object.fromEntries(formData))
 
     try {
         await fetch('/', {
@@ -176,7 +171,7 @@ const sendEmail = async () => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams(form).toString()
+            body: new URLSearchParams(formData).toString()
         })
     }
     catch(e) {

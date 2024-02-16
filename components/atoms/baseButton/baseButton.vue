@@ -1,5 +1,5 @@
 <template>
-    <a :class="{
+    <a :id="props.id !== '' ? props.id : null" :class="{
         'base-button' : true,
         'red' : props.colour == 'red',
         'red-invert' : props.colour == 'red-invert',
@@ -19,6 +19,10 @@
 
 <script setup>
 const props = defineProps({
+    id: {
+        type: String,
+        default: ''
+    },
     colour: {
         type: String,
         default: ''
