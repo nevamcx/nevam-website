@@ -44,6 +44,7 @@
                                 type="text" 
                                 inputmode="text" 
                                 placeholder="Name"
+                                name="name"
                             >
                             <div v-if="field1error" class="error-text">{{ errorText }}</div>
                         </div>
@@ -54,6 +55,7 @@
                                 type="email" 
                                 inputmode="email" 
                                 placeholder="Email"
+                                name="email"
                             >
                             <div v-if="field2error" class="error-text">{{ errorText }}</div>
                         </div>
@@ -64,6 +66,7 @@
                                 type="text" 
                                 inputmode="text" 
                                 placeholder="Write your message"
+                                name="message"
                             ></textarea>
                             <input type="hidden" name="form-name" value="contact">
                             <div v-if="field3error" class="error-text">{{ errorText }}</div>
