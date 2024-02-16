@@ -161,7 +161,7 @@ const sendEmail = async () => {
         "message": field3.value
     }
     try {
-        await fetch('https://api.formium.io/submit/655ba0008716f20001e05741/contact-us', {
+        await fetch('/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
