@@ -36,7 +36,8 @@
                 </div>
 
                 <div v-if="!messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
-                    <form name="contact" class="contact-form row" netlify>
+                    <form name="contact" class="contact-form row" netlify-honeypot="bot-field" netlify>
+                        <input type="hidden" name="form-name" value="contact" />
                         <div class="col-12">
                             <input
                                 v-model="field1" 
@@ -68,7 +69,6 @@
                                 placeholder="Write your message"
                                 name="message"
                             ></textarea>
-                            <input type="hidden" name="form-name" value="contact">
                             <div v-if="field3error" class="error-text">{{ errorText }}</div>
                         </div>
                         <div class="col-12" v-if="field1error || field2error || field3error">
@@ -164,11 +164,11 @@ const sendEmail = async () => {
     form.append('email', field2.value)
     form.append('message', field2.value)
 
-    console.log('form: ', {
-        name: form.get('name'),
-        email: form.get('email'),
-        message: form.get('message')
-    })
+    // console.log('form: ', {
+    //     name: form.get('name'),
+    //     email: form.get('email'),
+    //     message: form.get('message')
+    // })
 
     try {
         await fetch('/', {
