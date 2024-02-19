@@ -10,6 +10,7 @@
     "analyse": "npx nuxi analyze"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.12.0",
     "@pinia/nuxt": "^0.4.6",
     "sass": "^1.69.5"
   },

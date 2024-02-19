@@ -37,9 +37,7 @@ export default {
     }
   },
 
-  modules: [
-    '@pinia/nuxt'
-  ],
+  modules: ['@pinia/nuxt', "@nuxt/content"],
 
   nitro: {
     output: {

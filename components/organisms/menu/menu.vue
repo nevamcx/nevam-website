@@ -16,6 +16,7 @@
                             <ul>
                                 <li><a @click.prevent="navigateTo('/')">Home</a></li>
                                 <li><a @click.prevent="navigateTo('/about')">About</a></li>
+                                <li><a @click.prevent="navigateTo('/blog')">Blog</a></li>
                                 <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                 <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                             </ul>
@@ -45,6 +46,7 @@
                                 <ul class="metismenu" id="mobile-menu">
                                     <li><a @click.prevent="navigateTo('/')">Home</a></li>
                                     <li><a @click.prevent="navigateTo('/about')">About</a></li>
+                                    <li><a @click.prevent="navigateTo('/blog')">Blog</a></li>
                                     <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                     <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>
@@ -83,10 +85,6 @@ const toggleMenu = async () => {
 @import './../style/_variables.scss';
 @import './menu.scss';
 .mobile-mode {
-    #main-menu .logo img {
-        height: 40px;
-        width: auto;
-    }
     #main-menu {
         a.base-button {
             padding: 15px 40px;
