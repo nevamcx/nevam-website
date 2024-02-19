@@ -1,22 +1,17 @@
-
-DONE:
--demo button text changes
--privacy policy
--social links
-- delia testimonial quote update
-
-
-
 Tasks:
-- netlify forms setup
 
+- push up faqs
+- blog template
+- all blogs template
+
+- faqs content now ready
+- miro website check list of items
+- calendly link for button
 - fix styling fails on reload issue
-- faq's page content
 - images: review
 - review all content on site
-
+- XML sitemap
 - cloudflare cdn
-- cms
 
 
 Optional:
