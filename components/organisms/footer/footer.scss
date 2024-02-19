@@ -4,12 +4,6 @@ footer {
     &.alt-footer-style {
         background-color: $black !important;
 
-        .footer-logo {
-            img {
-                filter: invert(1);
-            }
-        }
-
         .footer-widgets-wrapper, 
         .footer-bottom-wrapper {
             a, p, span {

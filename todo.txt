@@ -1,8 +1,9 @@
 Tasks:
 
-- push up faqs
+- (done) push up faqs
 - blog template
 - all blogs template
+- nevam logo
 
 - faqs content now ready
 - miro website check list of items
