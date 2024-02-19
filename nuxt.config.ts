@@ -54,5 +54,11 @@ export default {
         manifest[key].dynamicImports = []
       }
     }
+  },
+
+  router: {
+    options: {
+      strict: true
+    }
   }
 }
