@@ -26,13 +26,11 @@
         padding: 100px 100px;
     }
 }
-
 .mobile-mode {
     #blog {
         padding: 50px 15px;
     }
 }
-
 .bubble {
     color: #fff;
     border-radius: 25px;

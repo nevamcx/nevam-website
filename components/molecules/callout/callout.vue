@@ -1,5 +1,5 @@
 <template>
-    <section class="callout">
+    <section class="callout" :id="props.slug ? props.slug : null">
         <div class="container">
             <div class="heading">
                 <h2 v-if="!props.effect" v-html="props.heading"></h2>
