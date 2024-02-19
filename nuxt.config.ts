@@ -1,6 +1,8 @@
 import path from 'path'
 
 export default {
+
+  target: 'static',
   
   components: [
     {
