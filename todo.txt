@@ -4,9 +4,12 @@ Tasks:
 - (done) logo updated
 - (done) miro website check list: added comments
 - (done) fix styling fail on reload issue
+- (done) add favicon
+- (done) add sitemap
 
-- faqs content now ready
-- review all content on site
+- add in faq content
+- add in 2 blogs content
+- review all content & images on site
 - XML sitemap
 - cloudflare cdn
 

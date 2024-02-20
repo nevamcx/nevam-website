@@ -88,6 +88,9 @@ const toggleMenu = async () => {
 @import './menu.scss';
 .mobile-mode {
     #main-menu {
+        padding-left: 10px;
+        padding-right: 10px;
+
         a.base-button {
             padding: 15px 40px;
         }
