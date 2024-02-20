@@ -9,7 +9,7 @@
 
                             <h1 v-if="store.mode == 'mobile'">Identify <br><TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
 
-                            <p>with recommendations on how to fix them</p>
+                            <p>We'll auto-magically discover the issues in your digital marketing experience. Because the customer experience is paramount to your marketing success.</p>
                             <div class="cta-button">
 
                                 <BaseButton

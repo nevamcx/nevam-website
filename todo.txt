@@ -5,11 +5,11 @@ Tasks:
 - (done) logo updated
 - (done) miro website check list: added comments
 
-- faqs content now ready
-
 - fix styling fails on reload issue:
 https://github.com/nuxt/nuxt/issues/5049
 https://stackoverflow.com/questions/70099682/integrating-bootsrap-5-in-nuxt-3-and-vite
+
+- faqs content now ready
 
 - review all content on site
 - XML sitemap
@@ -25,4 +25,3 @@ Optional:
 Performance:
 - use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
 - use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
-
