@@ -3,6 +3,5 @@
 </template>
 
 <style>
-@import url('/css/icons.min.css');
-@import url('/css/bootstrap.min.css');
+@import url('/css/icons.min.css')
 </style>

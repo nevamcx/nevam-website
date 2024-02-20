@@ -21,6 +21,8 @@ export default {
     }
   },
 
+  css: ['~/assets/styles/main.scss'],
+
   app: {
 
     head: {
@@ -39,9 +41,7 @@ export default {
         { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png' },
         { rel: 'manifest', href: '/site.webmanifest' }
       ],
-      script: [
-        { async: true, src: '/js/bootstrap.min.js' }
-      ]
+      script: [{}]
     }
   },
 
