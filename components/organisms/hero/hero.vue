@@ -13,6 +13,7 @@
                             <div class="cta-button">
 
                                 <BaseButton
+                                    @click.prevent="navigateTo(config.public.calendly, { external: true })"
                                     :colour="'purple'"
                                     :icon="'fal fa-phone'"
                                 >Book a Call</BaseButton>
@@ -35,6 +36,7 @@
 <script setup>
 import { baseStore } from '@/stores'
 const store = baseStore()
+const config = useRuntimeConfig()
 
 const words = [
     { text: 'problems' },

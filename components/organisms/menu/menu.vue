@@ -23,10 +23,11 @@
                         </div>
                     </div>
                     <div class="header-right-element">
-                        <BaseButton 
+                        <BaseButton
+                            @click.prevent="navigateTo(config.public.calendly, { external: true })"
                             style="margin-left: 20px;"
-                            @click.prevent="navigateTo('/book-call?d-header')"
                             :colour="'black'"
+                            :icon="'fal fa-phone'"
                         >Book a Call</BaseButton>
                     </div>
                 </div>
@@ -51,7 +52,7 @@
                                     <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>
                                 <BaseButton
-                                    @click.prevent="navigateTo('/book-call?m-header')"
+                                    @click.prevent="navigateTo(config.public.calendly, { external: true })"
                                     colour="purple"
                                     :icon="'fal fa-phone'"
                                     :fullWidth="true"
@@ -70,6 +71,7 @@
 import { baseStore } from "@/stores"
 import { publish } from '@/events/events'
 
+const config = useRuntimeConfig()
 const store = baseStore()
 var menuState = ref(false)
 

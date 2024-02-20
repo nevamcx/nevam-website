@@ -15,6 +15,12 @@ export default {
     }
   ],
 
+  runtimeConfig: {
+    public: {
+      calendly: 'https://calendly.com/nevamcx/information-about-nevam-cx'
+    }
+  },
+
   app: {
 
     head: {

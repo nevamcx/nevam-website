@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="custom-center-item">
                     <BaseButton
-                        @click="store.$patch({ modal: true })"
+                        @click.prevent="navigateTo(config.public.calendly, { external: true })"
                         :colour="'purple'"
                         :icon="'fal fa-phone'"
                     >Book a Call</BaseButton>
@@ -70,6 +70,7 @@
 <script setup>
 import { baseStore } from '@/stores'
 const store = baseStore()
+const config = useRuntimeConfig()
 </script>
 
 <style lang="scss">

@@ -1,7 +1,7 @@
 Tasks:
 
 
-- calendly link for button
+- (done) calendly link for button
 - miro website check list of items
 
 - faqs content now ready
