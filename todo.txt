@@ -1,9 +1,8 @@
 Tasks:
 
-- (done) push up faqs
-- blog template
-- all blogs template
-- nevam logo
+- fix nuxt / netlify bug: 
+https://github.com/nuxt/content/issues/1798
+https://answers.netlify.com/t/nuxt-generate-deployed-but-wont-load-page-properly/82950/11
 
 - faqs content now ready
 - miro website check list of items

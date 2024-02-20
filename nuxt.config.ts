@@ -60,5 +60,11 @@ export default {
     options: {
       strict: true
     }
+  },
+
+  content: {
+    api: {
+      baseURL: '/blog_api/content'
+    }
   }
 }
