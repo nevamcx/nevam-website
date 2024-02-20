@@ -13,6 +13,11 @@
                             <div class="cta-button">
 
                                 <BaseButton
+                                    @click.prevent="navigateTo('/contact')"
+                                    :colour="'purple-invert'"
+                                >Message us</BaseButton>
+
+                                <BaseButton
                                     @click.prevent="navigateTo(config.public.calendly, { external: true })"
                                     :colour="'purple'"
                                     :icon="'fal fa-phone'"

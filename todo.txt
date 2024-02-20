@@ -2,7 +2,8 @@ Tasks:
 
 
 - (done) calendly link for button
-- miro website check list of items
+- (done) logo updated
+- (done) miro website check list: added comments
 
 - faqs content now ready
 

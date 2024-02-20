@@ -8,7 +8,7 @@
                         <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                             <h1>Expert support. Guaranteed.</h1>
                         </div>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">We support you through the entire process. Together we will implement our tools and ways of working to help you get the best CX. Discover insights and support with driving organisational change. We give you the tools, teach you how to use them and be 1 call away. Forever.</p>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">We support you through the entire process. Together we will implement our tools into your ways of working to help you get the best CX, discover insights and support with driving organisational change. We give you the tools, teach you how to use them and be 1 call away. Forever.</p>
                     </div>
                     <BaseButton
                         v-if="store.mode == 'desktop'"
