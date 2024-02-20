@@ -54,17 +54,5 @@ export default {
         manifest[key].dynamicImports = []
       }
     }
-  },
-
-  router: {
-    options: {
-      strict: true
-    }
-  },
-
-  content: {
-    api: {
-      baseURL: '/blog_api/content'
-    }
   }
 }
