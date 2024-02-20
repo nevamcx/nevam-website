@@ -60,5 +60,11 @@
     #blog {
         padding: 50px 15px;
     }
+    #callout-3 {
+        .heading h2 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
 }
 </style>

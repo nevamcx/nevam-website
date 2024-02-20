@@ -36,8 +36,7 @@
                     class="accordion-collapse collapse" 
                     :data-bs-parent="`#parent-accordion-${faqParentIndex}-left`"
                   >
-                    <div class="accordion-body">
-                      {{ faqChild.content }}
+                    <div class="accordion-body" v-html="faqChild.content">
                     </div>
                   </div>
                 </div>
@@ -66,8 +65,7 @@
                     class="accordion-collapse collapse" 
                     :data-bs-parent="`#parent-accordion-${faqParentIndex}-right`"
                   >
-                    <div class="accordion-body">
-                      {{ faqChild.content }}
+                    <div class="accordion-body" v-html="faqChild.content">
                     </div>
                   </div>
                 </div>
@@ -173,10 +171,14 @@ onMounted(() => {
 
 <style lang="scss">
 @import './../style/_variables.scss';
+#faqs {
+  h4.heading {
+      color: $black;
+  }
+}
 .desktop-mode {
   #faqs {
     h4.heading {
-      color: $grayDark;
       margin-top: 80px;
       margin-bottom: 10px;
     }
@@ -191,7 +193,6 @@ onMounted(() => {
 .mobile-mode {
   #faqs {
     h4.heading {
-      color: $grayDark;
       margin-top: 60px;
       margin-bottom: 10px;
     }
@@ -203,5 +204,4 @@ onMounted(() => {
     border-bottom: 1px solid;
   }
 }
-
 </style>

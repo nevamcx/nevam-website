@@ -1,14 +1,15 @@
 Tasks:
 
-- fix nuxt / netlify bug: 
-https://github.com/nuxt/content/issues/1798
-https://answers.netlify.com/t/nuxt-generate-deployed-but-wont-load-page-properly/82950/11
+
+- calendly link for button
+- miro website check list of items
 
 - faqs content now ready
-- miro website check list of items
-- calendly link for button
-- fix styling fails on reload issue
-- images: review
+
+- fix styling fails on reload issue:
+https://github.com/nuxt/nuxt/issues/5049
+https://stackoverflow.com/questions/70099682/integrating-bootsrap-5-in-nuxt-3-and-vite
+
 - review all content on site
 - XML sitemap
 - cloudflare cdn
