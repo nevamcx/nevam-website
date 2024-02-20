@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 #faqs-container {
     background-color: $white3;
 }

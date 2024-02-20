@@ -101,6 +101,6 @@ onMounted(() => {
 </style>
 
 <style lang="scss">
-@import './../style/_variables.scss';
-@import './../style/style.scss';
+@import '~/assets/style/_variables.scss';
+@import '~/assets/style/main.scss';
 </style>

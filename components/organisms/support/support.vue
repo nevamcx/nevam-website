@@ -40,7 +40,7 @@ const store = baseStore()
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 #support {
     background-color: $white3;
 

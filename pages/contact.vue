@@ -181,8 +181,8 @@ const sendEmail = async () => {
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
-@import './../style/pages/contact.scss';
+@import '~/assets/style/_variables.scss';
+@import '~/assets/style/pages/contact.scss';
 #contact-us {
     background-color: $white3;
 

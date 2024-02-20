@@ -170,7 +170,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 #faqs {
   h4.heading {
       color: $black;

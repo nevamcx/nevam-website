@@ -1,24 +1,17 @@
 Tasks:
 
-
 - (done) calendly link for button
 - (done) logo updated
 - (done) miro website check list: added comments
-
-- fix styling fails on reload issue:
-https://github.com/nuxt/nuxt/issues/5049
-https://stackoverflow.com/questions/70099682/integrating-bootsrap-5-in-nuxt-3-and-vite
+- (done) fix styling fail on reload issue
 
 - faqs content now ready
-
 - review all content on site
 - XML sitemap
 - cloudflare cdn
 
 
 Optional:
-- change to use assets dir
-- import all bootstrap modules
 - treeshake css
 
 

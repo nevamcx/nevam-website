@@ -192,7 +192,7 @@
 </template>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 #privacy-policy {
     h3 {
         margin-top: 60px;

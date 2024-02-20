@@ -20,7 +20,7 @@
 </template>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 .desktop-mode {
     #blog {
         padding: 100px 100px;

@@ -29,7 +29,7 @@ const store = baseStore()
 </script>
 
 <style lang="scss">
-@import './style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 .desktop-mode {
     #page-404 {
         padding-top: 50px;

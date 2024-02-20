@@ -43,7 +43,7 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@import './../../../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 a.base-button {
     text-decoration: none;
     padding: 12px 30px;

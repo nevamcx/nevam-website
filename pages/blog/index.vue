@@ -26,7 +26,7 @@
 </template>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 #blog {
     .blog-card {
         margin-bottom: 50px;

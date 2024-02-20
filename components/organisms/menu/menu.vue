@@ -84,7 +84,7 @@ const toggleMenu = async () => {
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 @import './menu.scss';
 .mobile-mode {
     #main-menu {

@@ -18,7 +18,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 section #spinner {
     z-index: 9999999;
 }

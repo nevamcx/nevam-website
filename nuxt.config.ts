@@ -21,7 +21,7 @@ export default {
     }
   },
 
-  css: ['~/assets/styles/main.scss'],
+  css: ['~/assets/style/main.scss'],
 
   app: {
 

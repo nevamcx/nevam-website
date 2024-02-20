@@ -99,7 +99,7 @@ const getClassesB = () => {
 </script>
 
 <style lang="scss">
-@import './../style/_variables.scss';
+@import '~/assets/style/_variables.scss';
 .testimonial-card {
 
     .text-1 .linkedin i {
