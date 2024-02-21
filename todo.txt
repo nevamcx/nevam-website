@@ -1,17 +1,10 @@
 Done:
-- (done) button colour updates
-- (done) blue background for callouts
-- (done) delia image replace
-- (done) support image make human
-- (done) thank-you page for email sent
-- (done) add in faq content (brett to re-group)
 
 
 In progress:
-
+- pagespeed issues
 
 Tasks:
-- site performance (cdn)
 - meta blog tag gets stuck in tab name
 - review all content & images on site
 
