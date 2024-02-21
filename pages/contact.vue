@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div v-if="!messageSent" class="row intro-text">
+            <div class="row intro-text">
                 <div class="col-xl-12 mb-3">
                     Let us know if there's something we can help you with, simply fill out some of your details below to contact us. Our team will reply to your message shortly!
                 </div>
@@ -20,7 +20,7 @@
 
             <div class="row">
 
-                <div v-if="!messageSent" class="col-lg-6 pe-lg-4 order-2 order-lg-1">
+                <div class="col-lg-6 pe-lg-4 order-2 order-lg-1">
 
                     <div v-if="store.mode == 'mobile'" class="row mt-3 mb-4">
                         <h3>Our location:</h3>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
 
-                <div v-if="!messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
+                <div class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
                     <form name="contact" id="form" class="contact-form row" netlify-honeypot="bot-field" netlify>
                         <input type="hidden" name="form-name" value="contact" />
                         <div class="col-12">
@@ -89,18 +89,6 @@
                         </div>
                     </form>
                 </div>
-
-                <div v-if="messageSent" class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
-                    <div class="row">
-                        <div class="col-12">
-                            <InfoCard
-                                type="info"
-                                heading="Message sent"
-                                text="Thanks for contacting us, we're onto it! We'll process your message as soon as possible."
-                            />
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div v-if="store.mode == 'desktop'" class="row mt-5">
@@ -119,7 +107,6 @@ import { baseStore } from "@/stores"
 const store = baseStore()
 
 const errorText = 'Please update this field'
-const messageSent = ref(false)
 
 const field1 = ref('') // name
 const field2 = ref('') // email
@@ -134,11 +121,9 @@ const triggerChecks = async () => {
     isEmailValid()
     if(!field1error.value && !field2error.value && !field3error.value) {
         store.$state.spinner = true
-        messageSent.value = false
         await new Promise(resolve => setTimeout(resolve, 3000))
         await sendEmail()
-        messageSent.value = true
-        window.scrollTo(0, 0)
+        navigateTo('/thank-you')
         store.$state.spinner = false
     }
 }
