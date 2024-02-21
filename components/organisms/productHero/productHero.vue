@@ -15,7 +15,7 @@
 
                 <div class="col-lg-5 col-xl-5 offset-xl-1 pe-xl-3 col-12 order-2 order-lg-2">
                     <div class="block-img wow fadeInLeft" data-wow-duration="1.1s">
-                        <img src="/images/placeholder.png" alt="" class="image-radius">
+                        <img src="/images/placeholder.webp" alt="" class="image-radius">
                     </div>
                 </div>
 

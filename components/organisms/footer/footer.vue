@@ -10,7 +10,7 @@
                                     @click.prevent="store.mode == 'mobile' ? navigateTo('/?m-footer-logo') : navigateTo('/?d-footer-logo')"
                                     class="footer-logo d-block"
                                 >
-                                    <img src="/images/logo-dark.png" alt="Logo image">
+                                    <img src="/images/logo-dark.webp" alt="Logo image">
                                 </a>
                                 <p>We are on a mission to organise the world of digital marketing in one place, with one login.</p>
                             </div>

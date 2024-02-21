@@ -68,7 +68,7 @@ const testimonials = [
         role: "CEO",
         linkedin: "https://www.linkedin.com/in/samhussey",
         description: "<p>The best thing I got out of NEVAM CX was clarity and direction around some of the key things that have been huge pain points but we were just not getting on top of them quick enough.</p><br><p>NEVAM CX was able to go through it and pin point the exact areas that were causing customer frustration on our website and platform. It created a pathway for us to fix the issues that could be causing some customers to leave our platform and given me a roadmap to improve them.</p>",
-        image: "/images/clients/sam-hussey.jpg",
+        image: "/images/clients/sam-hussey.webp",
         position: "left"
     },
     {
@@ -79,7 +79,7 @@ const testimonials = [
         role: "Founder",
         linkedin: "https://www.linkedin.com/in/deliasuteja",
         description: "<p>I am confident in brand building and I have a great UX team, but where NEVAM CX differentiated was bridging the gap between the experience I wanted customers to have and the actual end to end flow.</p><br><p>The transparency of seeing it in one platform allows me to see opportunities I wouldn’t have noticed prior. I was able to easily identify the gaps and update what needed to be present so I could better brief my UX team.</p>",
-        image: "/images/clients/delia-suteja-yeboah.jpg",
+        image: "/images/clients/delia-suteja-yeboah.webp",
         position: "right"
     }
 ]
