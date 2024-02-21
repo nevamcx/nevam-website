@@ -82,83 +82,79 @@
 <script setup>
 const faqs = [
   {
-    heading: 'Some FAQ heading 1',
+    heading: 'About NEVAM',
     faqsLeft: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "Why the NEVAM name?",
+        content: "When you flip it around, you get Maven. Coined by Malcolm Gladwell in his book 'The Tipping Point', Mavens are the savvy information brokers, adept at sharing and trading their knowledge. Nevam CX, on the other hand, forms the backbone of a brand's information system. See the clever connection?"
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "How did NEVAM start?",
+        content: "Well, isn't this a coincidence? We've actually penned a whole 'About Us' section just for your entertainment! Dive in for a bit of light reading on our <a id='contact-link' href='/about'>about page</a>."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "Is NEVAM an analytics tool?",
+        content: "While traditional analytics depend on tagging and coding to extract data, presenting it through numbers, charts, and graphs, NEVAM takes a different approach. It scans your content and channel code directly, providing visual representations of the issues encountered. This method offers a more intuitive understanding of the problems you're facing. In analytics, users typically guide the search for insights. However, NEVAM's Insights Finder operates differently—it draws from the multitude of issues we've encountered in our customers' digital experiences. This means you gain from the collective wisdom amassed over time, benefiting from the shared learnings indefinitely."
       }
     ],
     faqsRight: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "Is NEVAM a SAAS or consultancy?",
+        content: "We utilize both approaches. While our platform evolves, some insights are discovered manually by our team and then incorporated into the algorithm to enhance its capabilities. This collaborative effort involves working with you to identify problems, which in turn teaches the platform to autonomously detect similar issues in the future. It's a continuous cycle of improvement, where human expertise and machine learning complement each other to refine our capabilities."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "Who can use Nevam CX?",
+        content: "Anyone who has to manage or interact with the customer experience digitally. UX professionals: Access the latest pages directly instead of relying on outdated Miro boards. Media teams: Review downstream experiences of their ads and identify optimization opportunities. Email marketers: Monitor real-time email sends, traffic destinations, and rendering accuracy. CMOs and Executives: Stay informed about all activities and maintain control over the customer experience. Campaign managers: Verify the accurate deployment of campaigns. Analytics specialists: Identify opportunities for better tagging and report inclusion of page elements. Content managers: Enforce governance over copy and image assets. Developers: Understand issues without the need for screenshots."
       }
     ]
   },
   {
-    heading: 'Some FAQ heading 2',
+    heading: 'Functionality and features',
     faqsLeft: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "How do we identify problems cross channel?",
+        content: "Many tools are limited to specific channels, making it challenging to identify issues that might occur across various channels in the customer experience journey. Even with extensive data resources like data lakes, data warehouses, or CDPs, pinpointing problems can be daunting. You either have to guide the algorithm on what to look for or sift through vast amounts of data to locate them. NEVAM CX eliminates this data barrier by scanning all content across channels. Our built-in Insights Finder does the heavy lifting, proactively seeking out and flagging problems for you, streamlining the process and saving you time and effort."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "What types of problems do we identify?",
+        content: "The list is extensive, but here are a few examples: Images not displaying correctly. Broken links. Outdated templates, colors, or fonts in use. Unanticipated emails being sent out. Locating outdated Terms and Conditions. Unintentional dead ends or loops. Media directing to messaging that doesn't match the site. Duplicate tags leading to incorrect metrics."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "How long does it take to get a full report?",
+        content: "Initially, we'll need to gather information about the platforms you use for marketing. Then, we'll collaborate closely with your team to seamlessly integrate with each tool. The timeline for implementation varies depending on the accessibility of different platforms, ranging from a couple of days to several weeks."
       }
     ],
     faqsRight: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "What do I actually see in NEVAM?",
+        content: "We've developed a comprehensive view that enables brands to visualize all their content across various channels organized into swim lanes. With a touch of personalization, content can be seamlessly transitioned into vertical swim lanes based on specific life stages. This setup empowers users to effortlessly navigate through content categorized by life stage or campaign, across different channels, all within a single interface."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "Are there examples of reports I can see?",
+        content: "Certainly! We have compelling customer case studies, but due to privacy considerations, our clients prefer that we share them directly with potential customers rather than publishing them on our website. Feel free to reach out to us, and we'll be delighted to provide you with a personalized walkthrough."
       }
     ]
   },
   {
-    heading: 'Some FAQ heading 3',
+    heading: 'Onboarding',
     faqsLeft: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "What is the process of becoming a customer?",
+        content: "Having been marketers ourselves, we understand the importance of alleviating anxiety. That's why we created NEVAM. We don't simply provide a link and hope for the best; instead, we take a proactive approach: We kick things off with a straightforward exercise to identify the channels and platforms utilized throughout the customer experience. Collaboratively, we delve into your organization's major pain points to ensure that NEVAM's presentation aligns with your team's preferences for adoption. We then assist in integrating NEVAM into each of your tools, either working alongside you or handling the process entirely. Our goal is to ensure minimal disruption to your daily operations, allowing you to focus on your core responsibilities while we manage the heavy lifting. Once all integrations are in place and content is seamlessly flowing through the system, we categorize and organize content according to its respective life stage or campaign for improved visibility. We establish a meeting schedule that suits your team's needs, convening to review the insights uncovered by the tool and your team collaboratively. Our support continues until you feel confident and self-sufficient in utilizing NEVAM autonomously."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "How do I become a customer?",
+        content: "When you're prepared, simply inform one of our team members that you've been in touch, or click the 'Book a call' button. We'll then arrange an initial call to delve into your platform requirements and take it from there."
       }
     ],
     faqsRight: [
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "How much does it cost?",
+        content: "The cost depends on a few factors: the number of integrated channels and the frequency of insights you require. We're more than happy to provide you with a quote, with no obligation attached. Simply <a id='contact-link' href='/about'>contact us</a> for more info."
       },
       {
-        title: "Here is a FAQ question?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title: "What payment methods are available?",
+        content: "We accept direct payments and transfers, offering billing options annually or upfront based on your preference."
       }
     ]
   }
