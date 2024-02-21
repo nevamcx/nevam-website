@@ -1,15 +1,14 @@
 Done:
 - (done) colour updates
+- (done) blue background for callouts
+- (done) delia image replace
+- (done) support image make human
 
 
 In progress:
 
 
-
 Tasks:
-- blue background for callouts
-- call support image make human
-- delia new image
 - make thank-you page for email sent
 
 - site performance (cdn)
