@@ -14,12 +14,12 @@
 
                                 <BaseButton
                                     @click.prevent="navigateTo('/contact')"
-                                    :colour="'purple-invert'"
+                                    :colour="'blue-invert'"
                                 >Message us</BaseButton>
 
                                 <BaseButton
                                     @click.prevent="navigateTo(config.public.calendly, { external: true })"
-                                    :colour="'purple'"
+                                    :colour="'blue'"
                                     :icon="'fal fa-phone'"
                                 >Book a Call</BaseButton>
 

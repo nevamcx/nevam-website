@@ -82,7 +82,7 @@
                             <BaseButton
                                 :id="'form-submit'"
                                 @click.prevent="triggerChecks()"
-                                :colour="'purple'" 
+                                :colour="'blue'" 
                                 :fullWidth="store.mode == 'mobile' ? true : false"
                                 :submit="true"
                             >Send</BaseButton>

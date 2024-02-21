@@ -1,44 +1,48 @@
-$white: #FFF;
+/* new colours */
+$black: #000000;
+$teal: #7db5c4;
+$blueNavy1: #003c6b;
+$blueNavy2: #03467c;
+$greenDark: #196468;
+$blue: #216ad9;
+$blueSteelDark: #1d4355;
+$blueMedium: #289dd2;
+$blueLight: #7ac9fa;
+$gray: #dde1e4;
+$beigeLight: #f2f1ec;
+$offWhite: #f7f7f7;
+$white: #ffffff;
+$yellow: #ffe435;
+
+/* old colours */
 $white2: #ffffffb3;
 $white3: #f4f4f4;
 $white4: rgba(255, 255, 255, 0.7);
 
-$black: #02021E;
+// $black: #02021E;
 
 $purple: #6941c6;
 
-$gray: #f4f7fd;
+// $gray: #f4f7fd;
 $grayLight: #eee;
 $grayDark: #617686;
 
 $red: #F54748;
 $redLight: #f8d7da;
 
-$base: #1085A9;
-$blue: #01A0E1;
+// $blue: #01A0E1;
 $blueLight: #cff4fc;
-$blueMain: #1A1AFF;
+// $blueMain: #1A1AFF;
 
-$pink: #FF681B;
 $info: #FAA21A;
-$green: #32C072;
 
-$yellow: #FFD44B;
+// $yellow: #FFD44B;
 $yellowLight1: #fff3cd;
-$yellowLight2: #ffe66d;
-$yellowDark: #593c0e;
 
-$primary: #8DC63F;
-$secondary: #F47102;
-
-$section-bg: rgba($black, 0.02);
-$section-bg-black: $black;
-$section-bg-2 : #E5E5E5;
-$theme-color: #1A1AFF;
+$theme-color: $blue;
 $second-color: #080F1E;
 $heading-color: $black;
-$sticky-bg-1: $theme-color;
-$box-shadow: 0px 15px 40px 0px rgba(109, 109, 109, 0.06);
+
 
 @mixin border-radius($r) {
     border-radius: $r;

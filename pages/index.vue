@@ -67,7 +67,7 @@ const testimonials = [
         url: "https://www.deployable.co",
         role: "CEO",
         linkedin: "https://www.linkedin.com/in/samhussey",
-        description: "<p>The best thing I got out of NEVAM CX was clarity and direction around some of the key things that have been huge pain points for us, but we were just not getting on top of them quick enough.</p><br><p>NEVAM CX was able to go through it and pin point the exact areas that were causing customer frustration on our website and platform. It created a pathway for us to fix the issues that could be causing some customers to leave our platform and given me a roadmap to improve them.</p>",
+        description: "<p>The best thing I got out of NEVAM CX was clarity and direction around some of the key things that have been huge pain points but we were just not getting on top of them quick enough.</p><br><p>NEVAM CX was able to go through it and pin point the exact areas that were causing customer frustration on our website and platform. It created a pathway for us to fix the issues that could be causing some customers to leave our platform and given me a roadmap to improve them.</p>",
         image: "/images/clients/sam-hussey.jpg",
         position: "left"
     },

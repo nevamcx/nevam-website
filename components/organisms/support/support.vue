@@ -13,7 +13,7 @@
                     <BaseButton
                         v-if="store.mode == 'desktop'"
                         @click.prevent="navigateTo('/contact')"
-                        :colour="'purple'" 
+                        :colour="'blue'" 
                         :fullWidth="store.mode == 'mobile' ? true : false"
                     >Contact us</BaseButton>
                 </div>
@@ -27,7 +27,7 @@
             <BaseButton
                 v-if="store.mode == 'mobile'"
                 @click.prevent="navigateTo('/contact')"
-                :colour="'purple'" 
+                :colour="'blue'" 
                 :fullWidth="store.mode == 'mobile' ? true : false"
             >Contact us</BaseButton>
         </div>

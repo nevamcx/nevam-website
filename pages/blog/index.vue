@@ -39,10 +39,10 @@
         margin-right: 15px;
     }
     .date {
-        background-color: $purple;
+        background-color: $blue;
     }
     .category {
-        background-color: $blue;
+        background-color: $blueMedium;
     }
 }
 .desktop-mode {

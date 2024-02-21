@@ -53,7 +53,7 @@
                                 </ul>
                                 <BaseButton
                                     @click.prevent="navigateTo(config.public.calendly, { external: true })"
-                                    colour="purple"
+                                    colour="blue"
                                     :icon="'fal fa-phone'"
                                     :fullWidth="true"
                                 >Book a Call</BaseButton>

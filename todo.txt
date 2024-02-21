@@ -1,22 +1,24 @@
+Done:
+- (done) colour updates
+
+
+In progress:
+
+
+
 Tasks:
+- blue background for callouts
+- call support image make human
+- delia new image
+- make thank-you page for email sent
 
-- (done) calendly link for button
-- (done) logo updated
-- (done) miro website check list: added comments
-- (done) fix styling fail on reload issue
-- (done) add favicon
-- (done) add sitemap
-
-- add in faq content
-- add in 2 blogs content
+- site performance (cdn)
+- meta blog tag gets stuck in tab name
+- add in faq content (brett to re-group)
 - review all content & images on site
-- XML sitemap
-- cloudflare cdn
-
 
 Optional:
 - treeshake css
-
 
 Performance:
 - use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/

@@ -57,7 +57,7 @@
                 <div class="custom-center-item">
                     <BaseButton
                         @click.prevent="navigateTo(config.public.calendly, { external: true })"
-                        :colour="'purple'"
+                        :colour="'blue'"
                         :icon="'fal fa-phone'"
                     >Book a Call</BaseButton>
                 </div>

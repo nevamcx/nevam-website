@@ -23,7 +23,7 @@ footer {
 
         a {
             &:hover {
-                color: $purple !important;
+                color: $blue !important;
             }
         }
     }
@@ -88,7 +88,7 @@ footer {
                         margin-top: 10px;
 
                         &:hover {
-                            color: $blueMain;
+                            color: $theme-color;
                         }
                     }
                 }

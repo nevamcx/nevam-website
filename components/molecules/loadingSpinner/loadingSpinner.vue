@@ -49,7 +49,7 @@ section #spinner {
         border-radius: 50%;
         animation: spin .92s infinite linear;
         border: 8px solid #e1e1e1;
-        border-left: 8px solid $blueMain;
+        border-left: 8px solid $theme-color;
         width: 110px;
         height: 110px;
         margin: auto;

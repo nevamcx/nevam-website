@@ -5,8 +5,8 @@
         'red-invert' : props.colour == 'red-invert',
         'black' : props.colour == 'black',
         'black-invert' : props.colour == 'black-invert',
-        'purple' : props.colour == 'purple',
-        'purple-invert' : props.colour == 'purple-invert',
+        'blue' : props.colour == 'blue',
+        'blue-invert' : props.colour == 'blue-invert',
         'full-width' : props.fullWidth == true,
         'more-icon-spacing': props.fullWidth == true
     }"
@@ -80,21 +80,21 @@ a.base-button {
     opacity: 0.6;
 }
 
-/* purple */
-.purple {
-    background-color: $purple;
+/* blue */
+.blue {
+    background-color: $blue;
     color: $white !important;
-    border: 2px solid $purple;
+    border: 2px solid $blue;
 }
-.purple:hover {
+.blue:hover {
     filter: brightness(0.8);
 }
-.purple-invert {
+.blue-invert {
     background-color: $white;
-    color: $purple !important;
-    border: 2px solid $purple;
+    color: $blue !important;
+    border: 2px solid $blue;
 }
-.purple-invert:hover {
+.blue-invert:hover {
     opacity: 0.6;
 }
 
