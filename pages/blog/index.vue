@@ -11,7 +11,7 @@
                 <slot>
                     <ContentList path="/blog" v-slot="{ list }">
                         <div v-for="blog in list" :key="blog._path" class="blog-card">
-                            <a @click.prevent="navigateTo(blog._path)" class="blog-link"><h4>{{ blog.title }}</h4></a>
+                            <a @click.prevent="navigateTo(blog._path)" :aria-label="`Navigate to the ${blog.title} article`" class="blog-link"><h4>{{ blog.title }}</h4></a>
                             <div class="blog-intro">{{ blog.intro }}</div>
                             <div>
                                 <span class="date bubble">{{ blog.date }}</span>

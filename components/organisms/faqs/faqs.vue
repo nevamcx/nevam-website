@@ -7,7 +7,7 @@
             <h2>Frequently asked questions:</h2>
           </div>
           <div class="section-content">
-            <p>Below are some of our most asked questions, and also some interesting facts about us. Also if you're not able to find an answer to a question you have, please feel to send us a message on our <a id="contact-link" @click.prevent="navigateTo('/contact')">contact page.</a></p>
+            <p>Below are some of our most asked questions, and also some interesting facts about us. Also if you're not able to find an answer to a question you have, please feel to send us a message on our <a id="contact-link" aria-label="Contact us page" @click.prevent="navigateTo('/contact')">contact page.</a></p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const faqs = [
       },
       {
         title: "How did NEVAM start?",
-        content: "Well, isn't this a coincidence? We've actually penned a whole 'About Us' section just for your entertainment! Dive in for a bit of light reading on our <a id='contact-link' href='/about'>about page</a>."
+        content: "Well, isn't this a coincidence? We've actually penned a whole 'About Us' section just for your entertainment! Dive in for a bit of light reading on our <a id='contact-link' aria-label='About us page' href='/about'>about page</a>."
       },
       {
         title: "Is NEVAM an analytics tool?",
@@ -150,7 +150,7 @@ const faqs = [
     faqsRight: [
       {
         title: "How much does it cost?",
-        content: "The cost depends on a few factors: the number of integrated channels and the frequency of insights you require. We're more than happy to provide you with a quote, with no obligation attached. Simply <a id='contact-link' href='/about'>contact us</a> for more info."
+        content: "The cost depends on a few factors: the number of integrated channels and the frequency of insights you require. We're more than happy to provide you with a quote, with no obligation attached. Simply <a id='contact-link' aria-label='Contact us page' href='/contact'>contact us</a> for more info."
       },
       {
         title: "What payment methods are available?",

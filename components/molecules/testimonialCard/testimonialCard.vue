@@ -15,7 +15,7 @@
 
             <div class="text-1">
                 <h2 :class="`name d-inline ${props.longName ? 'smaller-font' : ''}`">{{ props.name }}</h2>
-                <a :href="props.linkedin" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
+                <a :href="props.linkedin" target="_blank" class="linkedin d-inline" :aria-label="`LinkedIn profile for ${props.name}`"><i class="fab fa-linkedin social-icon"></i></a>
             </div>
 
             <div class="text-2">

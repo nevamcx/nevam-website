@@ -1,15 +1,18 @@
 <template>
-    <a :id="props.id !== '' ? props.id : null" :class="{
-        'base-button' : true,
-        'red' : props.colour == 'red',
-        'red-invert' : props.colour == 'red-invert',
-        'black' : props.colour == 'black',
-        'black-invert' : props.colour == 'black-invert',
-        'blue' : props.colour == 'blue',
-        'blue-invert' : props.colour == 'blue-invert',
-        'full-width' : props.fullWidth == true,
-        'more-icon-spacing': props.fullWidth == true
-    }"
+    <a 
+        :id="props.id !== '' ? props.id : null" 
+        :class="{
+            'base-button' : true,
+            'red' : props.colour == 'red',
+            'red-invert' : props.colour == 'red-invert',
+            'black' : props.colour == 'black',
+            'black-invert' : props.colour == 'black-invert',
+            'blue' : props.colour == 'blue',
+            'blue-invert' : props.colour == 'blue-invert',
+            'full-width' : props.fullWidth == true,
+            'more-icon-spacing': props.fullWidth == true
+        }"
+        :aria-label="`${slot} button`"
         :type="props.submit ? 'submit' : ''"
     >
         <slot />
@@ -18,6 +21,10 @@
 </template>
 
 <script setup>
+import { useSlots } from 'vue'
+const slots = useSlots()
+const slot = slots.default()[0].children
+
 const props = defineProps({
     id: {
         type: String,

@@ -14,11 +14,11 @@
                     <div class="menu-wrap">
                         <div class="main-menu">
                             <ul>
-                                <li><a @click.prevent="navigateTo('/')">Home</a></li>
-                                <li><a @click.prevent="navigateTo('/about')">About</a></li>
-                                <li><a @click.prevent="navigateTo('/blog')">Blog</a></li>
-                                <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
-                                <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
+                                <li><a aria-label="Navigate to home page" @click.prevent="navigateTo('/')">Home</a></li>
+                                <li><a aria-label="Navigate to the About page" @click.prevent="navigateTo('/about')">About</a></li>
+                                <li><a aria-label="Navigate to the Blog page" @click.prevent="navigateTo('/blog')">Blog</a></li>
+                                <li><a aria-label="Navigate to the FAQs page" @click.prevent="navigateTo('/faqs')">FAQs</a></li>
+                                <li><a aria-label="Navigate to the Contact page" @click.prevent="navigateTo('/contact')">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -45,11 +45,11 @@
                             </button>
                             <nav class="sidebar-nav">
                                 <ul class="metismenu" id="mobile-menu">
-                                    <li><a @click.prevent="navigateTo('/')">Home</a></li>
-                                    <li><a @click.prevent="navigateTo('/about')">About</a></li>
-                                    <li><a @click.prevent="navigateTo('/blog')">Blog</a></li>
-                                    <li><a @click.prevent="navigateTo('/faqs')">FAQs</a></li>
-                                    <li><a @click.prevent="navigateTo('/contact')">Contact</a></li>
+                                    <li><a aria-label="Navigate to home page" @click.prevent="navigateTo('/')">Home</a></li>
+                                    <li><a aria-label="Navigate to the About page" @click.prevent="navigateTo('/about')">About</a></li>
+                                    <li><a aria-label="Navigate to the Blog page" @click.prevent="navigateTo('/blog')">Blog</a></li>
+                                    <li><a aria-label="Navigate to the FAQs page" @click.prevent="navigateTo('/faqs')">FAQs</a></li>
+                                    <li><a aria-label="Navigate to the Contact page" @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>
                                 <BaseButton
                                     @click.prevent="navigateTo(config.public.calendly, { external: true })"

@@ -8,7 +8,7 @@
                             <div class="about-us-widget">
                                 <a 
                                     @click.prevent="store.mode == 'mobile' ? navigateTo('/?m-footer-logo') : navigateTo('/?d-footer-logo')"
-                                    class="footer-logo d-block"
+                                    class="footer-logo d-block" aria-label="Navigate to home page"
                                 >
                                     <img src="/images/logo-dark.webp" alt="Company logo">
                                 </a>
@@ -22,13 +22,13 @@
                                 <h5>Company</h5>
                             </div>
                             <ul>
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/about?m-footer-link') : navigateTo('/about?d-footer-link')">About</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/about?m-footer-link') : navigateTo('/about?d-footer-link')" aria-label="About us page">About</a></li>
 
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/contact?m-footer-link') : navigateTo('/contact?d-footer-link')">Contact</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/contact?m-footer-link') : navigateTo('/contact?d-footer-link')" aria-label="Contact us page">Contact</a></li>
 
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/faqs?m-footer-link') : navigateTo('/faqs?d-footer-link')">FAQs</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/faqs?m-footer-link') : navigateTo('/faqs?d-footer-link')" aria-label="FAQ page">FAQs</a></li>
 
-                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/privacy?m-footer-link') : navigateTo('/privacy?d-footer-link')">Privacy policy</a></li>
+                                <li><a @click.prevent="store.mode == 'mobile' ? navigateTo('/privacy?m-footer-link') : navigateTo('/privacy?d-footer-link')" aria-label="Privacy policy page">Privacy policy</a></li>
                             </ul>
                         </div>
                     </div>
@@ -39,11 +39,11 @@
                                 <h5>Social</h5>
                             </div>
                             <ul>
-                                <li><a href="https://www.instagram.com/nevamcx"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
+                                <li><a href="https://www.instagram.com/nevamcx" aria-label="Instagram page"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
 
-                                <li><a href="https://www.facebook.com/nevamcx"><i class="fab fa-facebook social-icon"></i>Facebook</a></li>
+                                <li><a href="https://www.facebook.com/nevamcx" aria-label="Facebook page"><i class="fab fa-facebook social-icon"></i>Facebook</a></li>
 
-                                <li><a href="https://www.linkedin.com/company/nevam-cx"><i class="fab fa-linkedin social-icon"></i>LinkedIn</a></li>
+                                <li><a href="https://www.linkedin.com/company/nevam-cx" aria-label="LinkedIn page"><i class="fab fa-linkedin social-icon"></i>LinkedIn</a></li>
                             </ul>
                         </div>
                     </div>

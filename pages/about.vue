@@ -30,7 +30,7 @@
                         <div class="block-contents">
                             <div class="text-1">
                                 <h2 class="name d-inline">Brittany Fox</h2>
-                                <a href="https://www.linkedin.com/in/brittanynfox" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
+                                <a href="https://www.linkedin.com/in/brittanynfox" aria-label="Navigate Brittany's LinkedIn" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
                             </div>
                             <div class="text-2">
                                 <h4 class="name d-inline">Founder, CEO</h4>
@@ -62,7 +62,7 @@
                         <div class="block-contents">
                             <div class="text-1">
                                 <h2 class="name d-inline">Brett Spradbury</h2>
-                                <a href="https://www.linkedin.com/in/brett-spradbury" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
+                                <a href="https://www.linkedin.com/in/brett-spradbury" aria-label="Navigate Brett's LinkedIn" target="_blank" class="linkedin d-inline"><i class="fab fa-linkedin social-icon"></i></a>
                             </div>
                             <div class="text-2">
                                 <h4 class="name d-inline">Founder, CTO</h4>
