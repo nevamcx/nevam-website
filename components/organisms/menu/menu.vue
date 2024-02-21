@@ -5,7 +5,7 @@
                 <div class="col-lg-2 col-sm-5 col-md-4 col-6">
                     <div class="logo">
                         <a @click.prevent="store.mode == 'mobile' ? navigateTo('/?m-logo') : navigateTo('/?d-logo')">
-                            <img src="/images/logo-white.webp" alt="Logo">
+                            <img src="/images/logo-white.webp" alt="Our company logo">
                         </a>
                     </div>
                 </div>

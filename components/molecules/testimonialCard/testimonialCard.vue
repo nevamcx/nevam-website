@@ -3,6 +3,7 @@
         <div :class="getClassesA()">
             <img 
                 :src="props.image"
+                :alt="`Picture of our client - ${props.name}`"
                 class="image-radius"
                 :class="{
                     image: true,

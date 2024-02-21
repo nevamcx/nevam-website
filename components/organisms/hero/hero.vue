@@ -25,7 +25,7 @@
 
                             </div>
                             <div class="tri-arrow">
-                                <img src="/images/arrow.svg" alt="">
+                                <img src="/images/arrow.svg" alt="Line arrow pointing to button">
                             </div>
                         </div>
                     </div>

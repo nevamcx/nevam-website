@@ -23,7 +23,7 @@
                 <div class="row align-items-center">
                     <div v-if="store.mode == 'mobile'" class="col-lg-4 col-xl-4 offset-xl-1 pe-xl-3 col-12 align-center">
                         <div class="outside-shape" >
-                            <img src="/images/britt.webp" alt="" class="inside-shape">
+                            <img src="/images/britt.webp" alt="Brittany Fox image" class="inside-shape">
                         </div>
                     </div>
                     <div class="col-lg-7 col-xl-7 mt-lg-0">
@@ -46,7 +46,7 @@
 
                     <div v-if="store.mode == 'desktop'" class="col-lg-4 col-xl-4 offset-xl-1 pe-xl-3 col-12 order-2 order-lg-2 align-center">
                         <div class="outside-shape" >
-                            <img src="/images/britt.webp" alt="" class="inside-shape">
+                            <img src="/images/britt.webp" alt="Brett Spradbury image" class="inside-shape">
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 col-xl-4 mt-lg-0 align-center">
                         <div class="outside-shape" >
-                            <img src="/images/brett.webp" alt="" class="inside-shape">
+                            <img src="/images/brett.webp" alt="Brett Spradbury image" class="inside-shape">
                         </div>
                     </div>
                     <div class="col-lg-7 col-xl-7 offset-xl-1 pe-xl-3 col-12">

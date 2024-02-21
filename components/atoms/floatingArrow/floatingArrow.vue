@@ -3,7 +3,7 @@
         <img :class="{
             left: props.direction == 0,
             right: props.direction == 1,
-        }" src="/images/floating-arrow.svg" alt="">
+        }" src="/images/floating-arrow.svg" alt="Floating line arrow">
     </section>
 </template>
 
