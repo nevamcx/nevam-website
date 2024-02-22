@@ -82,24 +82,24 @@
 <script setup>
 const faqs = [
   {
-    heading: 'About NEVAM',
+    heading: 'About Nevam',
     faqsLeft: [
       {
-        title: "Why the NEVAM name?",
+        title: "Why the Nevam name?",
         content: "When you flip it around, you get Maven. Coined by Malcolm Gladwell in his book 'The Tipping Point', Mavens are the savvy information brokers, adept at sharing and trading their knowledge. Nevam CX, on the other hand, forms the backbone of a brand's information system. See the clever connection?"
       },
       {
-        title: "How did NEVAM start?",
+        title: "How did Nevam start?",
         content: "Well, isn't this a coincidence? We've actually penned a whole 'About Us' section just for your entertainment! Dive in for a bit of light reading on our <a id='contact-link' aria-label='About us page' href='/about'>about page</a>."
       },
       {
-        title: "Is NEVAM an analytics tool?",
-        content: "While traditional analytics depend on tagging and coding to extract data, presenting it through numbers, charts, and graphs, NEVAM takes a different approach. It scans your content and channel code directly, providing visual representations of the issues encountered. This method offers a more intuitive understanding of the problems you're facing. In analytics, users typically guide the search for insights. However, NEVAM's Insights Finder operates differently—it draws from the multitude of issues we've encountered in our customers' digital experiences. This means you gain from the collective wisdom amassed over time, benefiting from the shared learnings indefinitely."
+        title: "Is Nevam an analytics tool?",
+        content: "While traditional analytics depend on tagging and coding to extract data, presenting it through numbers, charts, and graphs, Nevam takes a different approach. It scans your content and channel code directly, providing visual representations of the issues encountered. This method offers a more intuitive understanding of the problems you're facing. In analytics, users typically guide the search for insights. However, Nevam's Insights Finder operates differently—it draws from the multitude of issues we've encountered in our customers' digital experiences. This means you gain from the collective wisdom amassed over time, benefiting from the shared learnings indefinitely."
       }
     ],
     faqsRight: [
       {
-        title: "Is NEVAM a SAAS or consultancy?",
+        title: "Is Nevam a SAAS or consultancy?",
         content: "We utilize both approaches. While our platform evolves, some insights are discovered manually by our team and then incorporated into the algorithm to enhance its capabilities. This collaborative effort involves working with you to identify problems, which in turn teaches the platform to autonomously detect similar issues in the future. It's a continuous cycle of improvement, where human expertise and machine learning complement each other to refine our capabilities."
       },
       {
@@ -113,7 +113,7 @@ const faqs = [
     faqsLeft: [
       {
         title: "How do we identify problems cross channel?",
-        content: "Many tools are limited to specific channels, making it challenging to identify issues that might occur across various channels in the customer experience journey. Even with extensive data resources like data lakes, data warehouses, or CDPs, pinpointing problems can be daunting. You either have to guide the algorithm on what to look for or sift through vast amounts of data to locate them. NEVAM CX eliminates this data barrier by scanning all content across channels. Our built-in Insights Finder does the heavy lifting, proactively seeking out and flagging problems for you, streamlining the process and saving you time and effort."
+        content: "Many tools are limited to specific channels, making it challenging to identify issues that might occur across various channels in the customer experience journey. Even with extensive data resources like data lakes, data warehouses, or CDPs, pinpointing problems can be daunting. You either have to guide the algorithm on what to look for or sift through vast amounts of data to locate them. Nevam CX eliminates this data barrier by scanning all content across channels. Our built-in Insights Finder does the heavy lifting, proactively seeking out and flagging problems for you, streamlining the process and saving you time and effort."
       },
       {
         title: "What types of problems do we identify?",
@@ -126,7 +126,7 @@ const faqs = [
     ],
     faqsRight: [
       {
-        title: "What do I actually see in NEVAM?",
+        title: "What do I actually see in Nevam?",
         content: "We've developed a comprehensive view that enables brands to visualize all their content across various channels organized into swim lanes. With a touch of personalization, content can be seamlessly transitioned into vertical swim lanes based on specific life stages. This setup empowers users to effortlessly navigate through content categorized by life stage or campaign, across different channels, all within a single interface."
       },
       {
@@ -140,7 +140,7 @@ const faqs = [
     faqsLeft: [
       {
         title: "What is the process of becoming a customer?",
-        content: "Having been marketers ourselves, we understand the importance of alleviating anxiety. That's why we created NEVAM. We don't simply provide a link and hope for the best; instead, we take a proactive approach: We kick things off with a straightforward exercise to identify the channels and platforms utilized throughout the customer experience. Collaboratively, we delve into your organization's major pain points to ensure that NEVAM's presentation aligns with your team's preferences for adoption. We then assist in integrating NEVAM into each of your tools, either working alongside you or handling the process entirely. Our goal is to ensure minimal disruption to your daily operations, allowing you to focus on your core responsibilities while we manage the heavy lifting. Once all integrations are in place and content is seamlessly flowing through the system, we categorize and organize content according to its respective life stage or campaign for improved visibility. We establish a meeting schedule that suits your team's needs, convening to review the insights uncovered by the tool and your team collaboratively. Our support continues until you feel confident and self-sufficient in utilizing NEVAM autonomously."
+        content: "Having been marketers ourselves, we understand the importance of alleviating anxiety. That's why we created Nevam. We don't simply provide a link and hope for the best; instead, we take a proactive approach: We kick things off with a straightforward exercise to identify the channels and platforms utilized throughout the customer experience. Collaboratively, we delve into your organization's major pain points to ensure that Nevam's presentation aligns with your team's preferences for adoption. We then assist in integrating Nevam into each of your tools, either working alongside you or handling the process entirely. Our goal is to ensure minimal disruption to your daily operations, allowing you to focus on your core responsibilities while we manage the heavy lifting. Once all integrations are in place and content is seamlessly flowing through the system, we categorize and organize content according to its respective life stage or campaign for improved visibility. We establish a meeting schedule that suits your team's needs, convening to review the insights uncovered by the tool and your team collaboratively. Our support continues until you feel confident and self-sufficient in utilizing Nevam autonomously."
       },
       {
         title: "How do I become a customer?",

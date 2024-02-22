@@ -3,8 +3,8 @@ Done:
 
 
 In progress:
-- fix contact form email notification
 - pagespeed issues
+- fix blog nuxt content issue (needs npm run build to deploy, static generation breaks blogs)
 
 
 Tasks:
