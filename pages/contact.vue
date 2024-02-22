@@ -147,8 +147,8 @@ const sendEmail = async () => {
     const myForm = document.getElementById('form')
     const formData = new FormData(myForm)
 
-    // console.log('myForm: ', myForm)
-    // console.log('formData: ', Object.fromEntries(formData))
+    console.log('myForm: ', myForm)
+    console.log('formData: ', Object.fromEntries(formData))
 
     try {
         await fetch('/', {

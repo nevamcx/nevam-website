@@ -1,15 +1,19 @@
 Done:
+- meta blog tag gets stuck in tab name
 
 
 In progress:
+- fix contact form email notification
 - pagespeed issues
 
+
 Tasks:
-- meta blog tag gets stuck in tab name
 - review all content & images on site
+
 
 Optional:
 - treeshake css
+
 
 Performance:
 - use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
