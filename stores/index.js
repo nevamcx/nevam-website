@@ -7,6 +7,7 @@ export const baseStore = defineStore('store', {
             mode: null, // desktop, mobile, tablet
             mobile_device_type: null, // iphone, android
             small_mobile: false,
+            spinner: false,
             modal: false
         }
     },

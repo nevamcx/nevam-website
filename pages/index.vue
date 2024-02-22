@@ -1,6 +1,6 @@
 <template>
 
-    <Modal v-if="store.$state.modal"/>
+    <Modal v-if="store.modal"/>
 
     <Hero />
 

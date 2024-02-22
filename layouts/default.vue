@@ -1,7 +1,7 @@
 <template>
 
-  <LoadingSpinner :status="store.$state.spinner" />
-  <main class="main-page" id="main-page" :class="store.$state.spinner ? 'z-index-0' : ''">
+  <LoadingSpinner :status="store.spinner" />
+  <main class="main-page" id="main-page" :class="store.spinner ? 'z-index-0' : ''">
     <Menu />  
     <slot />
     <Footer />
@@ -77,17 +77,7 @@ const addResponsiveClasses = () => {
   }
 }
 
-const setPrice = () => {
-  if(route.query.ecirp == 'v1') {
-    store.$patch({ price: store.$state.priceA })
-  }
-  if(route.query.ecirp == 'v2') {
-    store.$patch({ price: store.$state.priceB })
-  }
-}
-
 onMounted(() => {
-  setPrice()
   setMobileDeviceType()
   addResponsiveClasses()
 })

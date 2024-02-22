@@ -120,11 +120,11 @@ const triggerChecks = async () => {
     checkEmptyFields()
     isEmailValid()
     if(!field1error.value && !field2error.value && !field3error.value) {
-        store.$state.spinner = true
+        store.spinner = true
         await new Promise(resolve => setTimeout(resolve, 3000))
         await sendEmail()
         navigateTo('/thank-you')
-        store.$state.spinner = false
+        store.spinner = false
     }
 }
 
