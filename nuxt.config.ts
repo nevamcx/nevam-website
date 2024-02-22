@@ -23,6 +23,10 @@ export default {
 
   css: ['~/assets/style/main.scss'],
 
+  content: {
+    contentHead: false
+  },
+
   app: {
 
     head: {
