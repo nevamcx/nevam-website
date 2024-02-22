@@ -47,10 +47,6 @@ export default {
     }
   },
 
-  routeRules: {
-    '/contact': { ssr: false }
-  },
-
   modules: ['@pinia/nuxt', "@nuxt/content"],
 
   nitro: {
