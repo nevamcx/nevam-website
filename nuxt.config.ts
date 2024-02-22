@@ -1,8 +1,6 @@
 import path from 'path'
 
 export default {
-
-  target: 'static',
   
   components: [
     {
@@ -47,6 +45,10 @@ export default {
       ],
       script: [{}]
     }
+  },
+
+  routeRules: {
+    '/contact': { ssr: false }
   },
 
   modules: ['@pinia/nuxt', "@nuxt/content"],
