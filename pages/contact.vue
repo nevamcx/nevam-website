@@ -147,21 +147,14 @@ const sendEmail = async () => {
     const myForm = document.getElementById('form')
     const formData = new FormData(myForm)
 
-    // console.log('myForm: ', myForm)
-    // console.log('formData: ', Object.fromEntries(formData))
-
-    const url = 'https://nevamcx.netlify.app'
+    console.log('myForm: ', myForm)
+    console.log('formData: ', Object.fromEntries(formData))
 
     try {
-        await fetch(url, {
+        await fetch('/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-                "Access-Control-Allow-Origin": "*",
-                'Access-Control-Allow-Credentials': 'true',
-                "Access-Control-Allow-Headers": '*',
-                "Access-Control-Expose-Headers": '*'
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(formData).toString()
         })
