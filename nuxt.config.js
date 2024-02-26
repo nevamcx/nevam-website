@@ -45,7 +45,7 @@ export default {
   app: {
 
     head: {
-      title: 'Nevam CX',
+      title: 'NEVAM CX',
       htmlAttrs: {
         lang: 'en'
       },
@@ -53,9 +53,9 @@ export default {
         { charset: 'utf-8' },
         { name: 'og:type', content: 'website' },
         { name: 'og:url', content: 'https://nevamcx.com' },
-        { name: 'og:site_name', content: 'Nevam CX' },
-        { name: 'description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
-        { name: 'og:description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
+        { name: 'og:site_name', content: 'NEVAM CX' },
+        { name: 'description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
+        { name: 'og:description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
         { name: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
         { name: 'og:locale', content: 'en_AU' },
         { name: 'cache_date_time', content: timeStamp() }

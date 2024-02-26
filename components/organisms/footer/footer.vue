@@ -53,14 +53,14 @@
         <div class="footer-bottom-wrapper">
             <div v-if="store.mode == 'mobile'" class="container">
                 <div class="address footer-bottom-text">
-                    <p><i class="icon fal fa-copyright"></i> 2023 Nevam CX. All Rights Reserved.</p>
+                    <p><i class="icon fal fa-copyright"></i> 2023 NEVAM CX. All Rights Reserved.</p>
                 </div>
             </div>
             <div class="container footer-border">
                 <div class="footer-bottom-content">
                     <div v-if="store.mode == 'desktop'" class="left">
                         <div class="address footer-bottom-text">
-                            <p><i class="icon fal fa-copyright"></i> 2023 Nevam CX. All Rights Reserved.</p>
+                            <p><i class="icon fal fa-copyright"></i> 2023 NEVAM CX. All Rights Reserved.</p>
                         </div>
                     </div>
                     <div class="right">
