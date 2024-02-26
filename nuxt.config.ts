@@ -34,7 +34,13 @@ export default {
       },
       meta: [
         { charset: 'utf-8' },
-        { name: 'description', content: 'Nevam CX' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: 'https://nevamcx.com' },
+        { name: 'og:site_name', content: 'Nevam CX' },
+        { name: 'description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
+        { name: 'og:description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
+        { name: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
+        { name: 'og:locale', content: 'en_AU' }
       ],
       link: [
         // https://favicon.io/favicon-converter
