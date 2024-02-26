@@ -1,5 +1,18 @@
 import path from 'path'
 
+const timeStamp = () => {
+  const date = new Date()
+  const options = {
+  	year: 'numeric',
+    month: 'short',
+    weekday: 'long',
+    day: 'numeric',
+    minute: '2-digit',
+		hour: '2-digit'
+  } 
+  return date.toLocaleTimeString('en-au', options)
+}
+
 export default {
   
   components: [
@@ -40,11 +53,12 @@ export default {
         { name: 'description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
         { name: 'og:description', content: 'Nevam CX helps you identify problems in your digital customer experience' },
         { name: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
-        { name: 'og:locale', content: 'en_AU' }
+        { name: 'og:locale', content: 'en_AU' },
+        { name: 'cache_date_time', content: timeStamp() }
       ],
       link: [
         // https://favicon.io/favicon-converter
-        { rel: 'apple-touch-icon', sizes: "180x180", type: 'image/x-icon', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', type: 'image/x-icon', href: '/apple-touch-icon.png' },
         { rel: 'icon', sizes: '32x32', type: 'image/png', href: '/favicon-32x32.png' },
         { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png' },
         { rel: 'manifest', href: '/site.webmanifest' }
@@ -53,7 +67,7 @@ export default {
     }
   },
 
-  modules: ['@pinia/nuxt', "@nuxt/content"],
+  modules: ['@pinia/nuxt', '@nuxt/content'],
 
   nitro: {
     output: {
@@ -61,9 +75,9 @@ export default {
     }
   },
 
-  // stop prefetching: <link rel="prefetch" href="/_nuxt/swiper.min.143156a0.js">
+  // stop prefetching: <link rel='prefetch' href='/_nuxt/swiper.min.143156a0.js'>
   hooks: {
-    'build:manifest': (manifest: any) => {
+    'build:manifest': (manifest) => {
       for (const key in manifest) {
         manifest[key].dynamicImports = []
       }
