@@ -1,19 +1,23 @@
 Done:
 - site meta tags
-
-
-In progress:
 - add meta tag to track cache purge <meta cache_date="22/feb/2024 @ 1:35pm" />
 
 
-Tasks:
+
+In progress:
 - CLS pagespeed issues: https://web.dev/articles/optimize-cls?utm_source=lighthouse&utm_medium=lr
+
+
+
+Tasks:
 - fix blog nuxt content issue (needs npm run build to deploy, static generation breaks blogs)
 - review all content & images on site
 
 
+
 Optional:
 - treeshake css
+
 
 
 Performance:
