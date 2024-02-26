@@ -1,5 +1,11 @@
 <template>
-        <section id="services" class="services-wrapper fix section-padding">
+        <section 
+            id="services" 
+            class="services-wrapper fix section-padding"
+            :width="store.mode == 'mobile' ? 330 : 1421"
+            :height="store.mode == 'mobile' ? 1227 : 618"
+            style="width: 100%; height: auto;"
+        >
 
         <div class="container">
             <div class="col-lg-8 ps-xl-5 pe-xl-5 col-12 offset-lg-2 text-center">

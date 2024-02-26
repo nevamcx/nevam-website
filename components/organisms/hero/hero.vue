@@ -1,13 +1,24 @@
 <template>
-    <section class="hero-welcome-wrapper" id="hero">
+    <section 
+        class="hero-welcome-wrapper" id="hero">
         <div class="single-slide">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-12 col-lg-10 offset-lg-1 offset-xl-0">
                         <div class="hero-contents">
-                            <h1 v-if="store.mode == 'desktop'">Identify <TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
+                            <h1 
+                                v-if="store.mode == 'desktop'"
+                                width="746"
+                                height="352"
+                                style="width: 100%; height: auto;"
+                            >Identify <TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
 
-                            <h1 v-if="store.mode == 'mobile'">Identify <br><TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
+                            <h1 
+                                v-if="store.mode == 'mobile'"
+                                width="311"
+                                height="330"
+                                style="width: 100%; height: auto;"
+                            >Identify <br><TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
 
                             <p>We'll auto-magically discover the issues in your digital marketing experience. Because the customer experience is paramount to your marketing success.</p>
                             <div class="cta-button">
