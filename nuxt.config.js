@@ -67,7 +67,9 @@ export default {
         { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png' },
         { rel: 'manifest', href: '/site.webmanifest' }
       ],
-      script: [{}]
+      script: [
+        { async: true, src: '/js/scripts.js' }
+      ]
     }
   },
 
