@@ -1,9 +1,9 @@
 Done:
+- improved site performance to 80%
+- 
 
 
 In progress:
-- nuxt preloading assets & duplicating css
-- CLS pagespeed issues: https://web.dev/articles/optimize-cls?utm_source=lighthouse&utm_medium=lr
 - add GTAG to site
 
 
