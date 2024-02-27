@@ -1,11 +1,10 @@
 Done:
-- site meta tags
-- add meta tag to track cache purge <meta cache_date="22/feb/2024 @ 1:35pm" />
-
 
 
 In progress:
+- nuxt preloading assets & duplicating css
 - CLS pagespeed issues: https://web.dev/articles/optimize-cls?utm_source=lighthouse&utm_medium=lr
+- add GTAG to site
 
 
 

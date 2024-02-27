@@ -79,11 +79,13 @@ export default {
     }
   },
 
-  // stop prefetching: <link rel='prefetch' href='/_nuxt/swiper.min.143156a0.js'>
   hooks: {
     'build:manifest': (manifest) => {
-      for (const key in manifest) {
-        manifest[key].dynamicImports = []
+      const css = manifest['node_modules/nuxt/dist/app/entry.js'].css
+      if (css) {
+        for (let i = css.length - 1; i >= 0; i--) {
+          if (css[i].startsWith('entry')) css.splice(i, 1)
+        }
       }
     }
   }
