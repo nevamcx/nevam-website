@@ -8,7 +8,7 @@
         v-if="store.mode == 'mobile'"
         :topColour="'white'"
         :bottomColour="'white-3'"
-        :src="'images/hero-1.webp'" 
+        :src="'images/hero.jpg'" 
         :alt="'Image of person using keyboard'"
     />
 

@@ -3,8 +3,7 @@
 .desktop-mode {
     #hero {
         .single-slide {
-            padding: 50px 0px !important;
-            margin-bottom: -50px !important;
+            padding:  50px 0px 100px 0px !important;
         }
     }
 }
@@ -41,9 +40,9 @@
     }
 
     .desktop-image {
-        clip-path: circle(39% at 50% 43%);
+        clip-path: circle(50% at 50% 50%);
         width: 100%;
-        margin-top: -15px;
+        margin-top: 50px;
     }
 
     .single-slide {

@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div v-if="store.mode == 'desktop'" class="col-xl-5 col-12 text-xl-end col-lg-10 offset-lg-1 offset-xl-0">
-                        <img src="/images/hero-1.webp" alt="Image of person using keyboard" class="desktop-image">
+                        <img src="/images/hero.jpg" alt="Image of person using keyboard" class="desktop-image">
                     </div>
                 </div>
             </div>
