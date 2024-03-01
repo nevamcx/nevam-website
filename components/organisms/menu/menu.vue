@@ -16,6 +16,7 @@
                             <ul>
                                 <li><a aria-label="Navigate to home page" @click.prevent="navigateTo('/')">Home</a></li>
                                 <li><a aria-label="Navigate to the About page" @click.prevent="navigateTo('/about')">About</a></li>
+                                <li><a aria-label="Navigate to the Blog page" @click.prevent="navigateTo('/blog')">Blog</a></li>
                                 <li><a aria-label="Navigate to the FAQs page" @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                 <li><a aria-label="Navigate to the Contact page" @click.prevent="navigateTo('/contact')">Contact</a></li>
                             </ul>
@@ -46,6 +47,7 @@
                                 <ul class="metismenu" id="mobile-menu">
                                     <li><a aria-label="Navigate to home page" @click.prevent="navigateTo('/')">Home</a></li>
                                     <li><a aria-label="Navigate to the About page" @click.prevent="navigateTo('/about')">About</a></li>
+                                    <li><a aria-label="Navigate to the Blog page" @click.prevent="navigateTo('/blog')">Blog</a></li>
                                     <li><a aria-label="Navigate to the FAQs page" @click.prevent="navigateTo('/faqs')">FAQs</a></li>
                                     <li><a aria-label="Navigate to the Contact page" @click.prevent="navigateTo('/contact')">Contact</a></li>
                                 </ul>

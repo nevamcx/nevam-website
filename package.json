@@ -10,15 +10,15 @@
     "analyse": "npx nuxi analyze"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.12.0",
     "@pinia/nuxt": "^0.4.6",
     "@types/bootstrap": "^5.2.10",
     "is-ci": "^3.0.1",
     "sass": "^1.69.5"
   },
   "dependencies": {
+    "@nuxt/content": "^2.12.0",
     "bootstrap": "^5.3.3",
-    "nuxt": "^3.0.0",
+    "nuxt": "^3.10.3",
     "pinia": "^2.0.28",
     "sass-loader": "^14.1.1"
   },

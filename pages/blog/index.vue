@@ -11,8 +11,8 @@
                 <slot>
                     <ContentList path="/blog" v-slot="{ list }">
                         <div v-for="blog in list" :key="blog._path" class="blog-card">
-                            <a @click.prevent="navigateTo(blog._path)" :aria-label="`Navigate to the ${blog.title} article`" class="blog-link"><h4>{{ blog.title }}</h4></a>
-                            <div class="blog-intro">{{ blog.intro }}</div>
+                            <a @click.prevent="navigateTo(blog._path)" :aria-label="`Navigate to the ${blog.title} article`" class="link"><h4>{{ blog.title }}</h4></a>
+                            <div class="description">{{ blog.description }}</div>
                             <div>
                                 <span class="date bubble">{{ blog.date }}</span>
                                 <span class="category bubble">{{ blog.category }}</span>
@@ -28,7 +28,7 @@
 <style lang="scss">
 @import '~/assets/style/_variables.scss';
 #blog {
-    .blog-card {
+    .card {
         margin-bottom: 50px;
     }
     .bubble {
@@ -43,6 +43,10 @@
     }
     .category {
         background-color: $blueMedium;
+    }
+    .description {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 .desktop-mode {

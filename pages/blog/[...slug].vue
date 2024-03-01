@@ -4,13 +4,12 @@
             <div class="row">
                 <ContentDoc v-slot="{ doc }">
                     <article>
-                        <h1>{{ doc.title }}</h1>
-                        <div>
+                        <div class="content">
+                            <ContentRenderer :value="doc" />
+                        </div>
+                        <div class="bubbles">
                             <span class="date bubble">{{ doc.date }}</span>
                             <span class="category bubble">{{ doc.category }}</span>
-                        </div>
-                        <div class="description">
-                            {{ doc.description }}
                         </div>
                     </article>
                 </ContentDoc>
@@ -31,20 +30,36 @@
         padding: 50px 15px;
     }
 }
-.bubble {
+
+#blog img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#blog h2 {
+    margin-top: 40px;
+}
+#blog ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#blog ul li {
+    list-style: initial;
+    padding-left: 10px;
+}
+#blog .bubbles {
+    margin-top: 50px;
+}
+#blog .bubble {
     color: #fff;
     border-radius: 25px;
     padding: 2px 10px;
     font-size: 14px;
     margin-right: 15px;
 }
-.date {
+#blog .date {
     background-color: $blue;
 }
-.category {
+#blog .category {
     background-color: $blue;
-}
-.description {
-    margin-top: 30px;
 }
 </style>

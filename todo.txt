@@ -1,17 +1,14 @@
 Done:
-- improved site performance to 80%
-- 
 
 
 In progress:
-- add GTAG to site
 
 
 
 Tasks:
-- fix blog nuxt content issue (needs npm run build to deploy, static generation breaks blogs)
 - review all content & images on site
-
+- add meta tags to blog pages
+- useHead tab name sticking from blog
 
 
 Optional:

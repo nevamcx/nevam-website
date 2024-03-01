@@ -1,5 +1,27 @@
+import fs from 'fs'
 import path from 'path'
 import isCI from 'is-ci'
+
+const getBlogSlugs = () => {
+  const directoryPath = './content/blog'
+  try {
+    const fileNames = fs.readdirSync(directoryPath)
+    const files = fileNames.filter(fileName => {
+      const filePath = path.join(directoryPath, fileName)
+      return fs.statSync(filePath).isFile()
+    })
+    var fileArray = []
+    files.forEach((file) => {
+      const newFile = file.split('.')[0]
+      fileArray.push('/blog/' + newFile)
+    })
+    return fileArray
+  } 
+  catch (error) {
+    console.log(error)
+    return []
+  }
+}
 
 const timeStamp = () => {
   const date = new Date()
@@ -78,6 +100,9 @@ export default {
   nitro: {
     output: {
       publicDir: path.join(__dirname, '.output/public')
+    },
+    prerender: {
+      routes:  getBlogSlugs()
     }
   },
 
