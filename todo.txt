@@ -4,9 +4,7 @@ Done:
 In progress:
 
 
-
 Tasks:
-- review all content & images on site
 - add meta tags to blog pages
 - useHead tab name sticking from blog
 

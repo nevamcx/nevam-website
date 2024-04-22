@@ -78,7 +78,7 @@ const testimonials = [
         url: "https://brandreadiy.com",
         role: "Founder",
         linkedin: "https://www.linkedin.com/in/deliasuteja",
-        description: "<p>I am confident in brand building and I have a great UX team, but where NEVAM CX differentiated was bridging the gap between the experience I wanted customers to have and the actual end to end flow.</p><br><p>The transparency of seeing it in one platform allows me to see opportunities I wouldn’t have noticed prior. I was able to easily identify the gaps and update what needed to be present so I could better brief my UX team.</p>",
+        description: "<p>I am confident in brand building and I have a great UX team, but where NEVAM CX differentiated was bridging the gap between the experience I wanted customers to have and the actual end to end flow.</p><br><p>The transparency of seeing it in one place allows me to see opportunities I wouldn’t have noticed prior. I was able to easily identify the gaps and update what needed to be present so I could better brief my UX team.</p>",
         image: "/images/clients/delia-suteja-yeboah.webp",
         position: "right"
     }

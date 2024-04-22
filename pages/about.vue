@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-12 mb-5">
                         <div class="block-contents">
-                            <div class="mission"><TextUnderline :colour="'pink'">Our mission</TextUnderline> is to organise the world of <TextUnderline :colour="'green'">digital marketing</TextUnderline> in one place, with one login</div>
+                            <div class="mission"><TextUnderline :colour="'pink'">Our mission</TextUnderline> is to organise the world of <TextUnderline :colour="'green'">digital marketing</TextUnderline> in one place</div>
                             <div class="section-content">
                                 <p>
                                     After years of marketing and consulting with top tier brands we thought a tool would exist by now that made it easier for marketers to see everything they had online, in one place. The problem kept looming with every client and personally, they just couldn’t identify problems in their experience because each tool only looked at 1 piece of the puzzle.
