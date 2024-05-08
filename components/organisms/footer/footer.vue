@@ -10,7 +10,7 @@
                                     @click.prevent="store.mode == 'mobile' ? navigateTo('/?m-footer-logo') : navigateTo('/?d-footer-logo')"
                                     class="footer-logo d-block" aria-label="Navigate to home page"
                                 >
-                                    <img src="/images/logo-dark.webp" alt="Company logo">
+                                    <img src="/images/logo-black.webp" alt="Company logo">
                                 </a>
                                 <p>We are on a mission to organise the world of digital marketing in one place, with one login.</p>
                             </div>
