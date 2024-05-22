@@ -132,6 +132,7 @@ const store = baseStore()
             padding: 100px 100px;
         }
         .outside-shape {
+            position: absolute;
             width: 400px;
             height: 400px;
         }
