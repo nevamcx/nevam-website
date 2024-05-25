@@ -20,7 +20,6 @@ const props = defineProps({
 .floating-arrow {
 
     text-align: center;
-    
 
     img {
         position: relative;

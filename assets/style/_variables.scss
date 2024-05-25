@@ -43,6 +43,11 @@ $theme-color: $blue;
 $second-color: #080F1E;
 $heading-color: $black;
 
+// cashflow co:
+$cco-green-1: #37696d;
+$cco-yellow-1: #dde11b;
+$cco-teal-1: #2ea1ac;
+
 
 @mixin border-radius($r) {
     border-radius: $r;

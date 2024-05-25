@@ -119,10 +119,8 @@ const getClassesB = () => {
     }
 
     .inverted-comma {
-
         height: 80px;
         width: 80px;
-        
         background-repeat: no-repeat;
         background-image: url('/images/inverted-comma.svg');
         color: $grayLight;

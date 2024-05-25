@@ -61,6 +61,12 @@ h6 {
     h6 {
         font-size: 18px;
     }
+    .website-link {
+        color: $grayDark;
+        font-size: 20px;
+        font-weight: initial;
+        border-bottom: 1px solid;
+    }
 }
 
 .mobile-mode {
@@ -83,6 +89,12 @@ h6 {
     }
     h6 {
         font-size: 17px;
+    }
+    .website-link {
+        color: $grayDark;
+        font-size: 18px;
+        font-weight: initial;
+        border-bottom: 1px solid;
     }
 }
 
