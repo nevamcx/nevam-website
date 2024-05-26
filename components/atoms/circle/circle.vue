@@ -56,4 +56,25 @@ const props = defineProps({
   margin-top: 30px;
   color: $grayDark;
 }
+
+.mobile-mode {
+    .circle-wrapper {
+        text-align: center;
+        width: 135px;
+
+        .content {
+            font-size: 45px;
+            width: 123px;
+            height: 123px;
+        }
+
+        .description {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+    .circle {
+        height: 135px;
+    }
+}
 </style>

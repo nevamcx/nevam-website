@@ -1,8 +1,8 @@
 <template>
-    <section class="quote-type-a">
+    <section class="quote-type-c">
+        <BlockQuote><slot/></BlockQuote>
         <ProfileImage :image="props.image" />
         <div class="name" v-html=props.name></div>
-        <BlockQuote><slot/></BlockQuote>
     </section>
 </template>
 
@@ -19,13 +19,17 @@ const props = defineProps({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '~/assets/style/_variables.scss';
 
-.quote-type-a {
+.quote-type-c {
     text-align: center;
     font-size: 28px;
     line-height: 1.2;
+
+    .block-quote {
+        font-size: 30px;
+    }
 
     .name {
         font-size: 25px;
@@ -38,12 +42,11 @@ const props = defineProps({
     }
 }
 
-.block-quote {
-    font-size: 30px;
-}
-
 .mobile-mode {
-    .quote-type-a {
+    .quote-type-c {
+        .circle {
+            margin-top: initial !important;
+        }
         .name {
             margin-bottom: -50px;
         }

@@ -23,38 +23,38 @@ const props = defineProps({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '~/assets/style/_variables.scss';
-.block-quote {
-    font-size: 30px;
-    padding: initial !important;
-    text-align: initial !important;
-}
 
 .quote-type-b {
     display: flex;
     font-size: 28px;
     line-height: 1.2;
+
+    .block-quote {
+        font-size: 30px;
+        padding: initial !important;
+        text-align: initial !important;
+    }
     
     .left {
-        width: 33.33%;
-        padding: 100px;
+        width: 30%;
+        padding: 70px;
     
         .circle {
             margin-top: initial;
-            height: initial;
+            height: auto !important;
         
             img {
-                width: initial;
-                margin-left: -50px;
+                width: 100% !important;
             }
         }
     }
 
     .right {
-        width: 66.66%;
+        width: 70%;
         align-content: center;
-        margin-left: -50px;
+        margin-left: 40px;
 
         .name {
             font-size: 25px;
@@ -62,8 +62,7 @@ const props = defineProps({
             color: $black;
             letter-spacing: 10px;
             text-transform: uppercase;
-            margin-top: 20px;
-            margin-bottom: -60px;
+            margin-top: -50px;
         }
     }
 }
