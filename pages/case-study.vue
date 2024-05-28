@@ -4,17 +4,16 @@
             <div class="col-12">
                 <div class="block-contents fw500">
                     <div class="section-title">
-                        <h2>Introducing: Terry & Ryan</h2>
+                        <h2>Maximizing impact and gaining clarity with NEVAM CX</h2>
                     </div>
                     <div :class="`section-content ${getValue('mb-100', 'mb-50')}`">
-                        <p>Terry and Ryan, co-founders of scale-up <a class="website-link" aria-label="Contact us page" href="https://cashflowco.com.au" target="_blank">"The Cashflow Co."</a> approached NEVAM CX with a pressing issue: customers aren't converting much lately through their marketing & they don't know why. They had built so many layers to get their business to where it is now, but didn’t realize the complexities and dependencies that were created as a result.</p>
+                        <p>Terry and Ryan, co-founders of the growing scale-up <a class="website-link" aria-label="Contact us page" href="https://cashflowco.com.au" target="_blank">"The Cashflow Co."</a> and hosts of their own podcast <a class="website-link" aria-label="Contact us page" href="https://open.spotify.com/show/4fh8xSyibogGPOgwswvIUa" target="_blank">"Wealth, Time, Freedom"</a> approached NEVAM CX with a pressing issue. They knew they had a problem. they had built so many layers to the business to where it is, they didn't realize the complexities and interdependencies that were created as a result. This affected their alignment and ability to effectively onboard and communicate to team members how it all fitted together. As result, they were missing opportunities. They realized they needed a solution that could provide clarity and streamline operations as they grew to maximize impact of time.</p>
                     </div>
                     <div :class="`section-content ${getValue('mb-50', 'mb-25')}`">
                         <FullwidthImageBlock :image="store.mode == 'desktop' ? '/images/case-studies/cashflowco/logo-banner.png' : '/images/case-studies/cashflowco/logo-mobile.png'" />
                     </div>
                     <div :class="`section-content ${getValue('', 'mb-25')}`">
-                        <BlockQuote>The Cashflow Co. is a <big>financial</big> coaching media business, that hosts a
-                            <big>podcast</big> and runs online <big>courses</big></BlockQuote>
+                        <BlockQuote>The Cashflow Co. is a <big>financial</big> coaching media business, that hosts a <big>podcast</big> and runs online <big>courses</big></BlockQuote>
                     </div>
                     <div :class="`section-content ${getValue('mb-100', 'mb-30')}`">
                         <FullwidthImageBlock :image="store.mode == 'desktop' ? '/images/case-studies/cashflowco/terry-ryan-banner.png' : '/images/case-studies/cashflowco/terry-ryan-mobile.png'" />
@@ -52,7 +51,7 @@
                             <tr>
                                 <td>
                                     <div class="heading">Location:</div>
-                                    <div class="content">Sydney, Australia</div>
+                                    <div class="content">Remote (Australia)</div>
                                 </td>
                                 <td>
                                     <div class="heading">Key people:</div>
@@ -86,7 +85,7 @@
                                     <div class="content">https://cashflowco.com.au</div>
                                     <div class="content">2 weeks</div>
                                     <div class="content">None</div>
-                                    <div class="content">Sydney, Australia</div>
+                                    <div class="content">Remote (Australia)</div>
                                     <div class="content">Terry, Ryan</div>
                                     <div class="content">Miro, Fireflies.ai, Nevam CX</div>
                                 </td>
@@ -117,16 +116,16 @@
                         <h2>Why they approached us:</h2>
                     </div>
                     <div class="section-content">
-                        <p>Luckily, our founder Brittany was actually a client of Cashflow Co. and so we already knew them. But after a while Cashflow Co. reached out to learn more about what we do. The turning point for them was really all these digital media channels that they run for marketing & course sales. It got to the point where it was becoming rather messy & they needed some clarity on how to manage this mighty marketing experience they had created.</p>
+                        <p>Terry and Ryan wear multiple hats and were growing rapidly. As they onboarded new members they found documentation was light and it took time to bring team members up to speed. Meanwhile, new products were needing to launch and they questioned whether they were maximizing every opportunity for conversion across their entire landscape. They were seeking a solution to prioritize tasks and align their efforts for maximum impact.</p>
                     </div>
                     <div :class="`section-title ${getValue('mt-80', 'mt-50')}`">
                         <h2>Reservations & concerns:</h2>
                     </div>
                     <div :class="`section-content ${getValue('mb-100', 'mb-80')}`">
-                        <p>Terry and Ryan were wearing multiple hats in their business, they are busy people! And so naturally they had some reservations about the time and effort required for our process. They were also skeptical about the value NEVAM CX could provide and whether it would truly address their needs. They needed reassurance that the solution would deliver tangible results and justify the investment cost of our services. And so we had our work cut out for us!</p>
+                        <p>Its hard to slow down and Terry and Ryan expressed reservations about the time commitment and effort required for the implementation process. Additionally they weren't positive on the whether the results would truly address their needs. Luckily Brittany our CEO was a client of theirs and trust had formed. We also made sure sessions worked around their schedule in bite sized chunks so it wasn't feeling like it lost them a days work.</p>
                     </div>
                     <div :class="`section-content ${getValue('mb-25', 'mb-80')}`">
-                        <QuoteTypeA :image="'/images/case-studies/cashflowco/terry.png'" :name="getValue('Terry Condon', 'Terry <br>Condon')">Taking time out from our business is not easy, we have a lot going on. But our marketing was becoming difficult to manage & improve</QuoteTypeA>
+                        <QuoteTypeA :image="'/images/case-studies/cashflowco/terry.png'" :name="getValue('Terry Condon', 'Terry <br>Condon')">Our businesses are like a maze and NEVAM CX makes it incredibly clear where in the maze I am losing customers and how to eliminate them</QuoteTypeA>
                     </div>
                     <div class="section-content">
                         <FullwidthImageBlock :image="getValue('/images/case-studies/cashflowco/square-blocks.png', '/images/case-studies/cashflowco/grid-mobile.png')" />
@@ -135,7 +134,7 @@
                         <h2>Solution:</h2>
                     </div>
                     <div class="section-content">
-                        <p>We analysed all Cashflow Co's media channels, including email campaigns & their social media accounts. We even reviewed their Podcast channels on Spotify & Apple podcasts! We found a many issues, including a lot of gaps where the customers drop off out of their funnel It's these "leaks" that really add up, especially with so many marketing channels involved here. We also did some performance testing of their website, and made some recommendations to speed up things for the potential customers. Finally, we documented all of our findings for them in Miro, so they can visually see how all the marketing connects to eachother. Seeing things visually is really what is missing is most marketing planning! That way it makes your planning easier.</p>
+                        <p>Where the value really came in was designing their end to end experience by product. As they were about to create a new product and upgrade their community portal, it was a great time to map it out. Together we found opportunities for simplifying the website content, streamlining the lead process and adding additional flows for different personas. In our last session, Terry and Ryan were able to take the reigns and really manage the process themselves.</p>
                     </div>
                     <div class="section-content mt-70 mb-70 opacity-75" v-if="store.mode == 'mobile'">
                         <FullwidthImageBlock :image="'/images/case-studies/cashflowco/social-posts-grid.png'" />
@@ -144,7 +143,7 @@
                         <h2>Impact:</h2>
                     </div>
                     <div class="section-content">
-                        <p>After going through our process, Terry & Ryan had many "ah ha" moments! Things started to get a little clearer, they could finally see how everything was connected & how to improve the customer journey through their funnel. So what was the result? Where did they end up? Well, because we made many recommendations, it affected a lot of their channels! Here's you can see what changed for them:</p>
+                        <p>After going through our process, Terry and Ryan had many 'ah ha' moments. On reflection they admitted if they hadn't invested, it was costing them more money and the couldn't afford not to. Cashflow Co since the date of this case study has now released their new community portal, updated their website, implemented a SEO strategy, changed many email automations, released a new app for their product Money mentorship as well as nearly completed build for their new product. Not to mention continued with business as usual and regular podcasts!</p>
                     </div>
                     <div class="d-flex justify-content-between mt-50 mb-150 circles-2" v-if="store.mode == 'desktop'">
                         <Circle :content="'31'" :description="'Webpage content improvements'"/>
