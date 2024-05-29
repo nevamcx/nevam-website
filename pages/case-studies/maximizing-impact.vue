@@ -118,6 +118,9 @@
                     <div class="section-content">
                         <p>Terry and Ryan wear multiple hats and were growing rapidly. As they onboarded new members they found documentation was light and it took time to bring team members up to speed. Meanwhile, new products were needing to launch and they questioned whether they were maximizing every opportunity for conversion across their entire landscape. They were seeking a solution to prioritize tasks and align their efforts for maximum impact.</p>
                     </div>
+                    <div :class="`section-content ${getValue('mt-120 mb-120', 'mt-80 mb-80')}`">
+                        <CtaBlock :colour="'green'" :text="'Demystify your marketing funnel:'" />
+                    </div>
                     <div :class="`section-title ${getValue('mt-80', 'mt-50')}`">
                         <h2>Reservations & concerns:</h2>
                     </div>
@@ -172,6 +175,9 @@
                     <div class="section-content mb-150" v-if="store.mode == 'mobile'">
                         <QuoteTypeC :image="'/images/case-studies/cashflowco/ryan.png'" :name="'Ryan <br>Monaghan'">Going through this process made me realise that we were losing opportunities in our funnel</QuoteTypeC>
                     </div>
+                    <div :class="`section-content ${getValue('mt-120', 'mt-50')}`">
+                        <CtaBlock :colour="'green'" :text="'Looking for the gaps in your funnel?'" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,6 +206,7 @@ const getValue = (desktopValue, mobileValue) => {
 }
 
 #case-study {
+    padding-bottom: 0px !important;
     table {
         td {
             width: 33.333333%;

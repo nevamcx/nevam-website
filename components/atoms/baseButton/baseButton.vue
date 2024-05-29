@@ -9,6 +9,7 @@
             'black-invert' : props.colour == 'black-invert',
             'blue' : props.colour == 'blue',
             'blue-invert' : props.colour == 'blue-invert',
+            'white' : props.colour == 'white',
             'full-width' : props.fullWidth == true,
             'more-icon-spacing': props.fullWidth == true
         }"
@@ -103,6 +104,16 @@ a.base-button {
 }
 .blue-invert:hover {
     opacity: 0.6;
+}
+
+/* white */
+.white {
+    background-color: $white;
+    color: $black !important;
+    border: 2px solid $white;
+}
+.white:hover {
+    filter: brightness(0.8);
 }
 
 /* black */

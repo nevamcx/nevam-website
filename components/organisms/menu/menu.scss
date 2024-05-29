@@ -348,7 +348,7 @@ header {
     width: 320px;
     height: 100vh;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: hidden;
     transition: right .5s ease-in;
     background-color: $black;
     padding: 20px;
