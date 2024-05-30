@@ -197,6 +197,10 @@ useHead({
             content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner.png'
         },
         { 
+            property: 'og:url', 
+            content: 'https://nevamcx.com/case-studies/maximizing-impact'
+        },
+        { 
             property: 'article:published_time', 
             content: timeStamp()
         },
