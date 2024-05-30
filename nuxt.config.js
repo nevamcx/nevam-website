@@ -73,14 +73,14 @@ export default {
             },
             meta: [
                 { charset: 'utf-8' },
-                { name: 'og:type', content: 'website' },
-                { name: 'og:url', content: 'https://nevamcx.com' },
-                { name: 'og:site_name', content: 'NEVAM CX' },
-                { name: 'description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
-                { name: 'og:description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
-                { name: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
-                { name: 'og:locale', content: 'en_AU' },
-                { name: 'cache_date_time', content: timeStamp() }
+                { property: 'og:type', content: 'website' },
+                { property: 'og:url', content: 'https://nevamcx.com' },
+                { property: 'og:site_name', content: 'NEVAM CX' },
+                { property: 'description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
+                { property: 'og:description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
+                { property: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
+                { property: 'og:locale', content: 'en_AU' },
+                { property: 'cache_date_time', content: timeStamp() }
             ],
             link: [
                 // https://favicon.io/favicon-converter
