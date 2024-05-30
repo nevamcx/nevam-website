@@ -1,6 +1,6 @@
 import isCI from 'is-ci'
 
-export const timeStamp = () => {
+export const timeStamp = (type) => {
     const date = new Date()
     const options: Object = {
         year: 'numeric',
@@ -13,5 +13,10 @@ export const timeStamp = () => {
     if (isCI) {
         date.setHours(date.getHours() - 3)
     }
-    return date.toLocaleTimeString('en-au', options)
+    if(type == 1) {
+        return date.toLocaleTimeString('en-au', options)
+    }
+    if(type == 2) {
+        return date.toISOString()
+    }
 }

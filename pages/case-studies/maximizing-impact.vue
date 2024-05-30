@@ -202,7 +202,7 @@ useHead({
         },
         { 
             property: 'article:published_time', 
-            content: timeStamp()
+            content: timeStamp(2)
         },
         { 
             property: 'article:author', 

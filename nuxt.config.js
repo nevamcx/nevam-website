@@ -69,7 +69,7 @@ export default {
                 { property: 'og:description', content: 'NEVAM CX helps you identify problems in your digital customer experience' },
                 { property: 'og:image', content: 'https://nevamcx.com/images/logo-thumbnail.svg' },
                 { property: 'og:locale', content: 'en_AU' },
-                { property: 'cache_date_time', content: timeStamp() }
+                { property: 'cache_date_time', content: timeStamp(1) }
             ],
             link: [
                 // https://favicon.io/favicon-converter
