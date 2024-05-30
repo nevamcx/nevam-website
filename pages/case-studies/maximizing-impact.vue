@@ -188,6 +188,12 @@
 import { baseStore } from "@/stores"
 const store = baseStore()
 
+useHead({
+    meta: [
+        { property: 'og:image', content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner.png' }
+    ]
+})
+
 const getValue = (desktopValue, mobileValue) => {
     if(store.mode == 'mobile') {
         return mobileValue
