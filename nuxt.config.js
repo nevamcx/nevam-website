@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import isCI from 'is-ci'
+import { timeStamp } from './composables/dateTime'
 
 const getBlogSlugs = () => {
     const directoryPath = './content/blog'
@@ -23,23 +23,11 @@ const getBlogSlugs = () => {
     }
 }
 
-const timeStamp = () => {
-    const date = new Date()
-    const options = {
-        year: 'numeric',
-        month: 'short',
-        weekday: 'long',
-        day: 'numeric',
-        minute: '2-digit',
-        hour: '2-digit'
-    }
-    if (isCI) {
-        date.setHours(date.getHours() - 3)
-    }
-    return date.toLocaleTimeString('en-au', options)
-}
-
 export default {
+
+    alias: {
+		'@/': '/'
+	},
 
     components: [
         {
@@ -54,11 +42,12 @@ export default {
 
     runtimeConfig: {
         public: {
-            calendly: 'https://calendly.com/nevamcx/information-about-nevam-cx'
+            calendly: 'https://calendly.com/nevamcx/information-about-nevam-cx',
+            author: 'Brittany Fox'
         }
     },
 
-    css: ['~/assets/style/main.scss'],
+    css: [ '~/assets/style/main.scss' ],
 
     content: {
         contentHead: false
@@ -95,7 +84,7 @@ export default {
         }
     },
 
-    modules: ['@pinia/nuxt', '@nuxt/content'],
+    modules: [ '@pinia/nuxt', '@nuxt/content' ],
 
     vue: {
         compilerOptions: {

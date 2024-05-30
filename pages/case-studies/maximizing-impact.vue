@@ -185,13 +185,27 @@
 </template>
 
 <script setup>
-import { baseStore } from "@/stores"
+import { baseStore } from '@/stores'
+import { timeStamp } from '@/composables/dateTime'
+const config = useRuntimeConfig()
 const store = baseStore()
 
-useHead({
+useHead({    
     meta: [
-        { property: 'og:image', content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner.png' }
-    ]
+        { 
+            property: 'og:image', 
+            content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner.png'
+        },
+        { 
+            property: 'article:published_time', 
+            content: timeStamp()
+        },
+        { 
+            property: 'article:author', 
+            content: config.public.author
+        }
+    ],
+    title: 'Maximizing impact & gaining clarity'
 })
 
 const getValue = (desktopValue, mobileValue) => {

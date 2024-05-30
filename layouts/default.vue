@@ -12,7 +12,6 @@
 <script setup>
 import { baseStore } from '@/stores'
 const store = baseStore()
-const route = useRoute()
 const props = defineProps({
   error: Object
 })
