@@ -194,7 +194,7 @@ useHead({
     meta: [
         { 
             property: 'og:image', 
-            content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner.png'
+            content: 'https://nevamcx.com/images/case-studies/cashflowco/terry-ryan-banner-thumbnail.jpg'
         },
         { 
             property: 'og:url', 

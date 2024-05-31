@@ -1,13 +1,10 @@
 
-
 Tasks:
-- add meta tags to blog pages
 - useHead tab name sticking from blog
 
 
 Optional:
 - treeshake css
-
 
 
 Performance:
