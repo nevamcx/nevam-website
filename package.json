@@ -6,6 +6,7 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
+    "cleanup": "npx nuxi cleanup",
     "static-serve": "nuxi generate && nuxi preview",
     "analyse": "npx nuxi analyze"
   },
@@ -18,11 +19,14 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
+    "@excalidraw/excalidraw": "^0.17.6",
     "@nuxt/content": "^2.12.0",
     "bootstrap": "^5.3.3",
     "d3": "^7.2.0",
     "nuxt": "^3.10.3",
     "pinia": "^2.0.28",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass-loader": "^14.1.1"
   },
   "type": "module"

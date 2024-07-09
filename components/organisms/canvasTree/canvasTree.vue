@@ -10,17 +10,23 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps({
+    data: {
+        type: String,
+        default: '',
+    }
+})
+
 import { d3Chart } from './classes/d3Chart'
 import { ref } from 'vue'
-import Data from './data.json' with { type: 'json' }
 
-const data = ref(null)
+const loadData = ref(null)
 const orgChart = ref(null)
 
 onMounted(() => {
-    data.value = Data
+    loadData.value = props.data
     orgChart.value = new d3Chart()
-    orgChart.value.draw(data.value)
+    orgChart.value.draw(loadData.value)
 })
 </script>
 

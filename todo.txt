@@ -1,12 +1,24 @@
 
 Tasks:
+
+
+
+
+
+Excalidraw:
+-(done) fix dimensions
+-(done) fix menu
+-(done) make excalidraw component
+-d3 custom shape
+
+
+
+
+
+
+
+Backlog:
 - useHead tab name sticking from blog
-
-
-Optional:
-- treeshake css
-
-
-Performance:
-- use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
-- use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
+- performance: treeshake css
+- performance: use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
+- performance: use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9

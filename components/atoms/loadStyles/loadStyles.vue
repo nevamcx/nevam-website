@@ -3,5 +3,5 @@
 </template>
 
 <style>
-@import url('/css/icons.min.css')
+@import url('/public/css/icons.min.css')
 </style>
