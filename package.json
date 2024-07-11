@@ -6,6 +6,7 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
+    "cleanup": "npx nuxi cleanup",
     "static-serve": "nuxi generate && nuxi preview",
     "analyse": "npx nuxi analyze"
   },

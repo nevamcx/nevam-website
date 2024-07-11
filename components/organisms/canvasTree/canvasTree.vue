@@ -1,3 +1,4 @@
+@ -1,47 +0,0 @@
 <template>
     <div class="chart">
         <div class="zoom-buttons">
@@ -12,15 +13,18 @@
 <script setup lang="ts">
 import { d3Chart } from './classes/d3Chart'
 import { ref } from 'vue'
-import Data from './data.json' with { type: 'json' }
 
-const data = ref(null)
+const props = defineProps({
+    data: {
+        type: Object,
+        default: () => { },
+    }
+})
+
 const orgChart = ref(null)
 
 onMounted(() => {
-    data.value = Data
-    orgChart.value = new d3Chart()
-    orgChart.value.draw(data.value)
+    return new d3Chart().draw(props.data)
 })
 </script>
 

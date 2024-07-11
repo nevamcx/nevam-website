@@ -54,9 +54,8 @@ export const roundRect = (context, x, y, width, height, radius = 5, fill = false
     }
 };
 
-const appendFront0 = numStr => numStr.padStart(2, '0');
-
 export const getColorStringFromCanvas = (context, xIndex, yIndex) => {
+    const appendFront0 = numStr => numStr.padStart(2, '0');
     const pixelData = context.getImageData(xIndex, yIndex, 1, 1).data;
     const [r, g, b] = pixelData;
     return `#${appendFront0(r.toString(16))}${appendFront0(g.toString(16))}${appendFront0(b.toString(16))}`;

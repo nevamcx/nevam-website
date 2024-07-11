@@ -1,12 +1,26 @@
 
+
 Tasks:
+- add json
+- expand method (only 1st level children)
+- collapse method (all children)
+
+
+- d3 adapter: add screenshot & children_count keys
+- modal for screenshot
+- add / remove nodes
+- save chart
+
+
+
+
+
+
+
+
+
+Backlog:
 - useHead tab name sticking from blog
-
-
-Optional:
-- treeshake css
-
-
-Performance:
-- use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
-- use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
+- performance: treeshake css
+- performance: use bootrap imports: https://getbootstrap.com/docs/5.0/customize/optimize/
+- performance: use treeshaking: postcss: https://medium.com/@jacobp100/tree-shaking-bootstrap-95d6301f61a9
