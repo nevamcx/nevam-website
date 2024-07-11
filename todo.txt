@@ -1,7 +1,8 @@
 
 
 Tasks:
-- add json
+- (done) add json
+- css positioning
 - expand method (only 1st level children)
 - collapse method (all children)
 
