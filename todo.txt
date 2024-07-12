@@ -8,10 +8,15 @@ Tasks:
 - css positioning
 > (done) get depth
 > (done) get parent id
+> (done) solve vertical lines height
 
 
-> solve vertical lines height
-> solve for when box is opened down: calculate vertical lines
+> (in progress) fix lines over box
+
+
+
+> box open line push down issue
+
 
 
 

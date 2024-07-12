@@ -32,7 +32,40 @@ const data = ref({
                                 },
                                 {
                                     "name": "Exampler2",
-                                    "children": []
+                                    "children": [
+                                        {
+                                            "name": "More 1",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 2",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 3",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 4",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 5",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 6",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 7",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "More 8",
+                                            "children": []
+                                        }
+                                    ]
                                 },
                                 {
                                     "name": "Exampler3",
