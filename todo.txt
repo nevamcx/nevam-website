@@ -2,7 +2,24 @@
 
 Tasks:
 - (done) add json
+> (done) make cards bigger
+
+
 - css positioning
+> (done) get depth
+> (done) get parent id
+
+
+> solve vertical lines height
+> solve for when box is opened down: calculate vertical lines
+
+
+
+
+
+
+
+
 - expand method (only 1st level children)
 - collapse method (all children)
 

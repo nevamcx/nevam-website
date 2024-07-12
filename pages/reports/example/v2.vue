@@ -5,7 +5,7 @@
 <script setup lang="ts">
 // import data from './data.json'
 
-const data = {
+const data = ref({
     "name": "Root",
     "children": [
         {
@@ -39,13 +39,27 @@ const data = {
                                     "children": []
                                 }
                             ]
+                        },
+                        {
+                            "name": "Some word 4",
+                            "children": []
                         }
                     ]
                 }
             ]
         }
     ]
+})
+
+const addUniqueId = (node) => {
+    node.id = generateUniqueAlphaNumericString();
+    if (node.children && node.children.length > 0) {
+        node.children.forEach(child => addUniqueId(child));
+    }
 }
+
+// add unique id's to each node
+addUniqueId(data.value)
 
 definePageMeta({
     layout: 'chart'

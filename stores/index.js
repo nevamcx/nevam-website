@@ -12,5 +12,6 @@ export const baseStore = defineStore('store', {
         }
     },
     persist: true,
-    actions: {}
+    actions: {},
+    getters: {}
 })
