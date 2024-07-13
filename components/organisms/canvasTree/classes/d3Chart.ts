@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
-import { roundRect, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
+import { getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
+import { square, textWrap, image } from '../components'
 import { customStep } from './customStep'
 
 export class d3Chart {
@@ -51,15 +52,15 @@ export class d3Chart {
         this.height = window.innerHeight
         this.padding = 20
         // tree node size
-        this.nodeWidth = 500
-        this.nodeHeight = 150
+        this.nodeWidth = 800
+        this.nodeHeight = 550
         // box unit size
         this.unitPadding = 20
-        this.unitWidth = 200
-        this.unitHeight = 100
+        this.unitWidth = 250
+        this.unitHeight = 350
         // animation duration
         this.duration = 600
-        this.scale = 1.0
+        this.scale = 0.5
         // drag
         this.mouseDown = false
         this.mouseMove = false
@@ -339,14 +340,14 @@ export class d3Chart {
             const indexY = Number(node.attr('y')) - self.unitHeight / 2
 
             /*
-            ** Note: the 'roundRect' draws the box outline which 
+            ** Note: the 'square' draws the box outline which 
             ** needs to appear in both shown + hidden canvases. 
             ** Whatever is changed in this shape needs to also be 
             ** replicated in the 'drawHiddenCanvas' so the x + y 
             ** positions can be calculated.
             */
 
-            roundRect(
+            square(
                 self.context,
                 indexX,
                 indexY,
@@ -357,15 +358,38 @@ export class d3Chart {
                 false
             )
 
-            wrapText(
+            // name
+            data.name ? textWrap(
                 self.context,
                 data.name,
                 indexX + self.unitPadding,
-                indexY + self.unitPadding + 10,
+                indexY + self.unitPadding + 30,
+                self.unitWidth - 2 * self.unitPadding,
+                '24px', // font size
+                30, // line height
+                '#000000'
+            ) : null
+
+            // url
+            data.url ? textWrap(
+                self.context,
+                data.url,
+                indexX + self.unitPadding,
+                indexY + self.unitPadding + 300,
                 self.unitWidth - 2 * self.unitPadding,
                 '14px', // font size
                 20, // line height
                 '#000000'
+            ) : null
+
+            // image placeholder
+            image(
+                self.context,
+                `../../images/image-placeholder.png`,
+                indexX + self.unitPadding,
+                indexY + self.unitPadding + 100,
+                200,
+                150
             )
         })
     }
@@ -376,7 +400,7 @@ export class d3Chart {
         this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             self.hiddenContext.fillStyle = node.attr('colorKey')
-            roundRect(
+            square(
                 self.hiddenContext,
                 Number(node.attr('x')) - self.unitWidth / 2,
                 Number(node.attr('y')) - self.unitHeight / 2,
