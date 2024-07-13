@@ -66,10 +66,6 @@ onBeforeUnmount(async () => {
 </script>
 
 <style scoped>
-#tree::-webkit-scrollbar {
-    display: none;
-}
-
 #tree {
     width: 100%;
     height: 100%;
@@ -82,5 +78,9 @@ onBeforeUnmount(async () => {
 
 #tree > :first-child {
     margin-left: 0px;
+}
+
+#tree::-webkit-scrollbar {
+    display: none;
 }
 </style>

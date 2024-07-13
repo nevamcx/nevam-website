@@ -73,14 +73,14 @@ const toggleCard = (event: any) => {
 </script>
 
 <style scoped>
+#root-card::before {
+    display: none;
+}
+
 .children {
     width: 250px;
     margin-top: 50px;
     margin-left: 300px;
-}
-
-#root-card::before {
-    display: none;
 }
 
 .card {
