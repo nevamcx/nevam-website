@@ -6,22 +6,19 @@
             :class="`card ${props.firstChild ? 'first-child' : ''}`"
             :id="props.id ? props.id : null"
             :parent-id="props.parentId ? props.parentId : null"
-            @click="(e) => [toggleCard(e), publish('triggerDrawVerticalLines', {})]"
+            @click="(e) => toggleCard(e)"
         >
             <span class="text" v-if="props.node.name">{{ props.node.name }}</span>
         </div>
 
-        <div class="children" v-if="props.node.children && props.node.children.length">
-
-            <htmlTreeNode 
-                v-for="(child, childIndex) in props.node.children"
-                :node="child" 
-                :firstChild="childIndex == 0 ? true : false"
-                :id="child.id"
-                :parent-id="props.node.id"
-            />
-
-        </div>
+        <htmlTreeNode
+            v-if="props.node.children && props.node.children.length"
+            v-for="(child, childIndex) in props.node.children"
+            :node="child" 
+            :firstChild="childIndex == 0 ? true : false"
+            :id="child.id"
+            :parent-id="props.node.id"
+        />
 
     </div>
 
@@ -63,16 +60,14 @@ const toggleCard = (event: any) => {
                     element.classList.remove('open')
                 })
                 element.classList.add('open')
+                publish('triggerDrawVerticalLines', { redraw: 1 })
             }
             // is open: close it
             if(array.includes('card') && array.includes('open')) {
                 element.classList.remove('open')
+                publish('triggerDrawVerticalLines', { redraw: 1 })
             }
         }
     }
 }
 </script>
-
-<style scoped>
-
-</style>

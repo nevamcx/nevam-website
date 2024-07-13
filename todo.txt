@@ -1,36 +1,10 @@
 
 
 Tasks:
-- (done) add json
-> (done) make cards bigger
-
-
-- css positioning
-> (done) get depth
-> (done) get parent id
-> (done) solve vertical lines height
-
-
-
-> (in progress) box open line push down issue
-
-
-
-> fix lines over box
 
 
 
 
-
-
-
-
-
-
-
-
-- expand method (only 1st level children)
-- collapse method (all children)
 
 
 - d3 adapter: add screenshot & children_count keys
