@@ -11,11 +11,15 @@ Tasks:
 > (done) solve vertical lines height
 
 
-> (in progress) fix lines over box
+
+> (in progress) box open line push down issue
 
 
 
-> box open line push down issue
+> fix lines over box
+
+
+
 
 
 

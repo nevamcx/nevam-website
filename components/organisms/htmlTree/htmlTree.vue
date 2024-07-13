@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { baseStore } from "@/stores";
+import { subscribe, unsubscribe } from '@/events/events'
 const store = baseStore();
 
 const props = defineProps({
@@ -63,7 +64,15 @@ const drawVerticalLines = () => {
 onMounted(async () => {
     await addDepth()
     drawVerticalLines()
-});
+})
+
+onBeforeMount(async () => {
+	subscribe('triggerDrawVerticalLines', () => drawVerticalLines())
+})
+
+onBeforeUnmount(async () => {
+	unsubscribe('triggerDrawVerticalLines', () => drawVerticalLines())
+})
 </script>
 
 <style>

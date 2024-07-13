@@ -6,7 +6,7 @@
             :class="`card ${props.firstChild ? 'first-child' : ''}`"
             :id="props.id ? props.id : null"
             :parent-id="props.parentId ? props.parentId : null"
-            @click="(e) => toggleCard(e)"
+            @click="(e) => [toggleCard(e), publish('triggerDrawVerticalLines', {})]"
         >
             <span class="text" v-if="props.node.name">{{ props.node.name }}</span>
         </div>
@@ -28,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+import { publish } from '@/events/events'
+
 const props = defineProps({
     node: {
         type: Object,
