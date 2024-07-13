@@ -4,6 +4,16 @@ Tasks:
 
 
 
+-(done) remove redraw param for pub / sub events
+
+-fix text span click
+-fix root click
+-fix root line
+-make cards smaller
+
+
+
+
 
 
 

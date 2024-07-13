@@ -42,21 +42,12 @@ const drawVerticalLines = (redraw) => {
             style.remove()
         })
         // set new style
-        if(redraw == 1) {
-            // fix for lines extending over boxes on redraw
-            style.innerHTML = `#${id}::before {
-                position: absolute;
-                top: ${distance + 60}px;
-                height: ${distance * -1}px;
-            }`
-        }
-        else {
-            style.innerHTML = `#${id}::before {
-                position: absolute;
-                top: ${distance + 60}px;
-                height: ${distance * -1}px;
-            }`
-        }
+        style.innerHTML = `#${id}::before {
+            position: absolute;
+            top: ${distance + 60}px;
+            height: ${distance * -1}px;
+        }`
+
         element.appendChild(style)
     })
 }
@@ -66,11 +57,11 @@ onMounted(async () => {
 })
 
 onBeforeMount(async () => {
-	subscribe('triggerDrawVerticalLines', (e) => drawVerticalLines(e.detail.redraw))
+	subscribe('triggerDrawVerticalLines', () => drawVerticalLines())
 })
 
 onBeforeUnmount(async () => {
-	unsubscribe('triggerDrawVerticalLines', (e) => drawVerticalLines(e.detail.redraw))
+	unsubscribe('triggerDrawVerticalLines', () => drawVerticalLines())
 })
 </script>
 

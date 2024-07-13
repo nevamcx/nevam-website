@@ -60,12 +60,12 @@ const toggleCard = (event: any) => {
                     element.classList.remove('open')
                 })
                 element.classList.add('open')
-                publish('triggerDrawVerticalLines', { redraw: 1 })
+                publish('triggerDrawVerticalLines', {})
             }
             // is open: close it
             if(array.includes('card') && array.includes('open')) {
                 element.classList.remove('open')
-                publish('triggerDrawVerticalLines', { redraw: 1 })
+                publish('triggerDrawVerticalLines', {})
             }
         }
     }
