@@ -2,9 +2,9 @@
 
     <div class="children">
 
-        <div 
+        <div
             :class="`card ${props.firstChild ? 'first-child' : ''}`"
-            :id="props.id ? props.id : null"
+            :id="props.id ? props.id : 'root-card'"
             :parent-id="props.parentId ? props.parentId : null"
             @click="(e) => toggleCard(e)"
         >
@@ -71,3 +71,49 @@ const toggleCard = (event: any) => {
     }
 }
 </script>
+
+<style scoped>
+.children {
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+#root-card::before {
+    display: none;
+}
+
+.card {
+    position: relative;
+    padding: 10px;
+    height: 120px;
+    border-radius: 15px;
+}
+
+.card.open {
+    height: 500px !important;
+}
+
+.card::before {
+    z-index: -10;
+    position: absolute;
+    left: -175px;
+    width: 175px;
+    /* top: -130px; */
+    /* height: 190px; */
+    border-left-color: #bbb;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-bottom-color: #bbb;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-left-radius: 15px;
+    content: "";
+}
+
+.card.first-child::before {
+    z-index: -10;
+    top: -50px !important;
+    height: 110px !important;
+}
+</style>

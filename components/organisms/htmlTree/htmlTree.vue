@@ -65,48 +65,22 @@ onBeforeUnmount(async () => {
 })
 </script>
 
-<style>
-body {
+<style scoped>
+#tree::-webkit-scrollbar {
+    display: none;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
     background-color: #eee;
-}
-
-.children {
-    width: 250px;
-    margin-top: 50px;
-    margin-left: 300px;
-}
-
-.card {
+    z-index: 99999999;
     position: relative;
-    padding: 10px;
-    height: 120px;
-    border-radius: 15px;
+    overflow: scroll;
 }
 
-.card.open {
-    height: 500px !important;
-}
-
-.card::before {
-    z-index: -10;
-    position: absolute;
-    left: -175px;
-    width: 175px;
-    /* top: -130px; */
-    /* height: 190px; */
-    border-left-color: #bbb;
-    border-left-style: solid;
-    border-left-width: 3px;
-    border-bottom-color: #bbb;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-left-radius: 15px;
-    content: "";
-}
-
-.card.first-child::before {
-    z-index: -10;
-    top: -50px !important;
-    height: 110px !important;
+#tree > :first-child {
+    margin-left: 0px;
 }
 </style>
