@@ -8,7 +8,8 @@ export const baseStore = defineStore('store', {
             mobile_device_type: null, // iphone, android
             small_mobile: false,
             spinner: false,
-            modal: false
+            modal: false,
+            imageModal: false
         }
     },
     persist: true,

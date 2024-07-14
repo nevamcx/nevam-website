@@ -1,11 +1,6 @@
-@ -1,47 +0,0 @@
 <template>
+    <ImageModal v-if="store.imageModal" :image="image" v-click-outside="() => (store.imageModal = false)"/>
     <div class="chart">
-        <div class="zoom-buttons">
-            <div class="bigger" @click="orgChart.zoomIn()">Zoom in</div>
-            <div class="smaller" @click="orgChart.zoomOut()">Zoom out</div>
-            <div class="reset" @click="orgChart.zoomReset()">Zoom reset</div>
-        </div>
         <div id="d3-chart-container"></div>
     </div>
 </template>
@@ -13,6 +8,12 @@
 <script setup lang="ts">
 import { d3Chart } from './classes/d3Chart'
 import { subscribe, unsubscribe } from '@/events/events'
+import { baseStore } from '@/stores'
+import { vClickOutside } from '@/directives/directives'
+
+const store = baseStore()
+
+const image = ref(null)
 
 const props = defineProps({
     data: {
@@ -23,8 +24,9 @@ const props = defineProps({
 
 const orgChart = ref(null)
 
-const someFunction = () => {
-    return console.log('i am an event')
+const setImage = (e) => {
+    image.value = e
+    return store.imageModal = true
 }
 
 onMounted(() => {
@@ -32,11 +34,11 @@ onMounted(() => {
 })
 
 onBeforeMount(async () => {
-	subscribe('triggerImageModal', () => someFunction())
+	subscribe('triggerImageModal', (e) => setImage(e.detail.screenshot))
 })
 
 onBeforeUnmount(async () => {
-	unsubscribe('triggerImageModal', () => someFunction())
+	unsubscribe('triggerImageModal', (e) => setImage(e.detail.screenshot))
 })
 </script>
 
@@ -52,12 +54,5 @@ onBeforeUnmount(async () => {
 }
 .canvas-grabbing {
     cursor: grabbing;
-}
-.zoom-buttons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 50px;
-    padding: 20px;
 }
 </style>

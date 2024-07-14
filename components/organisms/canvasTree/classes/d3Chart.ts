@@ -536,8 +536,16 @@ export class d3Chart {
             // clicked on inner shape
             else {
                 node = self.colorNodeMap[parentColor];
-                // console.log('clicked on image')
-                publish('triggerImageModal', {})
+                // if image
+                if(node.data()[0].data.screenshot) {
+                    // console.log('clicked on image: ', node.data()[0].data.screenshot)
+                    publish('triggerImageModal', {
+                        screenshot: node.data()[0].data.screenshot
+                    })
+                }
+                else {
+                    console.log('has no image')
+                }
             }
         });
     }       
