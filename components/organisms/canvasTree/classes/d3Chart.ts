@@ -2,6 +2,7 @@ import * as d3 from 'd3'
 import { getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
 import { square, textWrap, image } from '../components'
 import { customStep } from './customStep'
+import { publish } from '@/events/events'
 
 export class d3Chart {
     d3: any
@@ -48,6 +49,7 @@ export class d3Chart {
     }
 
     initVariables() {
+        // dimensions
         this.width = window.innerWidth
         this.height = window.innerHeight
         this.padding = 20
@@ -58,14 +60,14 @@ export class d3Chart {
         this.unitPadding = 20
         this.unitWidth = 250
         this.unitHeight = 350
-        // animation duration
-        this.duration = 600
-        this.scale = 0.5
         // drag
         this.mouseDown = false
         this.mouseMove = false
         this.mouseOut = false
         this.mouseUp = false
+        // other
+        this.duration = 600
+        this.scale = 0.5
     }
 
     draw(data) {
@@ -348,12 +350,14 @@ export class d3Chart {
             */
 
             square(
+                'visible',
                 self.context,
                 indexX,
                 indexY,
                 self.unitWidth,
                 self.unitHeight,
                 20,
+                '#FFFFFF',
                 true,
                 false
             )
@@ -400,16 +404,56 @@ export class d3Chart {
         this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             self.hiddenContext.fillStyle = node.attr('colorKey')
+            const indexX = Number(node.attr('x')) - self.unitWidth / 2
+            const indexY = Number(node.attr('y')) - self.unitHeight / 2
+
+            // generate colors
+            const color1 = '' // not needed
+            const color2 = randomColor()
+
+            // custom shape 1
             square(
+                'hidden',
                 self.hiddenContext,
-                Number(node.attr('x')) - self.unitWidth / 2,
-                Number(node.attr('y')) - self.unitHeight / 2,
+                indexX,
+                indexY,
                 self.unitWidth,
                 self.unitHeight,
                 20,
+                color1, // no color set when hidden
                 true,
                 false
-            )
+            );
+    
+            // custom shape 2: same position as image
+            square(
+                'visible',
+                self.hiddenContext,
+                indexX + self.unitPadding,
+                indexY + self.unitPadding + 100,
+                200,
+                150,
+                0,
+                color2, // color is visible to hidden canvas!
+                true,
+                false
+            );
+
+            const customShape1 = {
+                type: 'outer',
+                color: color1,
+                parentColor: node.attr('colorKey')
+            }
+
+            const customShape2 = {
+                type: 'inner',
+                color: color2,
+                parentColor: node.attr('colorKey')
+            }
+            
+            // store custom shape data
+            node.attr('customShapes', [customShape1, customShape2])
+            node.data()[0]['customShapes'] = [customShape1, customShape2]
         })
     }
 
@@ -441,21 +485,62 @@ export class d3Chart {
         const self = this
         const dpr = window.devicePixelRatio || 1;
         this.canvasNode.node().addEventListener('click', (e) => {
-            // gets position of node
+    
+            // get color of click position
             const colorStr = getColorStringFromCanvas(
                 self.hiddenContext,
-                (e.layerX) * dpr, // offset manual fix
-                (e.layerY) * dpr // offset manual fix
-            )
-            // magic with colors to find node position
-            const node = self.colorNodeMap[colorStr]
-            if (node) {
-                console.log('node: ', node)
-                self.toggleTreeNode(node.data()[0])
-                self.update(node.data()[0])
+                (e.layerX) * dpr,
+                (e.layerY) * dpr
+            ).toLowerCase()
+
+            /* @TODO: 
+            ** make a new map object that maps the child:parent relationships
+            ** so that we don't need to go through the below loop every time
+            ** the user clicks. That way we can reference the map directly.
+            */
+
+            var parentColor = ''
+
+            // get parent color from the clicked on child color
+            const parentObject = self.colorNodeMap
+            for (const key in parentObject) {
+                if (parentObject.hasOwnProperty(key)) {
+                    const childObject = parentObject[key];
+                    // loop through properties of each child object
+                    for (const [key, value] of Object.entries(childObject)) {
+                        if(key == '_groups') {
+                            const array = value[0][0]['__data__']['customShapes']
+                            array.forEach((item) => {
+                                const itemColor = item.color.toLowerCase()
+                                const itemParentColor = item.parentColor.toLowerCase()
+                                if(itemColor == colorStr) {
+                                    parentColor = itemParentColor
+                                }
+                            })
+                        }
+                    }
+                }
             }
-        })
-    }
+
+            var node = null
+
+            // clicked on outer shape
+            if(!parentColor) {
+                node = self.colorNodeMap[colorStr];
+                if(node) {
+                    // toggle & update node
+                    self.toggleTreeNode(node.data()[0]);
+                    self.update(node.data()[0]);
+                }
+            }
+            // clicked on inner shape
+            else {
+                node = self.colorNodeMap[parentColor];
+                // console.log('clicked on image')
+                publish('triggerImageModal', {})
+            }
+        });
+    }       
 
     setIsDragging() {
         // for mouse pointer change

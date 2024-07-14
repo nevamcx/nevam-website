@@ -1,4 +1,4 @@
-export const square = (context, x, y, width, height, radius = 5, fill = false, stroke = true) => {
+export const square = (type, context, x, y, width, height, radius = 5, color, fill = false, stroke = true) => {
     if (typeof radius === 'number') {
         radius = { tl: radius, tr: radius, br: radius, bl: radius };
     } 
@@ -19,6 +19,9 @@ export const square = (context, x, y, width, height, radius = 5, fill = false, s
     context.lineTo(x, y + radius.tl);
     context.quadraticCurveTo(x, y, x + radius.tl, y);
     context.closePath();
+    if (type !== 'hidden') {
+        context.fillStyle = color
+    }
     if (fill) {
         context.fill();
     }

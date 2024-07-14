@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { d3Chart } from './classes/d3Chart'
-import { ref } from 'vue'
+import { subscribe, unsubscribe } from '@/events/events'
 
 const props = defineProps({
     data: {
@@ -23,8 +23,20 @@ const props = defineProps({
 
 const orgChart = ref(null)
 
+const someFunction = () => {
+    return console.log('i am an event')
+}
+
 onMounted(() => {
     return new d3Chart().draw(props.data)
+})
+
+onBeforeMount(async () => {
+	subscribe('triggerImageModal', () => someFunction())
+})
+
+onBeforeUnmount(async () => {
+	unsubscribe('triggerImageModal', () => someFunction())
 })
 </script>
 
