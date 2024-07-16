@@ -388,9 +388,10 @@ export class d3Chart {
             ) : null
 
             // image placeholder
-            data.screenshot ? image(
+            data.thumbnail ? image(
                 self.context,
-                `../../images/image-placeholder.png`,
+                `../../images/reports/examples/v1/thumbnails/${data.thumbnail}`,
+                // `../../images/image-placeholder.png`,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding + 100,
                 200,
