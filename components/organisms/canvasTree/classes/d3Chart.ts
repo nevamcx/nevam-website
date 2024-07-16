@@ -349,13 +349,14 @@ export class d3Chart {
             ** positions can be calculated.
             */
 
+            // outer shape
             square(
                 'visible',
                 self.context,
                 indexX,
-                indexY,
+                data.screenshot ? indexY : indexY + 95,
                 self.unitWidth,
-                self.unitHeight,
+                data.screenshot ? self.unitHeight : 150,
                 20,
                 '#FFFFFF',
                 true,
@@ -367,7 +368,7 @@ export class d3Chart {
                 self.context,
                 data.name,
                 indexX + self.unitPadding,
-                indexY + self.unitPadding + 30,
+                data.screenshot ? (indexY + self.unitPadding + 30) : (indexY + self.unitPadding + 30) + 95,
                 self.unitWidth - 2 * self.unitPadding,
                 '24px', // font size
                 30, // line height
@@ -387,14 +388,14 @@ export class d3Chart {
             ) : null
 
             // image placeholder
-            image(
+            data.screenshot ? image(
                 self.context,
                 `../../images/image-placeholder.png`,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding + 100,
                 200,
                 150
-            )
+            ) : null
         })
     }
 
@@ -420,7 +421,7 @@ export class d3Chart {
                 self.unitWidth,
                 self.unitHeight,
                 20,
-                color1, // no color set when hidden
+                color1, // no color is drawn when hidden
                 true,
                 false
             );
@@ -434,7 +435,7 @@ export class d3Chart {
                 200,
                 150,
                 0,
-                color2, // color is visible to hidden canvas!
+                color2, // color is drawn to hidden canvas!
                 true,
                 false
             );
@@ -487,16 +488,17 @@ export class d3Chart {
         this.canvasNode.node().addEventListener('click', (e) => {
     
             // get color of click position
-            const colorStr = getColorStringFromCanvas(
+            const clickedColor = getColorStringFromCanvas(
                 self.hiddenContext,
                 (e.layerX) * dpr,
                 (e.layerY) * dpr
             ).toLowerCase()
 
             /* @TODO: 
-            ** make a new map object that maps the child:parent relationships
-            ** so that we don't need to go through the below loop every time
-            ** the user clicks. That way we can reference the map directly.
+            ** make a new object map that maps the child:parent relationships
+            ** on d3 init so that we don't need to go through the below loop 
+            ** every time the user clicks. That way we can reference the map 
+            ** directly with less overhead
             */
 
             var parentColor = ''
@@ -513,7 +515,7 @@ export class d3Chart {
                             array.forEach((item) => {
                                 const itemColor = item.color.toLowerCase()
                                 const itemParentColor = item.parentColor.toLowerCase()
-                                if(itemColor == colorStr) {
+                                if(itemColor == clickedColor) {
                                     parentColor = itemParentColor
                                 }
                             })
@@ -526,7 +528,7 @@ export class d3Chart {
 
             // clicked on outer shape
             if(!parentColor) {
-                node = self.colorNodeMap[colorStr];
+                node = self.colorNodeMap[clickedColor];
                 if(node) {
                     // toggle & update node
                     self.toggleTreeNode(node.data()[0]);
@@ -538,7 +540,6 @@ export class d3Chart {
                 node = self.colorNodeMap[parentColor];
                 // if image
                 if(node.data()[0].data.screenshot) {
-                    // console.log('clicked on image: ', node.data()[0].data.screenshot)
                     publish('triggerImageModal', {
                         screenshot: node.data()[0].data.screenshot
                     })
