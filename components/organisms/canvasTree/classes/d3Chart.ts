@@ -33,8 +33,8 @@ export class d3Chart {
     mouseMove: boolean
     mouseOut: boolean
     mouseUp: boolean
-    onDrag_: boolean
-    dragStartPoint_: { x: number; y: number }
+    onDrag: boolean
+    dragStartPoint: { x: number; y: number }
 
     constructor() {
         this.d3 = d3
@@ -247,7 +247,7 @@ export class d3Chart {
 
         this.canvasNode = this.container
             .append('canvas')
-            .attr('class', 'orgChart')
+            .attr('class', 'orgChart show')
             .attr('width', this.width * dpr)
             .attr('height', this.height * dpr)
             .style('width', `${this.width}px`)
@@ -302,7 +302,7 @@ export class d3Chart {
     }
 
     drawCanvas() {
-        this.clearCanvas_()
+        this.clearCanvas()
         this.drawShowCanvas()
         this.drawHiddenCanvas()
     }
@@ -564,8 +564,8 @@ export class d3Chart {
     }
 
     setMouseListeners() {
-        this.onDrag_ = false
-        this.dragStartPoint_ = { x: 0, y: 0 }
+        this.onDrag = false
+        this.dragStartPoint = { x: 0, y: 0 }
         const self = this
 
         this.canvasNode.node().onmousedown = function (e) {
@@ -573,24 +573,24 @@ export class d3Chart {
             self.mouseOut = false
             self.mouseUp = false
             self.setIsDragging()
-            self.dragStartPoint_.x = e.x
-            self.dragStartPoint_.y = e.y
-            self.onDrag_ = true
+            self.dragStartPoint.x = e.x
+            self.dragStartPoint.y = e.y
+            self.onDrag = true
         }
 
         this.canvasNode.node().onmousemove = function (e) {
             self.mouseMove = true
             self.setIsDragging()
-            if (!self.onDrag_) {
+            if (!self.onDrag) {
                 return
             }
-            const deltaX = (e.x - self.dragStartPoint_.x) / self.scale;
-            const deltaY = (e.y - self.dragStartPoint_.y) / self.scale;
+            const deltaX = (e.x - self.dragStartPoint.x) / self.scale;
+            const deltaY = (e.y - self.dragStartPoint.y) / self.scale;
             self.context.translate(deltaX, deltaY);
             self.hiddenContext.translate(deltaX, deltaY);
-            self.dragStartPoint_.x = e.x;
-            self.dragStartPoint_.y = e.y;
-            self.clearCanvas_();
+            self.dragStartPoint.x = e.x;
+            self.dragStartPoint.y = e.y;
+            self.clearCanvas();
             self.drawCanvas();
         }
 
@@ -598,8 +598,8 @@ export class d3Chart {
             self.mouseOut = true
             self.mouseDown = false
             self.setIsDragging()
-            if (self.onDrag_) {
-                self.onDrag_ = false
+            if (self.onDrag) {
+                self.onDrag = false
             }
         }
 
@@ -607,8 +607,8 @@ export class d3Chart {
             self.mouseUp = true
             self.mouseDown = false
             self.setIsDragging()
-            if (self.onDrag_) {
-                self.onDrag_ = false
+            if (self.onDrag) {
+                self.onDrag = false
             }
         }
 
@@ -630,7 +630,7 @@ export class d3Chart {
                 const deltaY = (e.deltaY / self.scale) * direction
                 self.context.translate(deltaX, deltaY);
                 self.hiddenContext.translate(deltaX, deltaY);
-                self.clearCanvas_();
+                self.clearCanvas();
                 self.drawCanvas();
             }
         }
@@ -638,7 +638,7 @@ export class d3Chart {
 
     zoomIn() {
         if (this.scale > 7) return;
-        this.clearCanvas_();
+        this.clearCanvas();
         const zoomFactor = 1.05;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
@@ -648,7 +648,7 @@ export class d3Chart {
 
     zoomOut() {
         if (this.scale < 0.1) return;
-        this.clearCanvas_();
+        this.clearCanvas();
         const zoomFactor = 0.95;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
@@ -658,7 +658,7 @@ export class d3Chart {
 
     zoomReset() {
         this.scale = 1.0;
-        this.clearCanvas_();
+        this.clearCanvas();
         this.context.setTransform(1, 0, 0, 1, 0, 0);
         this.hiddenContext.setTransform(1, 0, 0, 1, 0, 0);
         this.context.translate(this.width / 2, this.padding);
@@ -666,7 +666,7 @@ export class d3Chart {
         this.drawCanvas();
     }
 
-    clearCanvas_() {
+    clearCanvas() {
         this.context.clearRect(-100000, -100000, 1000000, 10000000)
         this.hiddenContext.clearRect(-100000, -100000, 1000000, 10000000)
     }
