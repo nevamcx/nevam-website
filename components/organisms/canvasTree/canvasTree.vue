@@ -22,8 +22,6 @@ const props = defineProps({
     }
 })
 
-const orgChart = ref(null)
-
 const setImage = (e) => {
     image.value = e
     return store.imageModal = true
