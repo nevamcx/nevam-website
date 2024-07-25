@@ -17,6 +17,7 @@ export class d3Chart {
     unitHeight: number
     duration: number
     scale: number
+    dpr: number
     // tree
     data: any
     treeGenerator: any
@@ -53,6 +54,7 @@ export class d3Chart {
         this.width = window.innerWidth
         this.height = window.innerHeight
         this.padding = 20
+        this.dpr = window.devicePixelRatio || 1
         // tree node size
         this.nodeWidth = 800
         this.nodeHeight = 550
@@ -253,31 +255,32 @@ export class d3Chart {
 
     initCanvas() {
         this.container = this.d3.select('#d3-chart-container')
-        const dpr = window.devicePixelRatio || 1;
 
         this.canvasNode = this.container
             .append('canvas')
-            .attr('class', 'orgChart show')
-            .attr('width', this.width * dpr)
-            .attr('height', this.height * dpr)
+            .attr('class', 'show')
+            .attr('id', 'd3-canvas-show')
+            .attr('width', this.width * this.dpr)
+            .attr('height', this.height * this.dpr)
             .style('width', `${this.width}px`)
             .style('height', `${this.height}px`)
 
         this.hiddenCanvasNode = this.container
             .append('canvas')
-            .attr('class', 'orgChart hidden')
-            .attr('width', this.width * dpr)
-            .attr('height', this.height * dpr)
+            .attr('class', 'hidden')
+            .attr('id', 'd3-canvas-hidden')
+            .attr('width', this.width * this.dpr)
+            .attr('height', this.height * this.dpr)
             .style('width', `${this.width}px`)
             .style('height', `${this.height}px`)
             .style('display', '')
 
         this.context = this.canvasNode.node().getContext('2d')
-        this.context.scale(dpr, dpr)
+        this.context.scale(this.dpr, this.dpr)
         this.context.translate(this.width / 2, this.padding)
 
         this.hiddenContext = this.hiddenCanvasNode.node().getContext('2d')
-        this.hiddenContext.scale(dpr, dpr)
+        this.hiddenContext.scale(this.dpr, this.dpr)
         this.hiddenContext.translate(this.width / 2, this.padding)
     }
 
@@ -320,6 +323,7 @@ export class d3Chart {
     drawShowCanvas() {
         this.context.clearRect(-this.width / 2, -this.padding, this.width, this.height)
         const self = this
+
         // draw links
         this.virtualContainerNode.selectAll('.link').each(function () {
             const node = self.d3.select(this)
@@ -342,6 +346,7 @@ export class d3Chart {
             self.context.strokeStyle = '#B3B3B3'
             self.context.lineWidth = 3
         })
+
         // draw boxes
         this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
@@ -495,14 +500,13 @@ export class d3Chart {
 
     setClickListener() {
         const self = this
-        const dpr = window.devicePixelRatio || 1;
         this.canvasNode.node().addEventListener('click', (e) => {
     
             // get color of click position
             const clickedColor = getColorStringFromCanvas(
                 self.hiddenContext,
-                (e.layerX) * dpr,
-                (e.layerY) * dpr
+                (e.layerX) * self.dpr,
+                (e.layerY) * self.dpr
             ).toLowerCase()
 
             /* @TODO: 

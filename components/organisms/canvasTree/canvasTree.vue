@@ -47,7 +47,7 @@ onBeforeUnmount(async () => {
 </style>
 
 <style>
-.orgChart.hidden {
+canvas#d3-canvas-hidden {
     display: none;
 }
 .canvas-grabbing {
