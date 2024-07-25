@@ -97,6 +97,15 @@ export class d3Chart {
 
     update(node) {
         this.treeData = this.treeGenerator(this.data);
+
+        let index = -1
+        let p = 0
+        this.treeData.eachBefore((d) => {
+            d.x = (p && p.depth !== d.depth ? index : ++index) * this.nodeHeight
+            d.y = d.depth * this.nodeWidth
+            p = d;
+        })
+
         const boxes = this.treeData.descendants()
         const links = this.treeData.links().filter(l => l.source.depth <= 2); // only expand one level at a time
 
