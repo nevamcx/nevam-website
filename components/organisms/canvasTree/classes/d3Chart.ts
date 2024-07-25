@@ -98,10 +98,11 @@ export class d3Chart {
     update(node) {
         this.treeData = this.treeGenerator(this.data);
 
+        // set horizontal plane
         let index = -1
         let p = 0
         this.treeData.eachBefore((d) => {
-            d.x = (p && p.depth !== d.depth ? index : ++index) * this.nodeHeight
+            d.x = (p && p.depth < d.depth ? index : ++index) * this.nodeHeight
             d.y = d.depth * this.nodeWidth
             p = d;
         })
