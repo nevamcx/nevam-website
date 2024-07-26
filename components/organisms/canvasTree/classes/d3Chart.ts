@@ -15,6 +15,8 @@ export class d3Chart {
     unitPadding: number
     unitWidth: number
     unitHeight: number
+    thumbnailHeight: number
+    thumbnailWidth: number
     duration: number
     scale: number
     dpr: number
@@ -55,9 +57,11 @@ export class d3Chart {
         this.height = window.innerHeight
         this.padding = 20
         this.dpr = window.devicePixelRatio || 1
+        this.thumbnailHeight = 150
+        this.thumbnailWidth = 200
         // tree node size
-        this.nodeWidth = 800
-        this.nodeHeight = 550
+        this.nodeWidth = 500
+        this.nodeHeight = 450
         // box unit size
         this.unitPadding = 20
         this.unitWidth = 250
@@ -74,7 +78,8 @@ export class d3Chart {
 
     draw(data) {
         this.data = this.d3.hierarchy(data)
-        this.collapseNodes(this.data);
+        /* always keep nodes open
+        this.collapseNodes(this.data) */
         this.treeGenerator =
             this.d3
                 .tree()
@@ -104,6 +109,7 @@ export class d3Chart {
         let index = -1
         let p = 0
         this.treeData.eachBefore((d) => {
+            // x + y are reversed as tree is not default D3 orientation
             d.x = (p && p.depth < d.depth ? index : ++index) * this.nodeHeight
             d.y = d.depth * this.nodeWidth
             p = d;
@@ -371,7 +377,7 @@ export class d3Chart {
                 indexX,
                 data.screenshot ? indexY : indexY + 95,
                 self.unitWidth,
-                data.screenshot ? self.unitHeight : 150,
+                data.screenshot ? self.unitHeight : self.thumbnailHeight,
                 20,
                 '#FFFFFF',
                 true,
@@ -409,8 +415,8 @@ export class d3Chart {
                 // `../../images/image-placeholder.png`,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding + 100,
-                200,
-                150
+                self.thumbnailWidth,
+                self.thumbnailHeight
             ) : null
         })
     }
@@ -442,14 +448,14 @@ export class d3Chart {
                 false
             );
     
-            // custom shape 2: same position as image
+            // custom shape 2: same position as thumbnail image
             square(
                 'visible',
                 self.hiddenContext,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding + 100,
-                200,
-                150,
+                self.thumbnailWidth,
+                self.thumbnailHeight,
                 0,
                 color2, // color is drawn to hidden canvas!
                 true,
@@ -546,8 +552,9 @@ export class d3Chart {
                 node = self.colorNodeMap[clickedColor];
                 if(node) {
                     // toggle & update node
-                    self.toggleTreeNode(node.data()[0]);
-                    self.update(node.data()[0]);
+                    /* always keep nodes open
+                    self.toggleTreeNode(node.data()[0])
+                    self.update(node.data()[0]) */
                 }
             }
             // clicked on inner shape
