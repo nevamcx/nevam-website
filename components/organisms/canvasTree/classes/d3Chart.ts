@@ -608,8 +608,8 @@ export class d3Chart {
             if (!self.onDrag) {
                 return
             }
-            const deltaX = (e.x - self.dragStartPoint.x) / self.scale;
-            const deltaY = (e.y - self.dragStartPoint.y) / self.scale;
+            const deltaX = (e.x - self.dragStartPoint.x) / self.scale * self.dpr
+            const deltaY = (e.y - self.dragStartPoint.y) / self.scale * self.dpr
             self.context.translate(deltaX, deltaY);
             self.hiddenContext.translate(deltaX, deltaY);
             self.dragStartPoint.x = e.x;
