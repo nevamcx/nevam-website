@@ -19,6 +19,7 @@ export class d3Chart {
     thumbnailWidth: number
     duration: number
     scale: number
+    initialScale: number
     dpr: number
     // tree
     data: any
@@ -74,6 +75,7 @@ export class d3Chart {
         // other
         this.duration = 600
         this.scale = 0.5
+        this.initialScale = 0.2
     }
 
     draw(data) {
@@ -282,11 +284,11 @@ export class d3Chart {
             .style('display', '')
 
         this.context = this.canvasNode.node().getContext('2d')
-        this.context.scale(this.dpr, this.dpr)
+        this.context.scale(this.dpr * this.initialScale, this.dpr * this.initialScale)
         this.context.translate(this.width / 2, this.padding)
 
         this.hiddenContext = this.hiddenCanvasNode.node().getContext('2d')
-        this.hiddenContext.scale(this.dpr, this.dpr)
+        this.hiddenContext.scale(this.dpr * this.initialScale, this.dpr * this.initialScale)
         this.hiddenContext.translate(this.width / 2, this.padding)
     }
 
