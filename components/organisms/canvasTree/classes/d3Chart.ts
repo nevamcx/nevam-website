@@ -81,7 +81,7 @@ export class d3Chart {
                 .nodeSize([this.nodeHeight, this.nodeWidth])
         this.update(null)
         const self = this
-        this.d3.timer(function () {
+        this.d3.timer(() => {
             self.drawCanvas()
         })
     }
@@ -157,12 +157,12 @@ export class d3Chart {
 
         allBoxes
             .attr('class', 'box')
-            .attr('x', function (data) { return !isHorizontal ? data.x0 : data.y0 }) // weird fix
-            .attr('y', function (data) { return !isHorizontal ? data.y0 : data.x0 }) // weird fix
+            .attr('x', (data) => { return !isHorizontal ? data.x0 : data.y0 }) // weird fix
+            .attr('y', (data) => { return !isHorizontal ? data.y0 : data.x0 }) // weird fix
             .transition()
             .duration(this.duration)
-            .attr('x', function (data) { return isHorizontal ? data.x : data.y })
-            .attr('y', function (data) { return isHorizontal ? data.y : data.x })
+            .attr('x', (data) => { return isHorizontal ? data.x : data.y })
+            .attr('y', (data) => { return isHorizontal ? data.y : data.x })
 
         allBoxes
             .enter()
@@ -172,8 +172,8 @@ export class d3Chart {
             .attr('y', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
-            .attr('x', function (data) { return isHorizontal ? data.x : data.y })
-            .attr('y', function (data) { return isHorizontal ? data.y : data.x })
+            .attr('x', (data) => { return isHorizontal ? data.x : data.y })
+            .attr('y', (data) => { return isHorizontal ? data.y : data.x })
 
         allBoxes
             .exit()
@@ -201,22 +201,22 @@ export class d3Chart {
     ) {
         let allLinks = this.virtualContainerNode
             .selectAll('.link')
-            .data(links, function (d) {
+            .data(links, (d) => {
                 return d.source['colorKey'] + ':' + d.target['colorKey']
             })
 
         allLinks
             .attr('class', 'link')
-            .attr('sourceX', function (link) { return !isHorizontal ? link.source['x00'] : link.source['y00'] }) // weird fix
-            .attr('sourceY', function (link) { return !isHorizontal ? link.source['y00'] : link.source['x00'] }) // weird fix
-            .attr('targetX', function (link) { return !isHorizontal ? link.target['x00'] : link.target['y00'] }) // weird fix
-            .attr('targetY', function (link) { return !isHorizontal ? link.target['y00'] : link.target['x00'] }) // weird fix
+            .attr('sourceX', (link) => { return !isHorizontal ? link.source['x00'] : link.source['y00'] }) // weird fix
+            .attr('sourceY', (link) => { return !isHorizontal ? link.source['y00'] : link.source['x00'] }) // weird fix
+            .attr('targetX', (link) => { return !isHorizontal ? link.target['x00'] : link.target['y00'] }) // weird fix
+            .attr('targetY', (link) => { return !isHorizontal ? link.target['y00'] : link.target['x00'] }) // weird fix
             .transition()
             .duration(this.duration)
-            .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
-            .attr('sourceY', function (link) { return isHorizontal ? link.source.y : link.source.x })
-            .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
-            .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
+            .attr('sourceX', (link) => { return isHorizontal ? link.source.x : link.source.y })
+            .attr('sourceY', (link) => { return isHorizontal ? link.source.y : link.source.x })
+            .attr('targetX', (link) => { return isHorizontal ? link.target.x : link.target.y })
+            .attr('targetY', (link) => { return isHorizontal ? link.target.y : link.target.x })
 
         allLinks
             .enter()
@@ -228,10 +228,10 @@ export class d3Chart {
             .attr('targetY', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
-            .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
-            .attr('sourceY', function (link) { return isHorizontal ? link.source.y : link.source.x })
-            .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
-            .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
+            .attr('sourceX', (link) => { return isHorizontal ? link.source.x : link.source.y })
+            .attr('sourceY', (link) => { return isHorizontal ? link.source.y : link.source.x })
+            .attr('targetX', (link) => { return isHorizontal ? link.target.x : link.target.y })
+            .attr('targetY', (link) => { return isHorizontal ? link.target.y : link.target.x })
 
         allLinks
             .exit()
@@ -582,7 +582,7 @@ export class d3Chart {
         this.dragStartPoint = { x: 0, y: 0 }
         const self = this
 
-        this.canvasNode.node().onmousedown = function (e) {
+        this.canvasNode.node().onmousedown = (e) => {
             self.mouseDown = true
             self.mouseOut = false
             self.mouseUp = false
@@ -592,7 +592,7 @@ export class d3Chart {
             self.onDrag = true
         }
 
-        this.canvasNode.node().onmousemove = function (e) {
+        this.canvasNode.node().onmousemove = (e) => {
             self.mouseMove = true
             self.setIsDragging()
             if (!self.onDrag) {
@@ -608,7 +608,7 @@ export class d3Chart {
             self.drawCanvas();
         }
 
-        this.canvasNode.node().onmouseout = function (e) {
+        this.canvasNode.node().onmouseout = (e) => {
             self.mouseOut = true
             self.mouseDown = false
             self.setIsDragging()
@@ -617,7 +617,7 @@ export class d3Chart {
             }
         }
 
-        this.canvasNode.node().onmouseup = function (e) {
+        this.canvasNode.node().onmouseup = (e) => {
             self.mouseUp = true
             self.mouseDown = false
             self.setIsDragging()
@@ -626,7 +626,7 @@ export class d3Chart {
             }
         }
 
-        this.canvasNode.node().onwheel = function (e) {
+        this.canvasNode.node().onwheel = (e) => {
             // 2 finger pinch zoom
             if (e.ctrlKey) {
                 e.preventDefault();
