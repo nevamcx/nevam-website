@@ -258,6 +258,7 @@ export class d3Chart {
             link.target['x00'] = isHorizontal ? link.target.x : link.target.y
             link.target['y00'] = isHorizontal ? link.target.y : link.target.x
         })
+        
         allLinks = null
     }
 
@@ -613,8 +614,8 @@ export class d3Chart {
             self.hiddenContext.translate(deltaX, deltaY);
             self.dragStartPoint.x = e.x;
             self.dragStartPoint.y = e.y;
-            self.clearCanvas();
-            self.drawCanvas();
+            // self.clearCanvas();
+            // self.drawCanvas();
         }
 
         this.canvasNode.node().onmouseout = (e) => {
@@ -653,40 +654,40 @@ export class d3Chart {
                 const deltaY = (e.deltaY / self.scale) * direction
                 self.context.translate(deltaX, deltaY);
                 self.hiddenContext.translate(deltaX, deltaY);
-                self.clearCanvas();
-                self.drawCanvas();
+                // self.clearCanvas()
+                // self.drawCanvas()
             }
         }
     }
 
     zoomIn() {
         if (this.scale > 7) return;
-        this.clearCanvas();
+        // this.clearCanvas();
         const zoomFactor = 1.05;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);
-        this.drawCanvas();
+        // this.drawCanvas();
     }
 
     zoomOut() {
         if (this.scale < 0.1) return;
-        this.clearCanvas();
+        // this.clearCanvas();
         const zoomFactor = 0.95;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);
-        this.drawCanvas();
+        // this.drawCanvas();
     }
 
     zoomReset() {
         this.scale = 1.0;
-        this.clearCanvas();
+        // this.clearCanvas();
         this.context.setTransform(1, 0, 0, 1, 0, 0);
         this.hiddenContext.setTransform(1, 0, 0, 1, 0, 0);
         this.context.translate(this.width / 2, this.padding);
         this.hiddenContext.translate(this.width / 2, this.padding);
-        this.drawCanvas();
+        // this.drawCanvas();
     }
 
     clearCanvas() {
