@@ -5,3 +5,13 @@ export const generateUniqueAlphaNumericString = () => {
     const formattedRandomString = randomStringWithDashes.replace(/-$/, '');
     return timestamp + '-' + formattedRandomString;
 }
+
+export const trimString = (string, maxChars) => {
+	if (string?.length > maxChars) {
+		string = string.toString()
+		string = string.substring(0, maxChars)
+		string = string + '...'
+		return string
+	}
+	return string
+}

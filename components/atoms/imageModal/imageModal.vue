@@ -1,6 +1,6 @@
 <template>
     <div id="image-modal">
-        <img :src="`/images/reports/examples/v1/${props.image}`"
+        <img :src="`/images/reports/examples/v1/web/${props.image}`"
     </div>
 </template>
 

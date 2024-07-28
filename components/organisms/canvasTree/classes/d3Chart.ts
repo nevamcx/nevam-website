@@ -1,6 +1,11 @@
 import * as d3 from 'd3'
 import { getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
-import { square, textWrap, image } from '../components'
+import { square } from '../components/elements/square'
+import { text } from '../components/elements/text'
+import { textWrap } from '../components/elements/textWrap'
+import { image } from '../components/elements/image'
+import { socialHeading } from '../components/groups/socialHeading'
+import { socialCards } from '../components/groups/socialCards'
 import { customStep } from './customStep'
 import { publish } from '@/events/events'
 
@@ -21,8 +26,13 @@ export class d3Chart {
     scale: number
     initialScale: number
     dpr: number
-    // tree
+    // coordinates
+    treeStartX: number
+    treeStartY: number
+    // data
     data: any
+    linkedinData: any
+    // tree
     treeGenerator: any
     treeData: any
     virtualContainerNode: any
@@ -60,6 +70,9 @@ export class d3Chart {
         this.dpr = window.devicePixelRatio || 1
         this.thumbnailHeight = 150
         this.thumbnailWidth = 200
+        // coordinates
+        this.treeStartX = 0
+        this.treeStartY = 0
         // tree node size
         this.nodeWidth = 500
         this.nodeHeight = 450
@@ -78,8 +91,9 @@ export class d3Chart {
         this.initialScale = 0.2
     }
 
-    draw(data) {
+    draw(data, linkedinData) {
         this.data = this.d3.hierarchy(data)
+        this.linkedinData = linkedinData
         /* always keep nodes open
         this.collapseNodes(this.data) */
         this.treeGenerator =
@@ -327,6 +341,7 @@ export class d3Chart {
         this.clearCanvas()
         this.drawShowCanvas()
         this.drawHiddenCanvas()
+        this.drawCustomShape()
     }
 
     drawShowCanvas() {
@@ -414,7 +429,7 @@ export class d3Chart {
             // image placeholder
             data.thumbnail ? image(
                 self.context,
-                `../../images/reports/examples/v1/thumbnails/${data.thumbnail}`,
+                `../../images/reports/examples/v1/web/thumbnails/${data.thumbnail}`,
                 // `../../images/image-placeholder.png`,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding + 100,
@@ -481,6 +496,34 @@ export class d3Chart {
             node.attr('customShapes', [customShape1, customShape2])
             node.data()[0]['customShapes'] = [customShape1, customShape2]
         })
+    }
+
+    drawCustomShape() {
+
+        const positionX = this.treeStartX - 2000
+        const positionY = this.treeStartY - 200
+        const data = this.linkedinData
+
+        socialHeading(
+            this.context,
+            positionX,
+            positionY,
+            this.unitWidth,
+            '#FFFFFF',
+            data.icon,
+            data.name
+        )
+
+        socialCards(
+            this.context,
+            positionX,
+            positionY,
+            this.unitWidth,
+            this.unitHeight,
+            20, // radius
+            '#FFFFFF',
+            data.posts
+        )
     }
 
     toggleTreeNode(node) {
@@ -661,9 +704,9 @@ export class d3Chart {
     }
 
     zoomIn() {
-        if (this.scale > 7) return;
+        if (this.scale > 5) return;
         // this.clearCanvas();
-        const zoomFactor = 1.05;
+        const zoomFactor = 1.09;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);
@@ -673,7 +716,7 @@ export class d3Chart {
     zoomOut() {
         if (this.scale < 0.1) return;
         // this.clearCanvas();
-        const zoomFactor = 0.95;
+        const zoomFactor = 0.90;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);

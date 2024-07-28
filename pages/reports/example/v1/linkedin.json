@@ -1,0 +1,30 @@
+{
+    "icon": "./../../images/reports/examples/v1/icons/linkedin.png",
+    "name": "Way We Do",
+    "posts": [
+        {
+            "date": "Mon, 23 April",
+            "time": "3:23 pm",
+            "text": "Don't miss Jacqui Jones' AI Management presentation -- \n\"Best Practices for Responsible AI Use and Creation.\n\"",
+            "image": "./../../../images/reports/examples/v1/linkedin/image-01.jpg"
+        },
+        {
+            "date": "Tues, 24 April",
+            "time": "11:06 am",
+            "text": "How long did you wait to get a Taylor Swift ticket?? Despite economic tough times, we still spent a pretty penny to get access to the concert of the year. Named TIME's Person of the Year, the first to generate over $1 billion in ticket sales, and generated $5.7 billion in economic activity! Maybe we can all take a page out of the Taylor Swift Playbook for Business Strategy?",
+            "image": "./../../../images/reports/examples/v1/linkedin/image-02.png"
+        },
+        {
+            "date": "Wed, 25 April",
+            "time": "1:25 pm",
+            "text": "Wow, what a year 2023 has been!! Immense gratitude to our Way We Do team for their outstanding efforts. We've successfully reached several milestones and we are ready to start afresh in 2024. Thank you to all our customers who guide us every day of how we can better serve you. Also, a special thanks to our advisors who help shape what Way We Do is today.",
+            "image": "./../../../images/reports/examples/v1/linkedin/image-03.png"
+        },
+        {
+            "date": "Thurs, 26 April",
+            "time": "6:09 pm",
+            "text": "Our next Way We Do Security class starts on Wednesday 4 October for Australian organisations. If you want to become ISO27001 or SOC2 certificate-ready, this is the program to join. Designed for founders and business managers, we have done all the heavy lifting for you with best-practice templates and hands-on support!",
+            "image": "./../../../images/reports/examples/v1/linkedin/image-04.png"
+        }
+    ]
+}

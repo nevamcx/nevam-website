@@ -1,11 +1,12 @@
 <template>
     <div>
-        <CanvasTree :data="data"/>
+        <CanvasTree :web="webData" :linkedin="linkedinData"/>
     </div>
 </template>
 
 <script setup lang="ts">
-import data from './data.json'
+import webData from './data.json'
+import linkedinData from './linkedin.json'
 
 definePageMeta({
     layout: 'chart'

@@ -16,9 +16,13 @@ const store = baseStore()
 const image = ref(null)
 
 const props = defineProps({
-    data: {
+    web: {
         type: Object,
-        default: () => {},
+        default: () => {}
+    },
+    linkedin: {
+        type: Object,
+        default: () => {}
     }
 })
 
@@ -28,7 +32,7 @@ const setImage = (e) => {
 }
 
 onMounted(() => {
-    return new d3Chart().draw(props.data)
+    return new d3Chart().draw(props.web, props.linkedin)
 })
 
 onBeforeMount(async () => {
