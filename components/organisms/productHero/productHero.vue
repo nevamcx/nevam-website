@@ -3,27 +3,52 @@
         <div class="container">
             <div class="row align-items-center">
 
-                <div class="col-8 order-1 left">
+                <div class="col-12 order-1 left">
                     <div class="block-contents ms-xl-3 mt-lg-0">
                         <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <h1>When to reach out:</h1>
+                            <h2 :style="store.mode == 'desktop' ? 'width: 700px;' : ''">Empowering Everyone In Your Business to Delight Customers</h2>
                         </div>
-                        <table>
-                            <tr class="list-item" v-for="(item, itemIndex) in items" :key="itemIndex">
-                                <td class="circle">
-                                    <div class="number">
-                                        {{ itemIndex + 1 }}
-                                    </div>
-                                </td>
-                                <td class="text">{{ item }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
 
-                <div class="col-4 order-2 right">
-                    <div class="block-img wow fadeInLeft" data-wow-duration="1.1s">
-                        <img src="/images/report.png" alt="A placeholder image" class="image-radius">
+                        <div class="row text-center text-lg-start mt-50">
+
+                            <div class="col-md-6 col-xl-3 col-12">
+                                <div class="service-box-item">
+                                    <div class="content">
+                                        <h4>For Marketers</h4>
+                                        <p>Optimize your campaigns and track their impact with detailed reports and insights</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3 col-12">
+                                <div class="service-box-item">
+                                    <div class="content">
+                                        <h4>For Product Teams</h4>
+                                        <p>Understand user interactions and improve product features based on real data</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3 col-12">
+                                <div class="service-box-item">
+                                    <div class="content">
+                                        <h4>For Tech & Design</h4>
+                                        <p>Collaborate seamlessly with other teams to create cohesive and engaging customer experiences</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3 col-12">
+                                <div class="service-box-item">
+                                    <div class="content">
+                                        <h4>For Leadership</h4>
+                                        <p>Gain a high-level view of performance and progress to make informed strategic decisions</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
 
@@ -33,15 +58,8 @@
 </template>
 
 <script setup>
-const items = [
-    "don't know what your customer experience looks like",
-    "aren't sure where or why you are losing customers",
-    "don't trust your data or don't know what to do with it",
-    "you're rebranding and need to make sure you cover all of your basis",
-    "launching a new product and want to make it as effective as possible",
-    "are thinking about implementing new software",
-    "need support with priority and alignment on what to focus on"
-]
+import { baseStore } from '@/stores'
+const store = baseStore()
 </script>
 
 <style lang="scss">
@@ -88,6 +106,12 @@ const items = [
             display: inline-flex;
             margin-bottom: 10px;
         }
+
+        .section-title {
+            margin-bottom: 100px;
+        }
+
+
     }
 }
 .mobile-mode {
@@ -103,6 +127,10 @@ const items = [
         }
         .left {
             width: 100%;
+        }
+
+        .service-box-item {
+            text-align: left;
         }
     }
 }

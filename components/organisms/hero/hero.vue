@@ -11,17 +11,12 @@
                 <div class="row">
                     <div class="col-xl-7 col-12 col-lg-10 offset-lg-1 offset-xl-0">
                         <div class="hero-contents">
-                            <h1 v-if="store.mode == 'desktop'">Identify <TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
+                            <h1 v-if="store.mode == 'desktop'"><TextEffect :id="1" :words="words"/> <br>your way to better customer journeys</h1>
 
-                            <h1 v-if="store.mode == 'mobile'">Identify <br><TextEffect :id="1" :words="words"/> <br>in your digital customer experience</h1>
+                            <h1 v-if="store.mode == 'mobile'"><TextEffect :id="1" :words="words"/> <br>your way to better customer journeys</h1>
 
-                            <p>We'll auto-magically discover the issues in your digital marketing experience. Because the customer experience is paramount to your marketing success.</p>
+                            <p>Empower your team to review, empathize, and enhance every touchpoint of your customer experience.</p>
                             <div class="cta-button">
-
-                                <BaseButton
-                                    @click.prevent="navigateTo('/contact')"
-                                    :colour="'blue-invert'"
-                                >Message us</BaseButton>
 
                                 <BaseButton
                                     @click.prevent="navigateTo(config.public.calendly, { external: true })"
@@ -50,9 +45,9 @@ const store = baseStore()
 const config = useRuntimeConfig()
 
 const words = [
-    { text: 'problems' },
-    { text: 'insights' },
-    { text: 'opportunities' }
+    { text: 'Navigate' },
+    { text: 'Collaborate' },
+    { text: 'Optimize' }
 ]
 </script>
 
@@ -70,7 +65,7 @@ const words = [
 
             .text-effect {
                 bottom: initial;
-                margin-left: 25px;
+                margin-left: 0.1px;
             }
 
             .input-cursor {

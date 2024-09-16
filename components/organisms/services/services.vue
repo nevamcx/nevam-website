@@ -11,18 +11,18 @@
             <div class="col-lg-8 ps-xl-5 pe-xl-5 col-12 offset-lg-2 text-center">
                 <div class="block-contents">
                     <div class="section-title wow fadeInUp" data-wow-duration="1s">
-                        <h1>Visualize your content with a birds eye view</h1>
-                        <p>See every aspect of your marketing efforts in one place</p>
+                        <p>Everything all in one place</p>
+                        <h1>It’s Google Maps for your customer experience</h1>
                     </div>
                 </div>
             </div>
 
             <div class="row text-center text-lg-start mt-50">
 
-                <div class="col-md-6 col-xl-4 col-12">
+                <div class="col-md-6 col-xl-3 col-12">
                     <div class="service-box-item">
                         <div class="icon">
-                            <img src="/images/icons/arrow.svg" alt="Arrow pointing image">
+                            <img src="/images/icons/grid.svg" alt="Arrow pointing image">
                         </div>
                         <div class="content">
                             <h4>Every channel</h4>
@@ -31,19 +31,31 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-xl-4 col-12">
+                <div class="col-md-6 col-xl-3 col-12">
                     <div class="service-box-item">
                         <div class="icon">
-                            <img src="/images/icons/grid.svg" alt="Grid blocks image">
+                            <img src="/images/icons/arrow.svg" alt="Grid blocks image">
                         </div>
                         <div class="content">
-                            <h4>Every piece of content</h4>
-                            <p>See all of the pages, ads and emails live</p>
+                            <h4>Every touchpoint</h4>
+                            <p>See all the pages, ads and emails live</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-xl-4 col-12">
+                <div class="col-md-6 col-xl-3 col-12">
+                    <div class="service-box-item">
+                        <div class="icon">
+                            <img src="/images/icons/papers.svg" alt="Grid blocks image">
+                        </div>
+                        <div class="content">
+                            <h4 class="long-text">Every piece of content</h4>
+                            <p>See all the creatives and copy across your campaigns</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3 col-12">
                     <div class="service-box-item">
                         <div class="icon">
                             <img src="/images/icons/path.svg" alt="Curved path line image">
@@ -127,6 +139,10 @@ const config = useRuntimeConfig()
             .icon {
                 margin-bottom: 50px;
             }
+        }
+
+        .long-text {
+            width: 250px;
         }
     }
 }

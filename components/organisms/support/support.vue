@@ -6,13 +6,18 @@
                 <div class="col-lg-8 col-xl-8 mt-lg-0 order-1 order-lg-1">
                     <div class="block-contents ms-xl-3 mt-lg-0">
                         <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <h1>Expert support. Guaranteed.</h1>
+                            <h1>A word from Britt</h1>
                         </div>
-                        <p>Our solution: we provide a solution that will audit your end to end, find the problems across your entire experience and co-design your future state or desired campaigns. We offer ongoing support and insights that keep your report up to date and your business consistently optimizing.</p><p> It's a little different from your typical Software as a Service. We want to solve your problems and build a solution around your needs, and not build software you have to squeeze into.</p>
+                        <p>The Customer Experience shouldn’t be chaos! Right now, different teams work on different platforms, across various channels, chasing a multitude of metrics—all in the name of creating a better experience. But here's the catch: nobody can truly own it. Why? Because there are blind spots everywhere.</p>
+                            
+                        <p>We’re tired of seeing businesses struggle through this mess manually. It's time to change the game. Our mission is to empower teams to break down the silos, illuminate the blind spots, and create a seamless, unified customer experience. No more band-aid solutions — let’s redefine what’s possible together!</p>
+                        
+                        Brittany Fox<br>
+                        Founder of Nevam CX
                     </div>
                     <BaseButton
                         v-if="store.mode == 'desktop'"
-                        @click.prevent="navigateTo('/contact')"
+                        @click.prevent="navigateTo(config.public.calendly, { external: true })"
                         :colour="'blue'" 
                         :fullWidth="store.mode == 'mobile' ? true : false"
                     >See how it works</BaseButton>
@@ -20,13 +25,13 @@
 
                 <div class="col-lg-3 col-xl-3 offset-xl-1 pe-xl-3 col-12 order-2 order-lg-2">
                     <div class="block-img wow fadeInLeft" data-wow-duration="1.1s">
-                        <img src="/images/tech-support.jpg" alt="Tech support group of people" class="image-radius">
+                        <img src="/images/britt.webp" alt="Brittany Fox image" class="image-radius">
                     </div>
                 </div>
             </div>
             <BaseButton
                 v-if="store.mode == 'mobile'"
-                @click.prevent="navigateTo('/contact')"
+                @click.prevent="navigateTo(config.public.calendly, { external: true })"
                 :colour="'blue'" 
                 :fullWidth="store.mode == 'mobile' ? true : false"
             >See how it works</BaseButton>
@@ -37,6 +42,7 @@
 <script setup>
 import { baseStore } from "@/stores"
 const store = baseStore()
+const config = useRuntimeConfig()
 </script>
 
 <style lang="scss">

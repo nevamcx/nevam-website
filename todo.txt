@@ -1,25 +1,4 @@
-
-
 Tasks:
-
-
-
-
-(done) name
-(done) url > link
-screenshot
-children
-
-
-
-
-
-
-- d3 adapter: add screenshot & children_count keys
-- modal for screenshot
-- add / remove nodes
-- save chart
-
 
 
 

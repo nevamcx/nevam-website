@@ -19,7 +19,7 @@
     <ProductHero />
 
     <Callout
-        :effect="true"
+        :effect="false"
         :effect-i-d="20"
         :effect-pre="callout1.effect.pre"
         :effect-post="callout1.effect.post"
@@ -85,6 +85,7 @@ const testimonials = [
 ]
 
 const callout1 = {
+    heading: "Don't just take our word for it...",
     effect: {
         pre: 'What people say </br>about our ',
         words: [
@@ -94,7 +95,7 @@ const callout1 = {
         ],
         post: ''
     },
-    text: "We have a passion for helping our clients solve their marketing issues. So don't just take our word for it, see what our clients have to say about us:"
+    text: "When you work with us to visualize your customer experience amazing things happen..."
 }
 </script>
 
